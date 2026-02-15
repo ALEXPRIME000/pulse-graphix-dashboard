@@ -1,5 +1,6 @@
 {
-  "updated": "2026-02-15T04:17:00Z",
+  "updated": "2026-02-15T10:03:07.812Z",
+  "lastSync": "2026-02-15T10:03:07.812Z",
   "keyMetrics": {
     "totalProspects": 20,
     "qualifiedProspects": 4,
@@ -7,7 +8,10 @@
     "revenueThisMonth": 0,
     "shopProducts": 10,
     "services": 9,
-    "clientSatisfaction": 98
+    "clientSatisfaction": 98,
+    "completedTasks": 19,
+    "pendingTasks": 29,
+    "workspaceFiles": 42490
   },
   "revenue": {
     "currentMonth": 0,
@@ -15,11 +19,26 @@
     "sixMonthTarget": 10000,
     "pipelineValue": 4500,
     "byService": [
-      { "name": "Branding", "value": 1200 },
-      { "name": "Website", "value": 1500 },
-      { "name": "Logo Design", "value": 800 },
-      { "name": "Motion Graphics", "value": 600 },
-      { "name": "Print Design", "value": 400 }
+      {
+        "name": "Branding",
+        "value": 1200
+      },
+      {
+        "name": "Website",
+        "value": 1500
+      },
+      {
+        "name": "Logo Design",
+        "value": 800
+      },
+      {
+        "name": "Motion Graphics",
+        "value": 600
+      },
+      {
+        "name": "Print Design",
+        "value": 400
+      }
     ]
   },
   "leads": [
@@ -154,92 +173,15 @@
       "enterprise": 1497
     }
   ],
-  "shopProducts": [
-    {
-      "name": "Startup Landing Page Template",
-      "price": 49,
-      "originalPrice": 79,
-      "badge": "BESTSELLER"
-    },
-    {
-      "name": "Agency Portfolio Template",
-      "price": 59,
-      "originalPrice": null,
-      "badge": null
-    },
-    {
-      "name": "Instagram Starter Kit",
-      "price": 29,
-      "originalPrice": 45,
-      "badge": "BESTSELLER"
-    },
-    {
-      "name": "LinkedIn Content Pack",
-      "price": 25,
-      "originalPrice": null,
-      "badge": null
-    },
-    {
-      "name": "Minimal Brand Kit",
-      "price": 69,
-      "originalPrice": 99,
-      "badge": null
-    },
-    {
-      "name": "Pitch Deck Pro",
-      "price": 35,
-      "originalPrice": null,
-      "badge": "BESTSELLER"
-    },
-    {
-      "name": "Business Card Collection",
-      "price": 19,
-      "originalPrice": null,
-      "badge": null
-    },
-    {
-      "name": "Dashboard UI Kit",
-      "price": 79,
-      "originalPrice": 120,
-      "badge": "NEW"
-    },
-    {
-      "name": "Device Mockup Bundle",
-      "price": 39,
-      "originalPrice": null,
-      "badge": null
-    },
-    {
-      "name": "Essential Icon Set",
-      "price": 29,
-      "originalPrice": null,
-      "badge": "NEW"
-    }
-  ],
-  "socialMedia": {
-    "linkedin": {
-      "status": "active",
-      "profileExists": true,
-      "postsDrafted": 4,
-      "nextPost": "2026-02-16"
-    },
-    "instagram": {
-      "status": "planning",
-      "profileExists": true,
-      "contentPlanned": true,
-      "nextPost": "2026-02-17"
-    },
-    "youtube": {
-      "status": "pending",
-      "profileExists": false
-    },
-    "tiktok": {
-      "status": "pending",
-      "profileExists": false
-    },
-    "facebook": {
-      "status": "pending",
-      "profileExists": false
+  "shop": [],
+  "social": {},
+  "theme": {
+    "colors": {
+      "primary": "#00FF00",
+      "dark": "#0D0D0D",
+      "card": "#111111",
+      "border": "#222222",
+      "muted": "#888888"
     }
   }
 }
