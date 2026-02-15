@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulse Graphix - Business Dashboard</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        body {
+            background: #0D0D0D;
+            color: #FFFFFF;
+        }
+        
+        .glass-card {
+            background: rgba(17, 17, 17, 0.8);
+            border: 1px solid #222222;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .glass-card:hover {
+            border-color: #00FF00;
+            transform: translateY(-2px);
+            box-shadow: 0 20px 60px rgba(0, 255, 0, 0.1);
+        }
+        
+        .neon-text {
+            color: #00FF00;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+        
+        .neon-border {
+            border-color: #00FF00;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+        }
+        
+        .progress-bar {
+            background: #222222;
+            border-radius: 9999px;
+            overflow: hidden;
+            height: 8px;
+        }
+        
+        .progress-fill {
+            background: linear-gradient(90deg, #00FF00, #00CC00);
+            height: 100%;
+            transition: width 1s ease-out;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+        
+        .tab-button {
+            position: relative;
+            padding: 0.75rem 1.5rem;
+            color: #888888;
+            transition: all 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+        
+        .tab-button.active {
+            color: #00FF00;
+            border-bottom-color: #00FF00;
+        }
+        
+        .tab-button:hover {
+            color: #00FF00;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+        
+        .badge-bestseller {
+            background: linear-gradient(135deg, #00FF00, #00CC00);
+            color: #0D0D0D;
+        }
+        
+        .badge-new {
+            background: linear-gradient(135deg, #00CCFF, #0088FF);
+            color: #FFFFFF;
+        }
+        
+        .kanban-column {
+            background: rgba(17, 17, 17, 0.6);
+            border: 1px solid #222222;
+            border-radius: 0.75rem;
+            padding: 1rem;
+            min-height: 300px;
+        }
+        
+        .kanban-card {
+            background: rgba(34, 34, 34, 0.8);
+            border: 1px solid #333333;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            transition: all 0.2s ease;
+            cursor: grab;
+        }
+        
+        .kanban-card:hover {
+            border-color: #00FF00;
+            transform: scale(1.02);
+        }
+        
+        .star-rating {
+            color: #FFD700;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+        
+        .metric-card {
+            background: linear-gradient(135deg, rgba(0, 255, 0, 0.1), rgba(0, 255, 0, 0.05));
+            border: 1px solid rgba(0, 255, 0, 0.3);
+        }
+        
+        .chart-container {
+            position: relative;
+            height: 300px;
+            width: 100%;
+        }
+        
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+        
+        .status-active { background: #00FF00; box-shadow: 0 0 10px #00FF00; }
+        .status-planning { background: #FFD700; box-shadow: 0 0 10px #FFD700; }
+        .status-review { background: #00CCFF; box-shadow: 0 0 10px #00CCFF; }
+        .status-completed { background: #888888; }
+        .status-pending { background: #FF4444; }
+    </style>
+</head>
+<body class="antialiased">
+    
+    <!-- Header -->
+    <header class="border-b border-gray-800 sticky top-0 z-50 glass-card">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-3xl font-black neon-text">PULSE GRAPHIX</h1>
+                    <p class="text-sm text-gray-400 mt-1">Business Dashboard · Chicco Mutombo Kabundji</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-sm text-gray-400">Last Updated</p>
+                    <p id="lastUpdated" class="text-sm font-semibold neon-text">Loading...</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Key Metrics -->
+    <section class="container mx-auto px-6 py-8">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <div class="glass-card rounded-xl p-6 text-center metric-card">
+                <p class="text-gray-400 text-sm mb-2">Total Prospects</p>
+                <p class="text-3xl font-bold neon-text" id="totalProspects">-</p>
+                <p class="text-xs text-gray-500 mt-1"><span id="qualifiedProspects">-</span> qualified</p>
+            </div>
+            <div class="glass-card rounded-xl p-6 text-center metric-card">
+                <p class="text-gray-400 text-sm mb-2">Pipeline Value</p>
+                <p class="text-3xl font-bold neon-text">€<span id="pipelineValue">-</span></p>
+            </div>
+            <div class="glass-card rounded-xl p-6 text-center metric-card">
+                <p class="text-gray-400 text-sm mb-2">Revenue (Month)</p>
+                <p class="text-3xl font-bold text-gray-400">€<span id="revenueThisMonth">-</span></p>
+                <p class="text-xs text-gray-500 mt-1">Just launched</p>
+            </div>
+            <div class="glass-card rounded-xl p-6 text-center metric-card">
+                <p class="text-gray-400 text-sm mb-2">Shop Products</p>
+                <p class="text-3xl font-bold neon-text" id="shopProducts">-</p>
+            </div>
+            <div class="glass-card rounded-xl p-6 text-center metric-card">
+                <p class="text-gray-400 text-sm mb-2">Services</p>
+                <p class="text-3xl font-bold neon-text" id="servicesCount">-</p>
+            </div>
+            <div class="glass-card rounded-xl p-6 text-center metric-card">
+                <p class="text-gray-400 text-sm mb-2">Satisfaction</p>
+                <p class="text-3xl font-bold neon-text"><span id="clientSatisfaction">-</span>%</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tab Navigation -->
+    <nav class="container mx-auto px-6 mb-8">
+        <div class="flex space-x-1 border-b border-gray-800 overflow-x-auto">
+            <button class="tab-button active" data-tab="overview">Overview</button>
+            <button class="tab-button" data-tab="pipeline">Pipeline</button>
+            <button class="tab-button" data-tab="projects">Projects</button>
+            <button class="tab-button" data-tab="services">Services</button>
+            <button class="tab-button" data-tab="shop">Shop</button>
+            <button class="tab-button" data-tab="social">Social Media</button>
+        </div>
+    </nav>
+
+    <!-- Tab Content Container -->
+    <main class="container mx-auto px-6 pb-12">
+        
+        <!-- Overview Tab -->
+        <div id="tab-overview" class="tab-content">
+            <div class="grid lg:grid-cols-2 gap-6">
+                <!-- Revenue Overview -->
+                <div class="glass-card rounded-xl p-6">
+                    <h2 class="text-xl font-bold mb-6 flex items-center">
+                        <span class="neon-text">💰</span>
+                        <span class="ml-2">Revenue Overview</span>
+                    </h2>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm text-gray-400">Near-Term Target (€3k/mo)</span>
+                                <span class="text-sm font-semibold" id="nearTermProgress">0%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="nearTermBar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm text-gray-400">6-Month Goal (€10k/mo)</span>
+                                <span class="text-sm font-semibold" id="sixMonthProgress">0%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="sixMonthBar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="chart-container mt-8">
+                            <canvas id="revenueChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Stats -->
+                <div class="space-y-6">
+                    <div class="glass-card rounded-xl p-6">
+                        <h2 class="text-xl font-bold mb-6 flex items-center">
+                            <span class="neon-text">📊</span>
+                            <span class="ml-2">Revenue by Service</span>
+                        </h2>
+                        <div class="chart-container">
+                            <canvas id="serviceRevenueChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pipeline Tab -->
+        <div id="tab-pipeline" class="tab-content hidden">
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold mb-2">Leads Pipeline</h2>
+                <p class="text-gray-400">Drag cards between stages to update status</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" id="kanbanBoard">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Projects Tab -->
+        <div id="tab-projects" class="tab-content hidden">
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold mb-2">Projects Status</h2>
+                <p class="text-gray-400">Track active initiatives and deliverables</p>
+            </div>
+            
+            <div class="grid gap-4" id="projectsList">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Services Tab -->
+        <div id="tab-services" class="tab-content hidden">
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold mb-2">Services Pricing</h2>
+                <p class="text-gray-400">Quick reference for client proposals</p>
+            </div>
+            
+            <div class="glass-card rounded-xl overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full" id="servicesTable">
+                        <thead>
+                            <tr class="border-b border-gray-800">
+                                <th class="text-left p-4 font-semibold text-gray-400">Service</th>
+                                <th class="text-right p-4 font-semibold text-gray-400">Starter</th>
+                                <th class="text-right p-4 font-semibold text-gray-400">Pro</th>
+                                <th class="text-right p-4 font-semibold text-gray-400">Enterprise</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shop Tab -->
+        <div id="tab-shop" class="tab-content hidden">
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold mb-2">Design Shop Products</h2>
+                <p class="text-gray-400">Digital templates and resources for sale</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="shopGrid">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Social Media Tab -->
+        <div id="tab-social" class="tab-content hidden">
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold mb-2">Social Media Status</h2>
+                <p class="text-gray-400">Content calendar and platform setup</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="socialGrid">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let dashboardData = null;
+        
+        // Load data
+        async function loadData() {
+            try {
+                const response = await fetch('data.json');
+                dashboardData = await response.json();
+                renderDashboard();
+            } catch (error) {
+                console.error('Error loading data:', error);
+                alert('Failed to load dashboard data');
+            }
+        }
+        
+        // Update timestamp
+        function updateTimestamp() {
+            const now = new Date();
+            const formatted = now.toLocaleString('en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+            document.getElementById('lastUpdated').textContent = formatted;
+        }
+        
+        // Render entire dashboard
+        function renderDashboard() {
+            if (!dashboardData) return;
+            
+            // Key metrics
+            document.getElementById('totalProspects').textContent = dashboardData.keyMetrics.totalProspects + '+';
+            document.getElementById('qualifiedProspects').textContent = dashboardData.keyMetrics.qualifiedProspects;
+            document.getElementById('pipelineValue').textContent = dashboardData.keyMetrics.pipelineValue.toLocaleString();
+            document.getElementById('revenueThisMonth').textContent = dashboardData.keyMetrics.revenueThisMonth;
+            document.getElementById('shopProducts').textContent = dashboardData.keyMetrics.shopProducts;
+            document.getElementById('servicesCount').textContent = dashboardData.keyMetrics.services;
+            document.getElementById('clientSatisfaction').textContent = dashboardData.keyMetrics.clientSatisfaction;
+            
+            // Revenue progress
+            const currentRev = dashboardData.revenue.currentMonth;
+            const nearTermTarget = dashboardData.revenue.nearTermTarget;
+            const sixMonthTarget = dashboardData.revenue.sixMonthTarget;
+            
+            const nearTermPercent = (currentRev / nearTermTarget * 100).toFixed(0);
+            const sixMonthPercent = (currentRev / sixMonthTarget * 100).toFixed(0);
+            
+            document.getElementById('nearTermProgress').textContent = nearTermPercent + '%';
+            document.getElementById('sixMonthProgress').textContent = sixMonthPercent + '%';
+            
+            setTimeout(() => {
+                document.getElementById('nearTermBar').style.width = nearTermPercent + '%';
+                document.getElementById('sixMonthBar').style.width = sixMonthPercent + '%';
+            }, 100);
+            
+            renderCharts();
+            renderPipeline();
+            renderProjects();
+            renderServices();
+            renderShop();
+            renderSocial();
+            updateTimestamp();
+        }
+        
+        // Render charts
+        function renderCharts() {
+            // Revenue by Service Chart
+            const ctx1 = document.getElementById('revenueChart').getContext('2d');
+            new Chart(ctx1, {
+                type: 'bar',
+                data: {
+                    labels: dashboardData.revenue.byService.map(s => s.name),
+                    datasets: [{
+                        label: 'Pipeline Value (€)',
+                        data: dashboardData.revenue.byService.map(s => s.value),
+                        backgroundColor: 'rgba(0, 255, 0, 0.6)',
+                        borderColor: '#00FF00',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            backgroundColor: '#111111',
+                            titleColor: '#00FF00',
+                            bodyColor: '#FFFFFF',
+                            borderColor: '#222222',
+                            borderWidth: 1
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: '#222222' },
+                            ticks: { color: '#888888' }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { color: '#888888' }
+                        }
+                    }
+                }
+            });
+            
+            // Service Revenue Pie Chart
+            const ctx2 = document.getElementById('serviceRevenueChart').getContext('2d');
+            new Chart(ctx2, {
+                type: 'doughnut',
+                data: {
+                    labels: dashboardData.revenue.byService.map(s => s.name),
+                    datasets: [{
+                        data: dashboardData.revenue.byService.map(s => s.value),
+                        backgroundColor: [
+                            'rgba(0, 255, 0, 0.8)',
+                            'rgba(0, 204, 0, 0.8)',
+                            'rgba(0, 153, 0, 0.8)',
+                            'rgba(0, 255, 0, 0.5)',
+                            'rgba(0, 204, 0, 0.5)'
+                        ],
+                        borderColor: '#0D0D0D',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: { color: '#888888', padding: 15 }
+                        },
+                        tooltip: {
+                            backgroundColor: '#111111',
+                            titleColor: '#00FF00',
+                            bodyColor: '#FFFFFF',
+                            borderColor: '#222222',
+                            borderWidth: 1
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Render pipeline
+        function renderPipeline() {
+            const stages = ['Research', 'Qualified', 'Top Priority', 'Contacted', 'Proposal', 'Negotiation'];
+            const board = document.getElementById('kanbanBoard');
+            board.innerHTML = '';
+            
+            stages.forEach(stage => {
+                const column = document.createElement('div');
+                column.className = 'kanban-column';
+                column.innerHTML = `
+                    <h3 class="font-bold mb-4 text-sm uppercase tracking-wide text-gray-400">${stage}</h3>
+                    <div class="space-y-3">
+                        ${dashboardData.leads
+                            .filter(lead => lead.stage === stage)
+                            .map(lead => `
+                                <div class="kanban-card">
+                                    <h4 class="font-semibold mb-1">${lead.name}</h4>
+                                    <p class="text-sm text-gray-400 mb-2">${lead.type} · ${lead.location}</p>
+                                    <div class="flex justify-between items-center">
+                                        <div class="star-rating text-xs">${'★'.repeat(lead.rating)}${'☆'.repeat(5 - lead.rating)}</div>
+                                        <span class="text-xs font-semibold neon-text">€${lead.value}</span>
+                                    </div>
+                                </div>
+                            `).join('')}
+                    </div>
+                `;
+                board.appendChild(column);
+            });
+        }
+        
+        // Render projects
+        function renderProjects() {
+            const list = document.getElementById('projectsList');
+            list.innerHTML = dashboardData.projects.map(project => {
+                const statusClass = project.status.toLowerCase().replace(' ', '-');
+                return `
+                    <div class="glass-card rounded-xl p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="font-semibold text-lg">${project.name}</h3>
+                                <div class="flex items-center mt-2">
+                                    <span class="status-dot status-${statusClass}"></span>
+                                    <span class="text-sm text-gray-400">${project.status}</span>
+                                </div>
+                            </div>
+                            <span class="text-2xl font-bold neon-text">${project.progress}%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: ${project.progress}%"></div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        // Render services
+        function renderServices() {
+            const tbody = document.querySelector('#servicesTable tbody');
+            tbody.innerHTML = dashboardData.services.map(service => `
+                <tr class="border-b border-gray-800 hover:bg-gray-900/50 transition">
+                    <td class="p-4">
+                        <div class="flex items-center">
+                            <span class="text-2xl mr-3">${service.icon}</span>
+                            <span class="font-medium">${service.name}</span>
+                        </div>
+                    </td>
+                    <td class="p-4 text-right font-semibold">€${service.starter}${service.recurring ? '/mo' : ''}</td>
+                    <td class="p-4 text-right font-semibold neon-text">€${service.pro}${service.recurring ? '/mo' : ''}</td>
+                    <td class="p-4 text-right font-semibold">€${service.enterprise}${service.recurring ? '/mo' : ''}</td>
+                </tr>
+            `).join('');
+        }
+        
+        // Render shop
+        function renderShop() {
+            const grid = document.getElementById('shopGrid');
+            grid.innerHTML = dashboardData.shopProducts.map(product => `
+                <div class="glass-card rounded-xl p-6 hover:scale-105 transition-transform">
+                    ${product.badge ? `<span class="badge badge-${product.badge.toLowerCase()} mb-3">${product.badge}</span>` : ''}
+                    <h3 class="font-semibold mb-3 mt-2">${product.name}</h3>
+                    <div class="flex items-baseline space-x-2">
+                        <span class="text-2xl font-bold neon-text">€${product.price}</span>
+                        ${product.originalPrice ? `<span class="text-sm text-gray-500 line-through">€${product.originalPrice}</span>` : ''}
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        // Render social media
+        function renderSocial() {
+            const grid = document.getElementById('socialGrid');
+            const platforms = [
+                { name: 'LinkedIn', icon: '💼', data: dashboardData.socialMedia.linkedin },
+                { name: 'Instagram', icon: '📸', data: dashboardData.socialMedia.instagram },
+                { name: 'YouTube', icon: '🎥', data: dashboardData.socialMedia.youtube },
+                { name: 'TikTok', icon: '🎵', data: dashboardData.socialMedia.tiktok },
+                { name: 'Facebook', icon: '👥', data: dashboardData.socialMedia.facebook }
+            ];
+            
+            grid.innerHTML = platforms.map(platform => {
+                const statusClass = platform.data.status;
+                const statusDot = statusClass === 'active' ? 'status-active' : 
+                                 statusClass === 'planning' ? 'status-planning' : 
+                                 'status-pending';
+                
+                return `
+                    <div class="glass-card rounded-xl p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <span class="text-3xl mr-3">${platform.icon}</span>
+                                <h3 class="font-semibold text-lg">${platform.name}</h3>
+                            </div>
+                            <span class="status-dot ${statusDot}"></span>
+                        </div>
+                        
+                        ${platform.data.profileExists ? 
+                            `<p class="text-sm text-gray-400 mb-2">✓ Profile created</p>` :
+                            `<p class="text-sm text-gray-500 mb-2">○ Not yet created</p>`
+                        }
+                        
+                        ${platform.data.postsDrafted ? 
+                            `<p class="text-sm neon-text">${platform.data.postsDrafted} posts drafted</p>` : 
+                            platform.data.contentPlanned ?
+                            `<p class="text-sm text-gray-400">Content planned</p>` :
+                            `<p class="text-sm text-gray-500">Pending setup</p>`
+                        }
+                        
+                        ${platform.data.nextPost ? 
+                            `<p class="text-xs text-gray-500 mt-2">Next: ${new Date(platform.data.nextPost).toLocaleDateString()}</p>` : 
+                            ''
+                        }
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        // Tab switching
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const tabName = button.dataset.tab;
+                
+                // Update active button
+                document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                // Update visible content
+                document.querySelectorAll('.tab-content').forEach(content => content.classList.add('hidden'));
+                document.getElementById('tab-' + tabName).classList.remove('hidden');
+            });
+        });
+        
+        // Auto-refresh timestamp every minute
+        setInterval(updateTimestamp, 60000);
+        
+        // Initialize
+        loadData();
+    </script>
+</body>
+</html>

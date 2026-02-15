@@ -1,0 +1,245 @@
+{
+  "updated": "2026-02-15T04:17:00Z",
+  "keyMetrics": {
+    "totalProspects": 20,
+    "qualifiedProspects": 4,
+    "pipelineValue": 4500,
+    "revenueThisMonth": 0,
+    "shopProducts": 10,
+    "services": 9,
+    "clientSatisfaction": 98
+  },
+  "revenue": {
+    "currentMonth": 0,
+    "nearTermTarget": 3000,
+    "sixMonthTarget": 10000,
+    "pipelineValue": 4500,
+    "byService": [
+      { "name": "Branding", "value": 1200 },
+      { "name": "Website", "value": 1500 },
+      { "name": "Logo Design", "value": 800 },
+      { "name": "Motion Graphics", "value": 600 },
+      { "name": "Print Design", "value": 400 }
+    ]
+  },
+  "leads": [
+    {
+      "name": "C.C.P Fournil",
+      "type": "Boulangerie",
+      "location": "Torcy",
+      "rating": 5,
+      "stage": "Top Priority",
+      "value": 1500
+    },
+    {
+      "name": "Le Belvédère",
+      "type": "Boulangerie",
+      "location": "Torcy",
+      "rating": 4,
+      "stage": "Qualified",
+      "value": 1200
+    },
+    {
+      "name": "Le Trente-Six",
+      "type": "Bistro",
+      "location": "Torcy",
+      "rating": 4,
+      "stage": "Qualified",
+      "value": 1100
+    },
+    {
+      "name": "Pho Quynh",
+      "type": "Restaurant",
+      "location": "Torcy",
+      "rating": 3,
+      "stage": "Research",
+      "value": 700
+    }
+  ],
+  "projects": [
+    {
+      "name": "Animated Template Business",
+      "progress": 15,
+      "status": "Planning"
+    },
+    {
+      "name": "Prospect Pipeline (Torcy)",
+      "progress": 60,
+      "status": "Active"
+    },
+    {
+      "name": "Dashboard System",
+      "progress": 80,
+      "status": "Active"
+    },
+    {
+      "name": "Invoice/Devis Templates",
+      "progress": 100,
+      "status": "Completed"
+    },
+    {
+      "name": "LinkedIn Marketing",
+      "progress": 80,
+      "status": "Review"
+    },
+    {
+      "name": "Social Media Strategy",
+      "progress": 100,
+      "status": "Completed"
+    }
+  ],
+  "services": [
+    {
+      "name": "Logo Design",
+      "icon": "🎨",
+      "starter": 497,
+      "pro": 997,
+      "enterprise": 2497
+    },
+    {
+      "name": "Website Design",
+      "icon": "🌐",
+      "starter": 1497,
+      "pro": 2997,
+      "enterprise": 5997
+    },
+    {
+      "name": "Branding",
+      "icon": "✨",
+      "starter": 997,
+      "pro": 2497,
+      "enterprise": 4997
+    },
+    {
+      "name": "Print Design",
+      "icon": "📄",
+      "starter": 297,
+      "pro": 697,
+      "enterprise": 1497
+    },
+    {
+      "name": "Merch Design",
+      "icon": "👕",
+      "starter": 197,
+      "pro": 497,
+      "enterprise": 1497
+    },
+    {
+      "name": "Motion Graphics",
+      "icon": "🎬",
+      "starter": 497,
+      "pro": 1497,
+      "enterprise": 3997
+    },
+    {
+      "name": "Infographics",
+      "icon": "📊",
+      "starter": 297,
+      "pro": 697,
+      "enterprise": 1497
+    },
+    {
+      "name": "Social Media",
+      "icon": "📱",
+      "starter": 297,
+      "pro": 797,
+      "enterprise": 1997,
+      "recurring": true
+    },
+    {
+      "name": "Presentations",
+      "icon": "📽️",
+      "starter": 297,
+      "pro": 697,
+      "enterprise": 1497
+    }
+  ],
+  "shopProducts": [
+    {
+      "name": "Startup Landing Page Template",
+      "price": 49,
+      "originalPrice": 79,
+      "badge": "BESTSELLER"
+    },
+    {
+      "name": "Agency Portfolio Template",
+      "price": 59,
+      "originalPrice": null,
+      "badge": null
+    },
+    {
+      "name": "Instagram Starter Kit",
+      "price": 29,
+      "originalPrice": 45,
+      "badge": "BESTSELLER"
+    },
+    {
+      "name": "LinkedIn Content Pack",
+      "price": 25,
+      "originalPrice": null,
+      "badge": null
+    },
+    {
+      "name": "Minimal Brand Kit",
+      "price": 69,
+      "originalPrice": 99,
+      "badge": null
+    },
+    {
+      "name": "Pitch Deck Pro",
+      "price": 35,
+      "originalPrice": null,
+      "badge": "BESTSELLER"
+    },
+    {
+      "name": "Business Card Collection",
+      "price": 19,
+      "originalPrice": null,
+      "badge": null
+    },
+    {
+      "name": "Dashboard UI Kit",
+      "price": 79,
+      "originalPrice": 120,
+      "badge": "NEW"
+    },
+    {
+      "name": "Device Mockup Bundle",
+      "price": 39,
+      "originalPrice": null,
+      "badge": null
+    },
+    {
+      "name": "Essential Icon Set",
+      "price": 29,
+      "originalPrice": null,
+      "badge": "NEW"
+    }
+  ],
+  "socialMedia": {
+    "linkedin": {
+      "status": "active",
+      "profileExists": true,
+      "postsDrafted": 4,
+      "nextPost": "2026-02-16"
+    },
+    "instagram": {
+      "status": "planning",
+      "profileExists": true,
+      "contentPlanned": true,
+      "nextPost": "2026-02-17"
+    },
+    "youtube": {
+      "status": "pending",
+      "profileExists": false
+    },
+    "tiktok": {
+      "status": "pending",
+      "profileExists": false
+    },
+    "facebook": {
+      "status": "pending",
+      "profileExists": false
+    }
+  }
+}
