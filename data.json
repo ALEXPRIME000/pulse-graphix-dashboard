@@ -1,187 +1,420 @@
 {
-  "updated": "2026-02-17T01:29:11.948Z",
-  "lastSync": "2026-02-17T01:29:11.948Z",
-  "keyMetrics": {
-    "totalProspects": 20,
-    "qualifiedProspects": 4,
-    "pipelineValue": 4500,
-    "revenueThisMonth": 0,
-    "shopProducts": 10,
-    "services": 9,
-    "clientSatisfaction": 98,
-    "completedTasks": 20,
-    "pendingTasks": 29,
-    "workspaceFiles": 42671
+  "lastGenerated": "2026-02-17T07:29:00.348Z",
+  "tasks": {
+    "completed": [
+      {
+        "name": "**Social Media Strategy** - 8 files, 6,004 lines, 5 platforms (MASTER, LinkedIn, YouTube, Twitter/X, Facebook, TikTok, Content Ideas, Weekly Checklist)",
+        "date": "2026-02-17"
+      },
+      {
+        "name": "**Pixel-Perfect Devis Template V2** - `templates/devis-pulse-v2.html` matching Kabundji's PDF model",
+        "date": "2026-02-17"
+      },
+      {
+        "name": "**Pulse Graphix Business Brief** - Saved to `business/PULSE-GRAPHIX-BRIEF.md`",
+        "date": "2026-02-17"
+      },
+      {
+        "name": "**Context Memory System** - 3-tier architecture documented at `docs/CONTEXT-MEMORY-SYSTEM.md`",
+        "date": "2026-02-17"
+      },
+      {
+        "name": "**Agent Zero Analysis** - Full research at `docs/AGENT-ZERO-ANALYSIS.md`",
+        "date": "2026-02-17"
+      },
+      {
+        "name": "**Memory Archive Structure** - `memory/archive/` with decisions.md + lessons.md",
+        "date": "2026-02-17"
+      },
+      {
+        "name": "Dashboard V6 - 12 sections, Vercel deployment",
+        "date": "2026-02-17"
+      },
+      {
+        "name": "Template Business Strategy - €10k/mo target",
+        "date": "2026-02-17"
+      },
+      {
+        "name": "Prospect Research - 4 qualified leads ready",
+        "date": "2026-02-17"
+      },
+      {
+        "name": "CSS Animation Library - 10 animation types",
+        "date": "2026-02-17"
+      },
+      {
+        "name": "Framer Marketplace Guide",
+        "date": "2026-02-17"
+      },
+      {
+        "name": "SaaS Template - Framer-ready",
+        "date": "2026-02-17"
+      },
+      {
+        "name": "Security Audit",
+        "date": "2026-02-17"
+      },
+      {
+        "name": "n8n CRM Workflow",
+        "date": "2026-02-17"
+      },
+      {
+        "name": "4 billing templates (devis/invoice FR/EN)",
+        "date": "2026-02-17"
+      }
+    ],
+    "inProgress": [],
+    "pending": []
   },
-  "revenue": {
-    "currentMonth": 0,
-    "nearTermTarget": 3000,
-    "sixMonthTarget": 10000,
-    "pipelineValue": 4500,
-    "byService": [
+  "workspace": {
+    "totalFiles": 263,
+    "totalFolders": 741,
+    "lastCommit": "2026-02-17"
+  },
+  "memory": {
+    "files": [
+      "memory/2026-01-31.md",
+      "memory/2026-02-01.md",
+      "memory/2026-02-02.md",
+      "memory/2026-02-03.md",
+      "memory/2026-02-04.md",
+      "memory/2026-02-06.md",
+      "memory/2026-02-09.md",
+      "memory/2026-02-10.md",
+      "memory/2026-02-11.md",
+      "memory/2026-02-12.md",
+      "memory/2026-02-13-overnight.md",
+      "memory/2026-02-13.md",
+      "memory/2026-02-14-morning-briefing.md",
+      "memory/2026-02-14.md",
+      "memory/2026-02-15.md",
+      "memory/2026-02-16.md",
+      "memory/2026-02-17.md",
+      "memory/GOALS.md",
+      "memory/SUBAGENTS.md",
+      "memory/drive-backup-log.md",
+      "memory/family-children.md"
+    ],
+    "coreFiles": [
+      "MEMORY.md",
+      "TODO.md",
+      "HEARTBEAT.md",
+      "SOUL.md",
+      "USER.md"
+    ]
+  },
+  "prospects": [
+    {
+      "name": "call-kit-ready",
+      "path": "prospects/call-kit-ready.md",
+      "preview": "# 📞 CALL KIT — PRÊT À APPELER\n**Kabundji — Pulse Graphix**  \n**Date:** 16 Février 2026  \n**Mission:** Convertir 4 leads locaux en clients\n\n---\n\n## 🎯 ORDRE D'APPEL (PRIORITÉ)\n\n### 1️⃣ **C.C.P Fournil"
+    },
+    {
+      "name": "call-sheet-next-5",
+      "path": "prospects/call-sheet-next-5.md",
+      "preview": "# Prospect Call Sheet — Next 5 Priority Calls\n**Prepared:** 2026-02-14 01:35 UTC  \n**Status:** Ready for Kabundji approval\n\n---\n\n## 📞 Priority Queue\n\n### 1. C.C.P Fournil — ★★★★★ TOP PRIORITY\n| Field"
+    },
+    {
+      "name": "follow-up-email-templates",
+      "path": "prospects/follow-up-email-templates.md",
+      "preview": "# 📧 TEMPLATES EMAIL DE SUIVI — PULSE GRAPHIX\n**Kabundji — Post-Appel Prospects**  \n**Dernière mise à jour:** 16 Février 2026\n\n---\n\n## 📩 TEMPLATE A — \"Ravi d'avoir discuté\" (Lead CHAUD)\n\n**Objet:** ["
+    },
+    {
+      "name": "paris-boulangeries-research",
+      "path": "prospects/paris-boulangeries-research.md",
+      "preview": "# 🥖 Prospection Boulangeries — Paris & Île-de-France\n*Recherche active — Dernière mise à jour: 12 Février 2026*\n\n## 📊 Critères de Sélection\n- **Zone:** Paris intra-muros + Seine-et-Marne (77) — proc"
+    },
+    {
+      "name": "paris-leads",
+      "path": "prospects/paris-leads.md",
+      "preview": "# Paris Prospecting List - AI Automation, n8n & Web Development\n\n**Generated:** February 2026  \n**Target Services:** AI automation, n8n workflows, web development, MVP development\n\n---\n\n## 🎯 Priority"
+    },
+    {
+      "name": "proposal-template-boulangerie",
+      "path": "prospects/proposal-template-boulangerie.md",
+      "preview": "# 🥖 PROPOSITION COMMERCIALE — SITE WEB BOULANGERIE\n\n**Client:** [NOM DE LA BOULANGERIE]  \n**Contact:** [Prénom Nom] — [Téléphone]  \n**Adresse:** [Adresse complète]  \n**Date:** [Date du jour]  \n**Réfé"
+    },
+    {
+      "name": "proposal-template-restaurant",
+      "path": "prospects/proposal-template-restaurant.md",
+      "preview": "# 🍽️ PROPOSITION COMMERCIALE — SITE WEB RESTAURANT\n\n**Client:** [NOM DU RESTAURANT]  \n**Contact:** [Prénom Nom] — [Téléphone]  \n**Adresse:** [Adresse complète]  \n**Date:** [Date du jour]  \n**Référenc"
+    },
+    {
+      "name": "torcy-boulangeries-leads",
+      "path": "prospects/torcy-boulangeries-leads.md",
+      "preview": "# 🥖 Prospects Boulangeries — Torcy & Environs (77200)\n*Recherche Alex Prime — 12 Février 2026*\n*Document interne — À revoir par Kabundji avant contact*\n\n---\n\n## 📍 Prospects Identifiés (Zone Torcy)\n\n"
+    },
+    {
+      "name": "torcy-boulangeries",
+      "path": "prospects/torcy-boulangeries.md",
+      "preview": "# Prospect Research — Boulangeries Torcy (77200)\n*Last Updated: 2026-02-13*\n\n---\n\n## 🥖 Le Belvédère — DETAILED PROFILE\n\n### Contact Information\n| Field | Value |\n|-------|-------|\n| **Nom** | Le Belv"
+    },
+    {
+      "name": "torcy-expanded",
+      "path": "prospects/torcy-expanded.md",
+      "preview": "# 🎯 Expanded Prospect Research — Torcy & Surrounds\n*Last Updated: 2026-02-13*\n\n---\n\n## NEW PROSPECTS\n\n### 🍽️ Bistro Le Trente-Six (Restaurant)\n| Field | Value |\n|-------|-------|\n| **Type** | Bistro"
+    },
+    {
+      "name": "torcy-full-pipeline",
+      "path": "prospects/torcy-full-pipeline.md",
+      "preview": "# Pulse Graphix - Prospects Pipeline\n## Torcy (77200) & Villes Voisines - Businesses Sans Site Web\n\n**Date de Recherche:** 13 février 2026  \n**Objectif:** Trouver des commerces indépendants sans site "
+    },
+    {
+      "name": "website-proposals",
+      "path": "prospects/website-proposals.md",
+      "preview": "# 🌐 Pulse Graphix - Propositions Sites Web\n## Prospects Torcy & Communes Voisines\n\n**Document préparé pour:** Kabundji - Pulse Graphix  \n**Date:** 13 février 2026  \n**Contact Pulse Graphix:**  \n📍 3 "
+    }
+  ],
+  "drafts": [
+    {
+      "name": "LINKEDIN_PROFILE_DRAFT.md",
+      "path": "drafts/LINKEDIN_PROFILE_DRAFT.md",
+      "modified": "2026-01-31"
+    },
+    {
+      "name": "LINKEDIN_PROFILE_FINAL.md",
+      "path": "drafts/LINKEDIN_PROFILE_FINAL.md",
+      "modified": "2026-02-01"
+    },
+    {
+      "name": "MALT_PROFILE_DRAFT.md",
+      "path": "drafts/MALT_PROFILE_DRAFT.md",
+      "modified": "2026-01-31"
+    },
+    {
+      "name": "carte-visite-brief.md",
+      "path": "drafts/carte-visite-brief.md",
+      "modified": "2026-02-12"
+    },
+    {
+      "name": "cold-emails.md",
+      "path": "drafts/cold-emails.md",
+      "modified": "2026-02-05"
+    },
+    {
+      "name": "email-signature.html",
+      "path": "drafts/email-signature.html",
+      "modified": "2026-02-12"
+    },
+    {
+      "name": "gmb-optimization-checklist.md",
+      "path": "drafts/gmb-optimization-checklist.md",
+      "modified": "2026-02-12"
+    },
+    {
+      "name": "linkedin-posts-feb2026.md",
+      "path": "drafts/linkedin-posts-feb2026.md",
+      "modified": "2026-02-12"
+    },
+    {
+      "name": "linkedin-posts.md",
+      "path": "drafts/linkedin-posts.md",
+      "modified": "2026-02-05"
+    },
+    {
+      "name": "paris-prospects-2026.md",
+      "path": "drafts/paris-prospects-2026.md",
+      "modified": "2026-02-11"
+    },
+    {
+      "name": "paris-prospects.md",
+      "path": "drafts/paris-prospects.md",
+      "modified": "2026-02-05"
+    },
+    {
+      "name": "sample-devis-filled.html",
+      "path": "drafts/sample-devis-filled.html",
+      "modified": "2026-02-11"
+    },
+    {
+      "name": "service-catalog-2026.md",
+      "path": "drafts/service-catalog-2026.md",
+      "modified": "2026-02-11"
+    },
+    {
+      "name": "service-catalog.html",
+      "path": "drafts/service-catalog.html",
+      "modified": "2026-02-05"
+    },
+    {
+      "name": "social-media-image-sizes-2026.md",
+      "path": "drafts/social-media-image-sizes-2026.md",
+      "modified": "2026-02-16"
+    }
+  ],
+  "integrations": {
+    "services": [
       {
-        "name": "Branding",
-        "value": 1200
+        "name": "GitHub",
+        "status": "connected",
+        "user": "ALEXPRIME000"
       },
       {
-        "name": "Website",
-        "value": 1500
+        "name": "Vercel",
+        "status": "connected",
+        "notes": "Auto-deploy active"
       },
       {
-        "name": "Logo Design",
-        "value": 800
+        "name": "Google Workspace",
+        "status": "expired",
+        "notes": "OAuth needs browser re-auth"
       },
       {
-        "name": "Motion Graphics",
-        "value": 600
+        "name": "Telegram",
+        "status": "connected"
       },
       {
-        "name": "Print Design",
-        "value": 400
+        "name": "n8n",
+        "status": "available",
+        "url": "https://n8n.nexusaiacademy.app"
+      },
+      {
+        "name": "Brave Search",
+        "status": "connected"
+      }
+    ],
+    "models": [
+      {
+        "provider": "Anthropic",
+        "model": "Claude Opus 4.6",
+        "role": "Primary",
+        "status": "active"
+      },
+      {
+        "provider": "Groq",
+        "model": "Llama 3.3 70B",
+        "role": "Fast fallback",
+        "status": "active"
+      },
+      {
+        "provider": "NVIDIA",
+        "model": "Kimi K2.5",
+        "role": "Backup",
+        "status": "active"
+      },
+      {
+        "provider": "OpenRouter",
+        "model": "Various",
+        "role": "Fallback",
+        "status": "active"
       }
     ]
   },
-  "leads": [
-    {
-      "name": "C.C.P Fournil",
-      "type": "Boulangerie",
-      "location": "Torcy",
-      "rating": 5,
-      "stage": "Top Priority",
-      "value": 1500
-    },
-    {
-      "name": "Le Belvédère",
-      "type": "Boulangerie",
-      "location": "Torcy",
-      "rating": 4,
-      "stage": "Qualified",
-      "value": 1200
-    },
-    {
-      "name": "Le Trente-Six",
-      "type": "Bistro",
-      "location": "Torcy",
-      "rating": 4,
-      "stage": "Qualified",
-      "value": 1100
-    },
-    {
-      "name": "Pho Quynh",
-      "type": "Restaurant",
-      "location": "Torcy",
-      "rating": 3,
-      "stage": "Research",
-      "value": 700
-    }
-  ],
+  "goals": {
+    "life": [
+      {
+        "goal": "Buy house in France",
+        "target": "€300k-500k",
+        "progress": 0
+      },
+      {
+        "goal": "Holiday home abroad",
+        "target": "€100k-200k",
+        "progress": 0
+      }
+    ],
+    "business": [
+      {
+        "goal": "€10k/mo template revenue",
+        "target": "6 months",
+        "progress": 5
+      },
+      {
+        "goal": "50 artisans digitalized",
+        "target": "2026",
+        "progress": 4
+      },
+      {
+        "goal": "LinkedIn weekly posts",
+        "target": "Ongoing",
+        "progress": 20
+      },
+      {
+        "goal": "YouTube channel",
+        "target": "Q2 2026",
+        "progress": 0
+      }
+    ]
+  },
   "projects": [
     {
       "name": "Animated Template Business",
+      "status": "planning",
       "progress": 15,
-      "status": "Planning"
+      "description": "AI-powered templates on Framer/Webflow",
+      "revenue": "€10k/mo target"
     },
     {
       "name": "Prospect Pipeline (Torcy)",
+      "status": "active",
       "progress": 60,
-      "status": "Active"
+      "description": "Local business prospecting",
+      "revenue": "€2,400-4,500 pipeline"
     },
     {
       "name": "Dashboard System",
+      "status": "active",
       "progress": 80,
-      "status": "Active"
+      "description": "Real-time executive dashboard"
     },
     {
       "name": "Invoice/Devis Templates",
+      "status": "completed",
       "progress": 100,
-      "status": "Completed"
+      "description": "FR/EN templates done"
     },
     {
       "name": "LinkedIn Marketing",
+      "status": "review",
       "progress": 80,
-      "status": "Review"
-    },
-    {
-      "name": "Social Media Strategy",
-      "progress": 100,
-      "status": "Completed"
+      "description": "4 posts + profile ready for approval"
     }
   ],
-  "services": [
-    {
-      "name": "Logo Design",
-      "icon": "🎨",
-      "starter": 497,
-      "pro": 997,
-      "enterprise": 2497
-    },
-    {
-      "name": "Website Design",
-      "icon": "🌐",
-      "starter": 1497,
-      "pro": 2997,
-      "enterprise": 5997
-    },
-    {
-      "name": "Branding",
-      "icon": "✨",
-      "starter": 997,
-      "pro": 2497,
-      "enterprise": 4997
-    },
-    {
-      "name": "Print Design",
-      "icon": "📄",
-      "starter": 297,
-      "pro": 697,
-      "enterprise": 1497
-    },
-    {
-      "name": "Merch Design",
-      "icon": "👕",
-      "starter": 197,
-      "pro": 497,
-      "enterprise": 1497
-    },
-    {
-      "name": "Motion Graphics",
-      "icon": "🎬",
-      "starter": 497,
-      "pro": 1497,
-      "enterprise": 3997
-    },
-    {
-      "name": "Infographics",
-      "icon": "📊",
-      "starter": 297,
-      "pro": 697,
-      "enterprise": 1497
-    },
-    {
-      "name": "Social Media",
-      "icon": "📱",
-      "starter": 297,
-      "pro": 797,
-      "enterprise": 1997,
-      "recurring": true
-    },
-    {
-      "name": "Presentations",
-      "icon": "📽️",
-      "starter": 297,
-      "pro": 697,
-      "enterprise": 1497
-    }
+  "skills": [
+    "frontend-design",
+    "designer",
+    "shadcn-ui",
+    "color-palette",
+    "happy-hues",
+    "colors",
+    "graphic-design",
+    "openai-image-gen",
+    "weather",
+    "gog",
+    "tmux",
+    "healthcheck",
+    "skill-creator"
   ],
-  "shop": [],
-  "social": {},
-  "theme": {
-    "colors": {
-      "primary": "#00FF00",
-      "dark": "#0D0D0D",
-      "card": "#111111",
-      "border": "#222222",
-      "muted": "#888888"
+  "approvals": [
+    {
+      "item": "LinkedIn Posts (4)",
+      "file": "drafts/linkedin-posts-feb2026.md",
+      "priority": "high"
+    },
+    {
+      "item": "Prospect Outreach",
+      "file": "prospects/torcy-expanded.md",
+      "priority": "high"
+    },
+    {
+      "item": "Template Business Strategy",
+      "file": "business/template-blueprint-strategy.md",
+      "priority": "high"
+    },
+    {
+      "item": "Google OAuth Re-auth",
+      "file": "scripts/fix-oauth.sh",
+      "priority": "high"
+    },
+    {
+      "item": "LinkedIn Profile",
+      "file": "drafts/LINKEDIN_PROFILE_FINAL.md",
+      "priority": "medium"
+    },
+    {
+      "item": "Malt Profile",
+      "file": "drafts/MALT_PROFILE_DRAFT.md",
+      "priority": "medium"
     }
-  }
+  ]
 }
