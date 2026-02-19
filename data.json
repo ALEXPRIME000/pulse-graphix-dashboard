@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-02-19T01:29:43.187Z",
+  "lastUpdate": "2026-02-19T15:29:12.919Z",
   "companies": [
     {
       "name": "Pulse Graphix",
@@ -43,5 +43,6 @@
       "active": 0,
       "pending": 0
     }
-  }
+  },
+  "lastHeartbeat": "2026-02-19T15:29:12.919Z"
 }
