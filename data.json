@@ -1,6 +1,356 @@
 {
-  "lastUpdate": "2026-02-20T04:51:36.447Z",
-  "lastHeartbeat": "2026-02-20T04:51:36.447Z",
+  "lastUpdate": "2026-02-20T04:52:13.096Z",
+  "lastHeartbeat": "2026-02-20T04:52:13.096Z",
+  "keyMetrics": {
+    "totalProspects": 20,
+    "qualifiedProspects": 11,
+    "pipelineValue": 7500,
+    "revenueThisMonth": 0,
+    "shopProducts": 4,
+    "services": 6,
+    "clientSatisfaction": "N/A"
+  },
+  "revenue": {
+    "currentMonth": 0,
+    "nearTermTarget": 3000,
+    "sixMonthTarget": 10000,
+    "byService": [
+      {
+        "name": "Websites",
+        "value": 4500
+      },
+      {
+        "name": "Templates",
+        "value": 1500
+      },
+      {
+        "name": "AI Automation",
+        "value": 2000
+      },
+      {
+        "name": "Design",
+        "value": 1500
+      },
+      {
+        "name": "3D/Archi",
+        "value": 1000
+      }
+    ]
+  },
+  "leads": [
+    {
+      "name": "C.C.P Fournil",
+      "type": "Boulangerie-Pâtisserie",
+      "location": "34 Rue de Paris, 77200 Torcy",
+      "rating": 5,
+      "value": 1500,
+      "stage": "Qualified",
+      "phone": "01 60 05 28 84",
+      "webStatus": "NO WEBSITE",
+      "tier": "hot"
+    },
+    {
+      "name": "Le Belvédère",
+      "type": "Boulangerie-Pâtisserie",
+      "location": "17 Promenade du Belvédère, 77200 Torcy",
+      "rating": 5,
+      "value": 1500,
+      "stage": "Qualified",
+      "phone": "09 87 32 46 79",
+      "webStatus": "NO WEBSITE",
+      "tier": "hot"
+    },
+    {
+      "name": "Le Trente-Six",
+      "type": "Bistrot-Restaurant",
+      "location": "36 Rue de Paris, 77200 Torcy",
+      "rating": 5,
+      "value": 1500,
+      "stage": "Qualified",
+      "phone": "01 60 05 31 44",
+      "webStatus": "NO REAL WEBSITE",
+      "tier": "hot"
+    },
+    {
+      "name": "Pho Quynh",
+      "type": "Restaurant vietnamien",
+      "location": "22 Rue Pierre Mendès France, 77200 Torcy",
+      "rating": 5,
+      "value": 1500,
+      "stage": "Qualified",
+      "phone": "01 60 17 26 32",
+      "webStatus": "NO WEBSITE (FB only)",
+      "tier": "hot"
+    },
+    {
+      "name": "Bopha Coiffure Visagiste",
+      "type": "Salon coiffure",
+      "location": "12 Grande Rue, 77200 Torcy",
+      "rating": 4,
+      "value": 1200,
+      "stage": "Research",
+      "phone": "Via Planity",
+      "webStatus": "NO OWN WEBSITE (uses Planity)",
+      "tier": "warm"
+    },
+    {
+      "name": "Nina Coiffure",
+      "type": "Salon coiffure",
+      "location": "1 Promenade du Belvédère, 77200 Torcy",
+      "rating": 4,
+      "value": 1200,
+      "stage": "Research",
+      "phone": "Via Pages Jaunes",
+      "webStatus": "NO OWN WEBSITE (uses Treatwell)",
+      "tier": "warm"
+    },
+    {
+      "name": "Oukhouya Zakaria Daniel",
+      "type": "Barbier-coiffeur",
+      "location": "26 Rue de Valmy, 77200 Torcy",
+      "rating": 4,
+      "value": 1200,
+      "stage": "Research",
+      "phone": "Via Pages Jaunes",
+      "webStatus": "NO WEBSITE",
+      "tier": "warm"
+    },
+    {
+      "name": "New Look Coiffure",
+      "type": "Salon coiffure",
+      "location": "88 Rue de Paris, 77200 Torcy",
+      "rating": 4,
+      "value": 1200,
+      "stage": "Research",
+      "phone": "Via Pages Jaunes",
+      "webStatus": "NO OWN WEBSITE",
+      "tier": "warm"
+    },
+    {
+      "name": "Soleil de Bali",
+      "type": "Institut de beauté",
+      "location": "99 Rue de Paris, 77200 Torcy",
+      "rating": 4,
+      "value": 1200,
+      "stage": "Research",
+      "phone": "Via Pages Jaunes",
+      "webStatus": "NO WEBSITE",
+      "tier": "warm"
+    },
+    {
+      "name": "Maison Julia",
+      "type": "Institut de beauté",
+      "location": "11 Rue Jules Vallès, 77200 Torcy",
+      "rating": 4,
+      "value": 1200,
+      "stage": "Research",
+      "phone": "Via Pages Jaunes",
+      "webStatus": "VERIFY",
+      "tier": "warm"
+    },
+    {
+      "name": "AM Clinic",
+      "type": "Institut de beauté",
+      "location": "11-15 Place de l'Église, 77200 Torcy",
+      "rating": 4,
+      "value": 1200,
+      "stage": "Research",
+      "phone": "Via Pages Jaunes",
+      "webStatus": "VERIFY",
+      "tier": "warm"
+    },
+    {
+      "name": "Ambiance Gourmande",
+      "type": "Boulangerie-Pâtisserie",
+      "location": "9 Rue du Cèdre, 77200 Torcy",
+      "rating": 3,
+      "value": 1000,
+      "stage": "Research",
+      "phone": "Via Mappy",
+      "webStatus": "VERIFY",
+      "tier": "new"
+    },
+    {
+      "name": "Allo Pizza",
+      "type": "Pizzeria/livraison",
+      "location": "101 Rue de Paris, 77200 Torcy",
+      "rating": 3,
+      "value": 1000,
+      "stage": "Research",
+      "phone": "01 60 17 17 17",
+      "webStatus": "HAS BASIC SITE",
+      "tier": "new"
+    },
+    {
+      "name": "Alix Chocolatier Confiseur",
+      "type": "Chocolatier",
+      "location": "3 Allée des Charmes, 77200 Torcy",
+      "rating": 3,
+      "value": 1000,
+      "stage": "Research",
+      "phone": "Via Mappy",
+      "webStatus": "VERIFY",
+      "tier": "new"
+    },
+    {
+      "name": "Institut Elisabeth",
+      "type": "Institut de beauté",
+      "location": "3 Rue de la Chapelle, 77200 Torcy",
+      "rating": 2,
+      "value": 1000,
+      "stage": "Research",
+      "phone": "01 60 05 21 51",
+      "webStatus": "OUTDATED SITE (institut-elisa-elisa.fr)",
+      "tier": "cold"
+    },
+    {
+      "name": "MVS Barbier",
+      "type": "Barbier",
+      "location": "12 Grande Rue, 77200 Torcy",
+      "rating": 2,
+      "value": 1000,
+      "stage": "Research",
+      "phone": "Via Planity",
+      "webStatus": "NO OWN WEBSITE",
+      "tier": "cold"
+    },
+    {
+      "name": "Mon Coiffeur Exclusif",
+      "type": "Salon (franchise VOG)",
+      "location": "27 Rue de Paris, 77200 Torcy",
+      "rating": 2,
+      "value": 1000,
+      "stage": "Research",
+      "phone": "01 60 17 53 78",
+      "webStatus": "FRANCHISE — lower priority",
+      "tier": "cold"
+    },
+    {
+      "name": "MLV Optique",
+      "type": "Opticien",
+      "location": "3 Allée Jean-Baptiste Colbert, 77200 Torcy",
+      "rating": 2,
+      "value": 1000,
+      "stage": "Research",
+      "phone": "01 64 68 05 33",
+      "webStatus": "VERIFY",
+      "tier": "cold"
+    },
+    {
+      "name": "Salon Glamour",
+      "type": "Salon coiffure",
+      "location": "Torcy centre (exact address TBD)",
+      "rating": 2,
+      "value": 1000,
+      "stage": "Research",
+      "phone": "Via Pages Jaunes",
+      "webStatus": "NO WEBSITE",
+      "tier": "cold"
+    },
+    {
+      "name": "Actuel Flors",
+      "type": "Fleuriste",
+      "location": "Near Rue de Paris, 77200 Torcy",
+      "rating": 2,
+      "value": 1000,
+      "stage": "Research",
+      "phone": "Via OpenStreetMap",
+      "webStatus": "VERIFY",
+      "tier": "cold"
+    }
+  ],
+  "shopProducts": [
+    {
+      "name": "SaaS Landing Page",
+      "price": 79,
+      "badge": "New"
+    },
+    {
+      "name": "Restaurant Template",
+      "price": 49,
+      "badge": "Popular"
+    },
+    {
+      "name": "Portfolio Template",
+      "price": 59,
+      "badge": ""
+    },
+    {
+      "name": "Business Card Set",
+      "price": 29,
+      "badge": ""
+    }
+  ],
+  "socialMedia": {
+    "linkedin": {
+      "status": "active",
+      "profileExists": true,
+      "postsDrafted": 5,
+      "contentPlanned": true
+    },
+    "instagram": {
+      "status": "active",
+      "profileExists": true,
+      "postsDrafted": 0,
+      "contentPlanned": true
+    },
+    "youtube": {
+      "status": "planning",
+      "profileExists": false,
+      "postsDrafted": 0,
+      "contentPlanned": true
+    },
+    "tiktok": {
+      "status": "planning",
+      "profileExists": false,
+      "postsDrafted": 0,
+      "contentPlanned": true
+    },
+    "facebook": {
+      "status": "planning",
+      "profileExists": false,
+      "postsDrafted": 0,
+      "contentPlanned": true
+    }
+  },
+  "services": [
+    {
+      "name": "Website Creation",
+      "price": "€1,497 - €5,997",
+      "description": "Responsive, modern websites",
+      "status": "active"
+    },
+    {
+      "name": "Mobile App Development",
+      "price": "€3,000+",
+      "description": "Android, Flutter cross-platform",
+      "status": "active"
+    },
+    {
+      "name": "AI Automation",
+      "price": "€2,000+",
+      "description": "n8n workflows, chatbots, AI agents",
+      "status": "active"
+    },
+    {
+      "name": "Graphic Design",
+      "price": "€500+",
+      "description": "Branding, logos, marketing visuals",
+      "status": "active"
+    },
+    {
+      "name": "3D Visualization",
+      "price": "€1,500+",
+      "description": "Architectural rendering, set design",
+      "status": "active"
+    },
+    {
+      "name": "Template Sales",
+      "price": "€49-199",
+      "description": "Framer/Webflow premium templates",
+      "status": "planned"
+    }
+  ],
   "company": {
     "name": "Pulse Graphix",
     "tagline": "Creative Agency & Digital Solutions",
@@ -575,44 +925,6 @@
       "status": "review",
       "progress": 80,
       "description": "Call scripts, email templates, objection handling"
-    }
-  ],
-  "services": [
-    {
-      "name": "Website Creation",
-      "price": "€1,497 - €5,997",
-      "description": "Responsive, modern websites",
-      "status": "active"
-    },
-    {
-      "name": "Mobile App Development",
-      "price": "€3,000+",
-      "description": "Android, Flutter cross-platform",
-      "status": "active"
-    },
-    {
-      "name": "AI Automation",
-      "price": "€2,000+",
-      "description": "n8n workflows, chatbots, AI agents",
-      "status": "active"
-    },
-    {
-      "name": "Graphic Design",
-      "price": "€500+",
-      "description": "Branding, logos, marketing visuals",
-      "status": "active"
-    },
-    {
-      "name": "3D Visualization",
-      "price": "€1,500+",
-      "description": "Architectural rendering, set design",
-      "status": "active"
-    },
-    {
-      "name": "Template Sales",
-      "price": "€49-199",
-      "description": "Framer/Webflow premium templates",
-      "status": "planned"
     }
   ],
   "goals": {

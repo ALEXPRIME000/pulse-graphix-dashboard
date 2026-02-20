@@ -281,6 +281,117 @@
             </div>
         </div>
 
+        <!-- Prospects Tab -->
+        <div id="tab-prospects" class="tab-content hidden">
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold mb-2">Prospect Leads (20 Total)</h2>
+                <p class="text-gray-400">All 20 local businesses organized by tier and readiness</p>
+            </div>
+            
+            <!-- Tier Filter Buttons -->
+            <div class="flex gap-3 mb-6">
+                <button onclick="filterProspects('all')" class="px-4 py-2 rounded-lg bg-gray-800 text-white text-sm font-semibold hover:bg-green-600 transition" id="filter-all">All (20)</button>
+                <button onclick="filterProspects('hot')" class="px-4 py-2 rounded-lg bg-gray-800 text-white text-sm font-semibold hover:bg-red-600 transition" id="filter-hot">🔥 Hot (4)</button>
+                <button onclick="filterProspects('warm')" class="px-4 py-2 rounded-lg bg-gray-800 text-white text-sm font-semibold hover:bg-orange-600 transition" id="filter-warm">🟠 Warm (7)</button>
+                <button onclick="filterProspects('new')" class="px-4 py-2 rounded-lg bg-gray-800 text-white text-sm font-semibold hover:bg-blue-600 transition" id="filter-new">🆕 New (3)</button>
+                <button onclick="filterProspects('cold')" class="px-4 py-2 rounded-lg bg-gray-800 text-white text-sm font-semibold hover:bg-gray-500 transition" id="filter-cold">❄️ Cold (6)</button>
+            </div>
+            
+            <!-- Prospects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="prospectsList">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Tasks Tab -->
+        <div id="tab-tasks" class="tab-content hidden">
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold mb-2">Task Management</h2>
+                <p class="text-gray-400">Blocked, pending, and completed tasks</p>
+            </div>
+            
+            <!-- Task Stats -->
+            <div class="grid grid-cols-3 gap-4 mb-6">
+                <div class="glass-card rounded-xl p-5 text-center">
+                    <div class="text-red-400 text-4xl font-bold" id="blockedCount">-</div>
+                    <div class="text-sm text-gray-400 mt-2">Blocked</div>
+                </div>
+                <div class="glass-card rounded-xl p-5 text-center">
+                    <div class="text-yellow-400 text-4xl font-bold" id="pendingCount">-</div>
+                    <div class="text-sm text-gray-400 mt-2">Pending</div>
+                </div>
+                <div class="glass-card rounded-xl p-5 text-center">
+                    <div class="neon-text text-4xl font-bold" id="completedCount">-</div>
+                    <div class="text-sm text-gray-400 mt-2">Completed</div>
+                </div>
+            </div>
+            
+            <!-- Blocked Tasks -->
+            <div class="mb-6">
+                <h3 class="text-lg font-bold mb-4 flex items-center">
+                    <span class="text-red-400">🚫</span>
+                    <span class="ml-2">Blocked Items (Need Approval)</span>
+                </h3>
+                <div class="space-y-3" id="blockedTasksList">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Pending Tasks -->
+            <div class="mb-6">
+                <h3 class="text-lg font-bold mb-4 flex items-center">
+                    <span class="text-yellow-400">⏳</span>
+                    <span class="ml-2">Pending Tasks</span>
+                </h3>
+                <div class="space-y-3" id="pendingTasksList">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Completed Tasks -->
+            <div>
+                <h3 class="text-lg font-bold mb-4 flex items-center">
+                    <span class="neon-text">✅</span>
+                    <span class="ml-2">Recently Completed</span>
+                </h3>
+                <div class="space-y-2" id="completedTasksList">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Marketing Tab -->
+        <div id="tab-marketing" class="tab-content hidden">
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold mb-2">LinkedIn Marketing</h2>
+                <p class="text-gray-400">5 ready-to-publish LinkedIn posts</p>
+            </div>
+            
+            <!-- LinkedIn Posts -->
+            <div class="grid md:grid-cols-2 gap-6" id="linkedinPostsList">
+                <!-- Populated by JavaScript -->
+            </div>
+            
+            <!-- Profile Status -->
+            <div class="mt-8 glass-card rounded-xl p-6">
+                <h3 class="text-lg font-bold mb-4">LinkedIn Profile Status</h3>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div>
+                        <div class="text-sm text-gray-400 mb-1">Status</div>
+                        <div class="text-lg font-semibold text-yellow-400">Needs Optimization</div>
+                    </div>
+                    <div>
+                        <div class="text-sm text-gray-400 mb-1">Connections</div>
+                        <div class="text-lg font-semibold">0 / 200 target</div>
+                    </div>
+                    <div>
+                        <div class="text-sm text-gray-400 mb-1">Posts Drafted</div>
+                        <div class="text-lg font-semibold neon-text">5 ready</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Pipeline Tab -->
         <div id="tab-pipeline" class="tab-content hidden">
             <div class="mb-6">
@@ -414,6 +525,9 @@
             }, 100);
             
             renderCharts();
+            renderProspects();
+            renderTasks();
+            renderMarketing();
             renderPipeline();
             renderProjects();
             renderServices();
