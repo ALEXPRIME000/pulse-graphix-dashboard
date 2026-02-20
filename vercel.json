@@ -1,6 +1,9 @@
 {
   "version": 2,
   "public": true,
+  "buildCommand": "",
+  "installCommand": "",
+  "outputDirectory": ".",
   "headers": [
     {
       "source": "/(.*).json",
@@ -10,7 +13,7 @@
       ]
     },
     {
-      "source": "/index.html",
+      "source": "/(.*)",
       "headers": [
         { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
       ]
