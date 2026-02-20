@@ -1,14 +1,13 @@
 {
-  "lastUpdate": "2026-02-20T04:53:25.039Z",
-  "lastHeartbeat": "2026-02-20T04:53:25.039Z",
+  "lastGenerated": "2026-02-20T04:53:35.228Z",
   "keyMetrics": {
     "totalProspects": 20,
     "qualifiedProspects": 11,
-    "pipelineValue": 7500,
+    "pipelineValue": 37357,
     "revenueThisMonth": 0,
-    "shopProducts": 4,
-    "services": 6,
-    "clientSatisfaction": "N/A"
+    "shopProducts": 0,
+    "services": 5,
+    "clientSatisfaction": 100
   },
   "revenue": {
     "currentMonth": 0,
@@ -16,816 +15,546 @@
     "sixMonthTarget": 10000,
     "byService": [
       {
-        "name": "Websites",
+        "name": "Website Design",
+        "value": 12000
+      },
+      {
+        "name": "Branding",
+        "value": 6000
+      },
+      {
+        "name": "E-commerce",
         "value": 4500
       },
       {
-        "name": "Templates",
-        "value": 1500
+        "name": "SEO/Marketing",
+        "value": 3000
       },
       {
-        "name": "AI Automation",
-        "value": 2000
-      },
-      {
-        "name": "Design",
-        "value": 1500
-      },
-      {
-        "name": "3D/Archi",
-        "value": 1000
+        "name": "Maintenance",
+        "value": 3000
       }
     ]
   },
-  "leads": [
+  "prospectLeads": [
     {
+      "id": 1,
       "name": "C.C.P Fournil",
       "type": "Boulangerie-Pâtisserie",
-      "location": "34 Rue de Paris, 77200 Torcy",
-      "rating": 5,
-      "value": 1500,
-      "stage": "Qualified",
+      "address": "34 Rue de Paris, 77200 Torcy",
       "phone": "01 60 05 28 84",
       "webStatus": "NO WEBSITE",
-      "tier": "hot"
+      "tier": "hot",
+      "estimatedValue": 2040,
+      "rating": 5,
+      "stage": "Top Priority",
+      "location": "Torcy"
     },
     {
+      "id": 2,
       "name": "Le Belvédère",
       "type": "Boulangerie-Pâtisserie",
-      "location": "17 Promenade du Belvédère, 77200 Torcy",
-      "rating": 5,
-      "value": 1500,
-      "stage": "Qualified",
+      "address": "17 Promenade du Belvédère, 77200 Torcy",
       "phone": "09 87 32 46 79",
       "webStatus": "NO WEBSITE",
-      "tier": "hot"
+      "tier": "hot",
+      "estimatedValue": 2260,
+      "rating": 5,
+      "stage": "Top Priority",
+      "location": "Torcy"
     },
     {
+      "id": 3,
       "name": "Le Trente-Six",
       "type": "Bistrot-Restaurant",
-      "location": "36 Rue de Paris, 77200 Torcy",
-      "rating": 5,
-      "value": 1500,
-      "stage": "Qualified",
+      "address": "36 Rue de Paris, 77200 Torcy",
       "phone": "01 60 05 31 44",
       "webStatus": "NO REAL WEBSITE",
-      "tier": "hot"
+      "tier": "hot",
+      "estimatedValue": 1918,
+      "rating": 5,
+      "stage": "Top Priority",
+      "location": "Torcy"
     },
     {
+      "id": 4,
       "name": "Pho Quynh",
       "type": "Restaurant vietnamien",
-      "location": "22 Rue Pierre Mendès France, 77200 Torcy",
-      "rating": 5,
-      "value": 1500,
-      "stage": "Qualified",
+      "address": "22 Rue Pierre Mendès France, 77200 Torcy",
       "phone": "01 60 17 26 32",
       "webStatus": "NO WEBSITE (FB only)",
-      "tier": "hot"
+      "tier": "hot",
+      "estimatedValue": 2138,
+      "rating": 5,
+      "stage": "Top Priority",
+      "location": "Torcy"
     },
     {
+      "id": 5,
       "name": "Bopha Coiffure Visagiste",
       "type": "Salon coiffure",
-      "location": "12 Grande Rue, 77200 Torcy",
-      "rating": 4,
-      "value": 1200,
-      "stage": "Research",
+      "address": "12 Grande Rue, 77200 Torcy",
       "phone": "Via Planity",
       "webStatus": "NO OWN WEBSITE (uses Planity)",
-      "tier": "warm"
+      "tier": "warm",
+      "estimatedValue": 1766,
+      "rating": 4,
+      "stage": "Research",
+      "location": "Torcy"
     },
     {
+      "id": 6,
       "name": "Nina Coiffure",
       "type": "Salon coiffure",
-      "location": "1 Promenade du Belvédère, 77200 Torcy",
-      "rating": 4,
-      "value": 1200,
-      "stage": "Research",
+      "address": "1 Promenade du Belvédère, 77200 Torcy",
       "phone": "Via Pages Jaunes",
       "webStatus": "NO OWN WEBSITE (uses Treatwell)",
-      "tier": "warm"
+      "tier": "warm",
+      "estimatedValue": 1990,
+      "rating": 4,
+      "stage": "Research",
+      "location": "Torcy"
     },
     {
+      "id": 7,
       "name": "Oukhouya Zakaria Daniel",
       "type": "Barbier-coiffeur",
-      "location": "26 Rue de Valmy, 77200 Torcy",
-      "rating": 4,
-      "value": 1200,
-      "stage": "Research",
+      "address": "26 Rue de Valmy, 77200 Torcy",
       "phone": "Via Pages Jaunes",
       "webStatus": "NO WEBSITE",
-      "tier": "warm"
+      "tier": "warm",
+      "estimatedValue": 1682,
+      "rating": 4,
+      "stage": "Research",
+      "location": "Torcy"
     },
     {
+      "id": 8,
       "name": "New Look Coiffure",
       "type": "Salon coiffure",
-      "location": "88 Rue de Paris, 77200 Torcy",
-      "rating": 4,
-      "value": 1200,
-      "stage": "Research",
+      "address": "88 Rue de Paris, 77200 Torcy",
       "phone": "Via Pages Jaunes",
       "webStatus": "NO OWN WEBSITE",
-      "tier": "warm"
+      "tier": "warm",
+      "estimatedValue": 1370,
+      "rating": 4,
+      "stage": "Research",
+      "location": "Torcy"
     },
     {
+      "id": 9,
       "name": "Soleil de Bali",
       "type": "Institut de beauté",
-      "location": "99 Rue de Paris, 77200 Torcy",
-      "rating": 4,
-      "value": 1200,
-      "stage": "Research",
+      "address": "99 Rue de Paris, 77200 Torcy",
       "phone": "Via Pages Jaunes",
       "webStatus": "NO WEBSITE",
-      "tier": "warm"
+      "tier": "warm",
+      "estimatedValue": 1492,
+      "rating": 4,
+      "stage": "Research",
+      "location": "Torcy"
     },
     {
+      "id": 10,
       "name": "Maison Julia",
       "type": "Institut de beauté",
-      "location": "11 Rue Jules Vallès, 77200 Torcy",
-      "rating": 4,
-      "value": 1200,
-      "stage": "Research",
+      "address": "11 Rue Jules Vallès, 77200 Torcy",
       "phone": "Via Pages Jaunes",
       "webStatus": "VERIFY",
-      "tier": "warm"
+      "tier": "warm",
+      "estimatedValue": 1481,
+      "rating": 4,
+      "stage": "Research",
+      "location": "Torcy"
     },
     {
+      "id": 11,
       "name": "AM Clinic",
       "type": "Institut de beauté",
-      "location": "11-15 Place de l'Église, 77200 Torcy",
-      "rating": 4,
-      "value": 1200,
-      "stage": "Research",
+      "address": "11-15 Place de l'Église, 77200 Torcy",
       "phone": "Via Pages Jaunes",
       "webStatus": "VERIFY",
-      "tier": "warm"
+      "tier": "warm",
+      "estimatedValue": 1600,
+      "rating": 4,
+      "stage": "Research",
+      "location": "Torcy"
     },
     {
+      "id": 12,
       "name": "Ambiance Gourmande",
       "type": "Boulangerie-Pâtisserie",
-      "location": "9 Rue du Cèdre, 77200 Torcy",
-      "rating": 3,
-      "value": 1000,
-      "stage": "Research",
+      "address": "9 Rue du Cèdre, 77200 Torcy",
       "phone": "Via Mappy",
       "webStatus": "VERIFY",
-      "tier": "new"
+      "tier": "new",
+      "estimatedValue": 1985,
+      "rating": 4,
+      "stage": "Research",
+      "location": "Torcy"
     },
     {
+      "id": 13,
       "name": "Allo Pizza",
       "type": "Pizzeria/livraison",
-      "location": "101 Rue de Paris, 77200 Torcy",
-      "rating": 3,
-      "value": 1000,
-      "stage": "Research",
+      "address": "101 Rue de Paris, 77200 Torcy",
       "phone": "01 60 17 17 17",
       "webStatus": "HAS BASIC SITE",
-      "tier": "new"
+      "tier": "new",
+      "estimatedValue": 1888,
+      "rating": 4,
+      "stage": "Research",
+      "location": "Torcy"
     },
     {
+      "id": 14,
       "name": "Alix Chocolatier Confiseur",
       "type": "Chocolatier",
-      "location": "3 Allée des Charmes, 77200 Torcy",
-      "rating": 3,
-      "value": 1000,
-      "stage": "Research",
+      "address": "3 Allée des Charmes, 77200 Torcy",
       "phone": "Via Mappy",
       "webStatus": "VERIFY",
-      "tier": "new"
+      "tier": "new",
+      "estimatedValue": 1540,
+      "rating": 4,
+      "stage": "Research",
+      "location": "Torcy"
     },
     {
+      "id": 15,
       "name": "Institut Elisabeth",
       "type": "Institut de beauté",
-      "location": "3 Rue de la Chapelle, 77200 Torcy",
-      "rating": 2,
-      "value": 1000,
-      "stage": "Research",
+      "address": "3 Rue de la Chapelle, 77200 Torcy",
       "phone": "01 60 05 21 51",
       "webStatus": "OUTDATED SITE (institut-elisa-elisa.fr)",
-      "tier": "cold"
+      "tier": "cold",
+      "estimatedValue": 2281,
+      "rating": 3,
+      "stage": "Research",
+      "location": "Torcy"
     },
     {
+      "id": 16,
       "name": "MVS Barbier",
       "type": "Barbier",
-      "location": "12 Grande Rue, 77200 Torcy",
-      "rating": 2,
-      "value": 1000,
-      "stage": "Research",
+      "address": "12 Grande Rue, 77200 Torcy",
       "phone": "Via Planity",
       "webStatus": "NO OWN WEBSITE",
-      "tier": "cold"
+      "tier": "cold",
+      "estimatedValue": 2326,
+      "rating": 3,
+      "stage": "Research",
+      "location": "Torcy"
     },
     {
+      "id": 17,
       "name": "Mon Coiffeur Exclusif",
       "type": "Salon (franchise VOG)",
-      "location": "27 Rue de Paris, 77200 Torcy",
-      "rating": 2,
-      "value": 1000,
-      "stage": "Research",
+      "address": "27 Rue de Paris, 77200 Torcy",
       "phone": "01 60 17 53 78",
       "webStatus": "FRANCHISE — lower priority",
-      "tier": "cold"
+      "tier": "cold",
+      "estimatedValue": 2306,
+      "rating": 3,
+      "stage": "Research",
+      "location": "Torcy"
     },
     {
+      "id": 18,
       "name": "MLV Optique",
       "type": "Opticien",
-      "location": "3 Allée Jean-Baptiste Colbert, 77200 Torcy",
-      "rating": 2,
-      "value": 1000,
-      "stage": "Research",
+      "address": "3 Allée Jean-Baptiste Colbert, 77200 Torcy",
       "phone": "01 64 68 05 33",
       "webStatus": "VERIFY",
-      "tier": "cold"
+      "tier": "cold",
+      "estimatedValue": 1826,
+      "rating": 3,
+      "stage": "Research",
+      "location": "Torcy"
     },
     {
+      "id": 19,
       "name": "Salon Glamour",
       "type": "Salon coiffure",
-      "location": "Torcy centre (exact address TBD)",
-      "rating": 2,
-      "value": 1000,
-      "stage": "Research",
+      "address": "Torcy centre (exact address TBD)",
       "phone": "Via Pages Jaunes",
       "webStatus": "NO WEBSITE",
-      "tier": "cold"
+      "tier": "cold",
+      "estimatedValue": 2175,
+      "rating": 3,
+      "stage": "Research",
+      "location": "Torcy"
     },
     {
+      "id": 20,
       "name": "Actuel Flors",
       "type": "Fleuriste",
-      "location": "Near Rue de Paris, 77200 Torcy",
-      "rating": 2,
-      "value": 1000,
-      "stage": "Research",
+      "address": "Near Rue de Paris, 77200 Torcy",
       "phone": "Via OpenStreetMap",
       "webStatus": "VERIFY",
-      "tier": "cold"
+      "tier": "cold",
+      "estimatedValue": 1293,
+      "rating": 3,
+      "stage": "Research",
+      "location": "Torcy"
     }
   ],
-  "shopProducts": [
-    {
-      "name": "SaaS Landing Page",
-      "price": 79,
-      "badge": "New"
-    },
-    {
-      "name": "Restaurant Template",
-      "price": 49,
-      "badge": "Popular"
-    },
-    {
-      "name": "Portfolio Template",
-      "price": 59,
-      "badge": ""
-    },
-    {
-      "name": "Business Card Set",
-      "price": 29,
-      "badge": ""
-    }
-  ],
-  "socialMedia": {
-    "linkedin": {
-      "status": "active",
-      "profileExists": true,
-      "postsDrafted": 5,
-      "contentPlanned": true
-    },
-    "instagram": {
-      "status": "active",
-      "profileExists": true,
-      "postsDrafted": 0,
-      "contentPlanned": true
-    },
-    "youtube": {
-      "status": "planning",
-      "profileExists": false,
-      "postsDrafted": 0,
-      "contentPlanned": true
-    },
-    "tiktok": {
-      "status": "planning",
-      "profileExists": false,
-      "postsDrafted": 0,
-      "contentPlanned": true
-    },
-    "facebook": {
-      "status": "planning",
-      "profileExists": false,
-      "postsDrafted": 0,
-      "contentPlanned": true
-    }
-  },
-  "services": [
-    {
-      "name": "Website Creation",
-      "price": "€1,497 - €5,997",
-      "description": "Responsive, modern websites",
-      "status": "active"
-    },
-    {
-      "name": "Mobile App Development",
-      "price": "€3,000+",
-      "description": "Android, Flutter cross-platform",
-      "status": "active"
-    },
-    {
-      "name": "AI Automation",
-      "price": "€2,000+",
-      "description": "n8n workflows, chatbots, AI agents",
-      "status": "active"
-    },
-    {
-      "name": "Graphic Design",
-      "price": "€500+",
-      "description": "Branding, logos, marketing visuals",
-      "status": "active"
-    },
-    {
-      "name": "3D Visualization",
-      "price": "€1,500+",
-      "description": "Architectural rendering, set design",
-      "status": "active"
-    },
-    {
-      "name": "Template Sales",
-      "price": "€49-199",
-      "description": "Framer/Webflow premium templates",
-      "status": "planned"
-    }
-  ],
-  "company": {
-    "name": "Pulse Graphix",
-    "tagline": "Creative Agency & Digital Solutions",
-    "address": "3 Rue Jacques Prévert, 77200 Torcy",
-    "monthlyTarget": "€10,000",
-    "status": "active"
-  },
-  "companies": [
-    {
-      "name": "Pulse Graphix",
-      "status": "active",
-      "focus": "Creative agency & template marketplace",
-      "monthlyTarget": "€10,000",
-      "progress": 20
-    },
-    {
-      "name": "Nexus AI Academy",
-      "status": "active",
-      "focus": "AI-powered LMS platform",
-      "monthlyTarget": "TBD",
-      "progress": 10
-    },
-    {
-      "name": "Invest in Congo",
-      "status": "planning",
-      "focus": "DRC investment platform",
-      "monthlyTarget": "TBD",
-      "progress": 5
-    },
-    {
-      "name": "Pulse Architects",
-      "status": "planning",
-      "focus": "Architectural plans marketplace",
-      "monthlyTarget": "TBD",
-      "progress": 5
-    }
-  ],
-  "prospects": {
-    "total": 20,
-    "hot": 4,
-    "warm": 7,
-    "new": 9,
-    "leads": [
-      {
-        "id": 1,
-        "name": "C.C.P Fournil",
-        "type": "Boulangerie-Pâtisserie",
-        "address": "34 Rue de Paris, 77200 Torcy",
-        "phone": "01 60 05 28 84",
-        "webStatus": "NO WEBSITE",
-        "tier": "hot"
-      },
-      {
-        "id": 2,
-        "name": "Le Belvédère",
-        "type": "Boulangerie-Pâtisserie",
-        "address": "17 Promenade du Belvédère, 77200 Torcy",
-        "phone": "09 87 32 46 79",
-        "webStatus": "NO WEBSITE",
-        "tier": "hot"
-      },
-      {
-        "id": 3,
-        "name": "Le Trente-Six",
-        "type": "Bistrot-Restaurant",
-        "address": "36 Rue de Paris, 77200 Torcy",
-        "phone": "01 60 05 31 44",
-        "webStatus": "NO REAL WEBSITE",
-        "tier": "hot"
-      },
-      {
-        "id": 4,
-        "name": "Pho Quynh",
-        "type": "Restaurant vietnamien",
-        "address": "22 Rue Pierre Mendès France, 77200 Torcy",
-        "phone": "01 60 17 26 32",
-        "webStatus": "NO WEBSITE (FB only)",
-        "tier": "hot"
-      },
-      {
-        "id": 5,
-        "name": "Bopha Coiffure Visagiste",
-        "type": "Salon coiffure",
-        "address": "12 Grande Rue, 77200 Torcy",
-        "phone": "Via Planity",
-        "webStatus": "NO OWN WEBSITE (uses Planity)",
-        "tier": "warm"
-      },
-      {
-        "id": 6,
-        "name": "Nina Coiffure",
-        "type": "Salon coiffure",
-        "address": "1 Promenade du Belvédère, 77200 Torcy",
-        "phone": "Via Pages Jaunes",
-        "webStatus": "NO OWN WEBSITE (uses Treatwell)",
-        "tier": "warm"
-      },
-      {
-        "id": 7,
-        "name": "Oukhouya Zakaria Daniel",
-        "type": "Barbier-coiffeur",
-        "address": "26 Rue de Valmy, 77200 Torcy",
-        "phone": "Via Pages Jaunes",
-        "webStatus": "NO WEBSITE",
-        "tier": "warm"
-      },
-      {
-        "id": 8,
-        "name": "New Look Coiffure",
-        "type": "Salon coiffure",
-        "address": "88 Rue de Paris, 77200 Torcy",
-        "phone": "Via Pages Jaunes",
-        "webStatus": "NO OWN WEBSITE",
-        "tier": "warm"
-      },
-      {
-        "id": 9,
-        "name": "Soleil de Bali",
-        "type": "Institut de beauté",
-        "address": "99 Rue de Paris, 77200 Torcy",
-        "phone": "Via Pages Jaunes",
-        "webStatus": "NO WEBSITE",
-        "tier": "warm"
-      },
-      {
-        "id": 10,
-        "name": "Maison Julia",
-        "type": "Institut de beauté",
-        "address": "11 Rue Jules Vallès, 77200 Torcy",
-        "phone": "Via Pages Jaunes",
-        "webStatus": "VERIFY",
-        "tier": "warm"
-      },
-      {
-        "id": 11,
-        "name": "AM Clinic",
-        "type": "Institut de beauté",
-        "address": "11-15 Place de l'Église, 77200 Torcy",
-        "phone": "Via Pages Jaunes",
-        "webStatus": "VERIFY",
-        "tier": "warm"
-      },
-      {
-        "id": 12,
-        "name": "Ambiance Gourmande",
-        "type": "Boulangerie-Pâtisserie",
-        "address": "9 Rue du Cèdre, 77200 Torcy",
-        "phone": "Via Mappy",
-        "webStatus": "VERIFY",
-        "tier": "new"
-      },
-      {
-        "id": 13,
-        "name": "Allo Pizza",
-        "type": "Pizzeria/livraison",
-        "address": "101 Rue de Paris, 77200 Torcy",
-        "phone": "01 60 17 17 17",
-        "webStatus": "HAS BASIC SITE",
-        "tier": "new"
-      },
-      {
-        "id": 14,
-        "name": "Alix Chocolatier Confiseur",
-        "type": "Chocolatier",
-        "address": "3 Allée des Charmes, 77200 Torcy",
-        "phone": "Via Mappy",
-        "webStatus": "VERIFY",
-        "tier": "new"
-      },
-      {
-        "id": 15,
-        "name": "Institut Elisabeth",
-        "type": "Institut de beauté",
-        "address": "3 Rue de la Chapelle, 77200 Torcy",
-        "phone": "01 60 05 21 51",
-        "webStatus": "OUTDATED SITE (institut-elisa-elisa.fr)",
-        "tier": "cold"
-      },
-      {
-        "id": 16,
-        "name": "MVS Barbier",
-        "type": "Barbier",
-        "address": "12 Grande Rue, 77200 Torcy",
-        "phone": "Via Planity",
-        "webStatus": "NO OWN WEBSITE",
-        "tier": "cold"
-      },
-      {
-        "id": 17,
-        "name": "Mon Coiffeur Exclusif",
-        "type": "Salon (franchise VOG)",
-        "address": "27 Rue de Paris, 77200 Torcy",
-        "phone": "01 60 17 53 78",
-        "webStatus": "FRANCHISE — lower priority",
-        "tier": "cold"
-      },
-      {
-        "id": 18,
-        "name": "MLV Optique",
-        "type": "Opticien",
-        "address": "3 Allée Jean-Baptiste Colbert, 77200 Torcy",
-        "phone": "01 64 68 05 33",
-        "webStatus": "VERIFY",
-        "tier": "cold"
-      },
-      {
-        "id": 19,
-        "name": "Salon Glamour",
-        "type": "Salon coiffure",
-        "address": "Torcy centre (exact address TBD)",
-        "phone": "Via Pages Jaunes",
-        "webStatus": "NO WEBSITE",
-        "tier": "cold"
-      },
-      {
-        "id": 20,
-        "name": "Actuel Flors",
-        "type": "Fleuriste",
-        "address": "Near Rue de Paris, 77200 Torcy",
-        "phone": "Via OpenStreetMap",
-        "webStatus": "VERIFY",
-        "tier": "cold"
-      }
-    ],
-    "revenueProjection": {
-      "conservative": "€4,500",
-      "moderate": "€7,500",
-      "optimistic": "€12,000"
-    }
-  },
   "tasks": {
-    "completed": [
-      {
-        "name": "Dashboard Always Live - ✅ Cron job set up for 2-hour auto-sync",
-        "date": "2026-02-20"
-      },
-      {
-        "name": "Trim MEMORY.md - Reduced to 99 lines ✅ (Feb 15)",
-        "date": "2026-02-20"
-      },
-      {
-        "name": "Create Pulse Graphix Dashboard — ✅ LIVE on Vercel (Feb 16)",
-        "date": "2026-02-20"
-      },
-      {
-        "name": "Save Pulse Architects Brief — Company #4 identified ✅, brief saved (Feb 15)",
-        "date": "2026-02-20"
-      },
-      {
-        "name": "Create Pulse Architects Dashboard — ✅ LIVE on Vercel (Feb 16)",
-        "date": "2026-02-20"
-      },
-      {
-        "name": "Create Unified Portal — ✅ LIVE on Vercel (Feb 16)",
-        "date": "2026-02-20"
-      },
-      {
-        "name": "Create 5 LinkedIn Posts - ✅ Created Feb 20",
-        "date": "2026-02-20"
-      },
-      {
-        "name": "Prospect Call Preparation - ✅ APPROVED Feb 16! Prepping now",
-        "date": "2026-02-20"
-      },
-      {
-        "name": "Create Client Proposal Template - ✅ Created Feb 19",
-        "date": "2026-02-20"
-      },
-      {
-        "name": "Expand Prospect List to 20 - ✅ Compiled Feb 20",
-        "date": "2026-02-20"
-      },
-      {
-        "name": "Social Media Strategy - 8 files, 6,004 lines, 5 platforms (MASTER, LinkedIn, YouTube, Twitter/X, Facebook, TikTok, Content Ideas, Weekly Checklist)",
-        "date": "2026-02-20"
-      },
-      {
-        "name": "Pixel-Perfect Devis Template V2 - `templates/devis-pulse-v2.html` matching Kabundji's PDF model",
-        "date": "2026-02-20"
-      },
-      {
-        "name": "Pulse Graphix Business Brief - Saved to `business/PULSE-GRAPHIX-BRIEF.md`",
-        "date": "2026-02-20"
-      },
-      {
-        "name": "Context Memory System - 3-tier architecture documented at `docs/CONTEXT-MEMORY-SYSTEM.md`",
-        "date": "2026-02-20"
-      },
-      {
-        "name": "Agent Zero Analysis - Full research at `docs/AGENT-ZERO-ANALYSIS.md`",
-        "date": "2026-02-20"
-      },
-      {
-        "name": "Memory Archive Structure - `memory/archive/` with decisions.md + lessons.md",
-        "date": "2026-02-20"
-      },
-      {
-        "name": "Dashboard V6 - 12 sections, Vercel deployment",
-        "date": "2026-02-20"
-      },
-      {
-        "name": "Template Business Strategy - €10k/mo target",
-        "date": "2026-02-20"
-      },
-      {
-        "name": "Prospect Research - 4 qualified leads ready",
-        "date": "2026-02-20"
-      },
-      {
-        "name": "CSS Animation Library - 10 animation types",
-        "date": "2026-02-20"
-      },
-      {
-        "name": "Framer Marketplace Guide",
-        "date": "2026-02-20"
-      },
-      {
-        "name": "SaaS Template - Framer-ready",
-        "date": "2026-02-20"
-      },
-      {
-        "name": "Security Audit",
-        "date": "2026-02-20"
-      },
-      {
-        "name": "n8n CRM Workflow",
-        "date": "2026-02-20"
-      },
-      {
-        "name": "4 billing templates (devis/invoice FR/EN)",
-        "date": "2026-02-20"
-      }
-    ],
-    "pending": [
-      {
-        "name": "LinkedIn Profile Optimization - Apply strategy from LINKEDIN-STRATEGY.md",
-        "priority": "medium"
-      },
-      {
-        "name": "Fix Google OAuth - Restore email/calendar access",
-        "priority": "medium"
-      },
-      {
-        "name": "Enable UFW Firewall - Security critical",
-        "priority": "medium"
-      },
-      {
-        "name": "First Cold Calls - Call 4 qualified leads",
-        "priority": "medium"
-      },
-      {
-        "name": "Framer Account + First Template Upload",
-        "priority": "medium"
-      },
-      {
-        "name": "Set Up All 5 Social Accounts - Profile optimization per strategy docs",
-        "priority": "medium"
-      },
-      {
-        "name": "First Week of Content - 15+ posts across all platforms",
-        "priority": "medium"
-      },
-      {
-        "name": "Design Social Media Templates - 5 Canva/Figma templates",
-        "priority": "medium"
-      },
-      {
-        "name": "Create Email Sequences - Automated follow-up for leads",
-        "priority": "medium"
-      },
-      {
-        "name": "Close first client from cold outreach - Target: 1 signed project (€3K+)",
-        "priority": "medium"
-      },
-      {
-        "name": "YouTube channel launch - First 2 videos uploaded",
-        "priority": "medium"
-      },
-      {
-        "name": "Aura account setup - AI template builder ($20/mo)",
-        "priority": "medium"
-      },
-      {
-        "name": "Unicorn Studio setup - WebGL backgrounds for premium templates",
-        "priority": "medium"
-      },
-      {
-        "name": "Launch Pulse Graphix Design Shop - 3+ products on website",
-        "priority": "medium"
-      },
-      {
-        "name": "First YouTube video published - Tutorial: \"Build a Website in 30 Min\"",
-        "priority": "medium"
-      },
-      {
-        "name": "LinkedIn: 200+ connections - Daily outreach per strategy",
-        "priority": "medium"
-      },
-      {
-        "name": "Second batch of prospect calls - 5 more leads",
-        "priority": "medium"
-      },
-      {
-        "name": "Deploy Subagent Pyramid - 4 manager agents + specialized subagents",
-        "priority": "medium"
-      },
-      {
-        "name": "First template on Framer Marketplace - SaaS template ($49-79)",
-        "priority": "medium"
-      },
-      {
-        "name": "Social media audit - 30-day review per MASTER-STRATEGY.md KPIs",
-        "priority": "medium"
-      },
-      {
-        "name": "Create case study content - From first client project (if closed)",
-        "priority": "medium"
-      },
-      {
-        "name": "Monthly revenue review - Track all income sources",
-        "priority": "medium"
-      },
-      {
-        "name": "Content calendar for April - Plan next month's social media",
-        "priority": "medium"
-      },
-      {
-        "name": "Expand to Webflow Marketplace - Second template platform",
-        "priority": "medium"
-      },
-      {
-        "name": "First affiliate partnerships - Apply for Webflow, hosting, tool affiliates",
-        "priority": "medium"
-      }
-    ],
     "blocked": [
       {
         "name": "Prospect calls",
         "need": "Green light to start calling",
-        "priority": "🔴 HIGH"
+        "priority": "HIGH",
+        "category": "general"
       },
       {
         "name": "Google OAuth",
         "need": "Browser re-auth session",
-        "priority": "🔴 HIGH"
+        "priority": "HIGH",
+        "category": "general"
       },
       {
         "name": "UFW Firewall",
         "need": "Approval to enable",
-        "priority": "🟡 MEDIUM"
+        "priority": "MEDIUM",
+        "category": "general"
       },
       {
         "name": "Framer Account",
         "need": "Create account at framer.com",
-        "priority": "🟡 MEDIUM"
+        "priority": "MEDIUM",
+        "category": "general"
       },
       {
         "name": "LinkedIn posts",
         "need": "Review & approve 4 drafts",
-        "priority": "🟡 MEDIUM"
+        "priority": "MEDIUM",
+        "category": "general"
       },
       {
         "name": "Subagent Pyramid",
         "need": "Approval to deploy",
-        "priority": "🟢 LOW"
+        "priority": "LOW",
+        "category": "general"
       },
       {
         "name": "~~Company names~~",
         "need": "✅ All 4 identified: PG, Nexus AI, Invest in Congo, Pulse Architects",
-        "priority": "✅ DONE"
+        "priority": "✅ DONE",
+        "category": "general"
       },
       {
         "name": "Existing social accounts",
         "need": "For audit & optimization",
-        "priority": "🟢 LOW"
+        "priority": "LOW",
+        "category": "general"
+      }
+    ],
+    "pending": [
+      {
+        "name": "LinkedIn Profile Optimization",
+        "description": "Apply strategy from LINKEDIN-STRATEGY.md",
+        "priority": "MEDIUM",
+        "category": "general"
+      },
+      {
+        "name": "Fix Google OAuth",
+        "description": "Restore email/calendar access",
+        "priority": "MEDIUM",
+        "category": "general"
+      },
+      {
+        "name": "Enable UFW Firewall",
+        "description": "Security critical",
+        "priority": "MEDIUM",
+        "category": "general"
+      },
+      {
+        "name": "First Cold Calls",
+        "description": "Call 4 qualified leads",
+        "priority": "MEDIUM",
+        "category": "general"
+      },
+      {
+        "name": "Set Up All 5 Social Accounts",
+        "description": "Profile optimization per strategy docs",
+        "priority": "MEDIUM",
+        "category": "general"
+      },
+      {
+        "name": "First Week of Content",
+        "description": "15+ posts across all platforms",
+        "priority": "MEDIUM",
+        "category": "general"
+      },
+      {
+        "name": "Design Social Media Templates",
+        "description": "5 Canva/Figma templates",
+        "priority": "MEDIUM",
+        "category": "general"
+      },
+      {
+        "name": "Create Email Sequences",
+        "description": "Automated follow-up for leads",
+        "priority": "MEDIUM",
+        "category": "general"
+      },
+      {
+        "name": "Close first client from cold outreach",
+        "description": "Target: 1 signed project (€3K+)",
+        "priority": "MEDIUM",
+        "category": "general"
+      },
+      {
+        "name": "YouTube channel launch",
+        "description": "First 2 videos uploaded",
+        "priority": "MEDIUM",
+        "category": "general"
+      },
+      {
+        "name": "Aura account setup",
+        "description": "AI template builder ($20/mo)",
+        "priority": "MEDIUM",
+        "category": "general"
+      },
+      {
+        "name": "Unicorn Studio setup",
+        "description": "WebGL backgrounds for premium templates",
+        "priority": "MEDIUM",
+        "category": "general"
+      },
+      {
+        "name": "Launch Pulse Graphix Design Shop",
+        "description": "3+ products on website",
+        "priority": "MEDIUM",
+        "category": "general"
+      },
+      {
+        "name": "First YouTube video published",
+        "description": "Tutorial: \"Build a Website in 30 Min\"",
+        "priority": "MEDIUM",
+        "category": "general"
+      },
+      {
+        "name": "LinkedIn: 200+ connections",
+        "description": "Daily outreach per strategy",
+        "priority": "MEDIUM",
+        "category": "general"
+      },
+      {
+        "name": "Second batch of prospect calls",
+        "description": "5 more leads",
+        "priority": "MEDIUM",
+        "category": "general"
+      },
+      {
+        "name": "Deploy Subagent Pyramid",
+        "description": "4 manager agents + specialized subagents",
+        "priority": "MEDIUM",
+        "category": "general"
+      },
+      {
+        "name": "First template on Framer Marketplace",
+        "description": "SaaS template ($49-79)",
+        "priority": "MEDIUM",
+        "category": "general"
+      },
+      {
+        "name": "Social media audit",
+        "description": "30-day review per MASTER-STRATEGY.md KPIs",
+        "priority": "MEDIUM",
+        "category": "general"
+      },
+      {
+        "name": "Create case study content",
+        "description": "From first client project (if closed)",
+        "priority": "MEDIUM",
+        "category": "general"
+      },
+      {
+        "name": "Monthly revenue review",
+        "description": "Track all income sources",
+        "priority": "MEDIUM",
+        "category": "general"
+      },
+      {
+        "name": "Content calendar for April",
+        "description": "Plan next month's social media",
+        "priority": "MEDIUM",
+        "category": "general"
+      },
+      {
+        "name": "Expand to Webflow Marketplace",
+        "description": "Second template platform",
+        "priority": "MEDIUM",
+        "category": "general"
+      },
+      {
+        "name": "First affiliate partnerships",
+        "description": "Apply for Webflow, hosting, tool affiliates",
+        "priority": "MEDIUM",
+        "category": "general"
+      }
+    ],
+    "completed": [
+      {
+        "name": "Dashboard Always Live",
+        "description": "✅ Cron job set up for 2-hour auto-sync",
+        "date": "2026-02-20"
+      },
+      {
+        "name": "Trim MEMORY.md",
+        "description": "Reduced to 99 lines ✅ (Feb 15)",
+        "date": "2026-02-20"
+      },
+      {
+        "name": "Create 5 LinkedIn Posts",
+        "description": "✅ Created Feb 20",
+        "date": "2026-02-20"
+      },
+      {
+        "name": "Prospect Call Preparation",
+        "description": "✅ APPROVED Feb 16! Prepping now",
+        "date": "2026-02-20"
+      },
+      {
+        "name": "Create Client Proposal Template",
+        "description": "✅ Created Feb 19",
+        "date": "2026-02-20"
+      },
+      {
+        "name": "Expand Prospect List to 20",
+        "description": "✅ Compiled Feb 20",
+        "date": "2026-02-20"
+      },
+      {
+        "name": "Social Media Strategy",
+        "description": "8 files, 6,004 lines, 5 platforms (MASTER, LinkedIn, YouTube, Twitter/X, Facebook, TikTok, Content Ideas, Weekly Checklist)",
+        "date": "2026-02-20"
+      },
+      {
+        "name": "Pixel-Perfect Devis Template V2",
+        "description": "`templates/devis-pulse-v2.html` matching Kabundji's PDF model",
+        "date": "2026-02-20"
+      },
+      {
+        "name": "Pulse Graphix Business Brief",
+        "description": "Saved to `business/PULSE-GRAPHIX-BRIEF.md`",
+        "date": "2026-02-20"
+      },
+      {
+        "name": "Context Memory System",
+        "description": "3-tier architecture documented at `docs/CONTEXT-MEMORY-SYSTEM.md`",
+        "date": "2026-02-20"
+      },
+      {
+        "name": "Agent Zero Analysis",
+        "description": "Full research at `docs/AGENT-ZERO-ANALYSIS.md`",
+        "date": "2026-02-20"
+      },
+      {
+        "name": "Memory Archive Structure",
+        "description": "`memory/archive/` with decisions.md + lessons.md",
+        "date": "2026-02-20"
       }
     ]
   },
@@ -833,146 +562,216 @@
     "linkedin": {
       "posts": [
         {
-          "id": 1,
           "title": "Thought Leadership - AI Transformation",
           "type": "Perspective/Opinion",
-          "status": "awaiting_review",
-          "preview": "'AI won't replace designers. But designers who use AI will replace those who don't.\n\nI've seen the divide forming in real-time:\n\n→ 6 months ago: 'AI art is a trend'\n→ Today: Top agencies using AI deliver 3x faster, slash costs by 40%\n→ 6 months from now: It'll be the baseline expectation\n\nHere's wha"
+          "hook": "AI won't replace designers. But designers who use AI will replace those who don't.",
+          "status": "draft",
+          "id": 1,
+          "scheduledDay": "Tuesday",
+          "scheduledTime": "8:00 AM",
+          "estimatedEngagement": "High"
         },
         {
-          "id": 2,
           "title": "Portfolio Showcase (Carousel Style)",
           "type": "Visual showcase",
-          "status": "awaiting_review",
-          "preview": "'85% of businesses in our local market have websites that lose customers instead of attracting them.\n\nSwipe through 4 transformations we delivered this quarter 🎨\n\n→ Slide 1: Before (cluttered, confusing, mobile-unfriendly)\n→ Slide 2: After (clean hierarchy, clear CTAs, 40% faster load)\n→ Slide 3: R"
+          "hook": "85% of businesses in our local market have websites that lose customers instead of attracting them.",
+          "status": "draft",
+          "id": 2,
+          "scheduledDay": "Thursday",
+          "scheduledTime": "10:00 AM",
+          "estimatedEngagement": "Medium-High"
         },
         {
-          "id": 3,
           "title": "Value Checklist (High-engagement format)",
           "type": "\"Save this\" content",
-          "status": "awaiting_review",
-          "preview": "'🚨 Graphic design red flags that scream 'amateur':\n\nIf your designer does these, get a second opinion before you pay:\n\n❌ 1. No grid system — Everything placed 'by eye'\n❌ 2. 3+ fonts on one page (chaos, not character)\n❌ 3. No hierarchy — your eye doesn't know where to go first\n❌ 4. Stock photos that"
+          "hook": "🚨 Graphic design red flags that scream 'amateur':",
+          "status": "draft",
+          "id": 3,
+          "scheduledDay": "Tuesday",
+          "scheduledTime": "1:00 PM",
+          "estimatedEngagement": "High"
         },
         {
-          "id": 4,
           "title": "Lesson Learned / Behind the Scenes",
           "type": "Story/Personal insight",
-          "status": "awaiting_review",
-          "preview": "'I used to say yes to every project.\n\n'Of course I can do that website'\n'Logo design? Easy'\n'Can you also do the copywriting? Sure'\n\nThen I hit burnout. And my work suffered. And clients were... fine, not thrilled.\n\nThe turning point? Saying no.\n\nI turned down 3 projects last month. All paid decent "
+          "hook": "I used to say yes to every project.",
+          "status": "draft",
+          "id": 4,
+          "scheduledDay": "Friday",
+          "scheduledTime": "3:00 PM",
+          "estimatedEngagement": "Medium"
         },
         {
-          "id": 5,
           "title": "Poll / Engagement Starter",
           "type": "Poll",
-          "status": "awaiting_review",
-          "preview": "'Quick poll for my fellow agency owners and freelancers 🎯\n\nYou're onboarding a new client. What's your biggest friction point?\n\nA) Getting clear requirements (vague briefs)\nB) Pricing conversations (scope creep fear)\nC) Setting expectations on timelines\nD) The actual design work (rarely the problem"
+          "hook": "Quick poll for my fellow agency owners and freelancers 🎯",
+          "status": "draft",
+          "id": 5,
+          "scheduledDay": "Wednesday",
+          "scheduledTime": "9:00 AM",
+          "estimatedEngagement": "High"
         }
       ],
-      "totalDrafts": 5,
-      "status": "awaiting_review"
-    },
-    "strategies": [
-      "LinkedIn",
-      "YouTube",
-      "TikTok",
-      "Twitter/X",
-      "Facebook"
-    ],
-    "contentPieces": 8
+      "profile": {
+        "status": "needs_optimization",
+        "connections": 0,
+        "target": 200
+      }
+    }
   },
+  "leads": [
+    {
+      "name": "C.C.P Fournil",
+      "type": "Boulangerie-Pâtisserie",
+      "location": "Torcy",
+      "stage": "Top Priority",
+      "value": "2,040",
+      "rating": 5
+    },
+    {
+      "name": "Le Belvédère",
+      "type": "Boulangerie-Pâtisserie",
+      "location": "Torcy",
+      "stage": "Top Priority",
+      "value": "2,260",
+      "rating": 5
+    },
+    {
+      "name": "Le Trente-Six",
+      "type": "Bistrot-Restaurant",
+      "location": "Torcy",
+      "stage": "Top Priority",
+      "value": "1,918",
+      "rating": 5
+    },
+    {
+      "name": "Pho Quynh",
+      "type": "Restaurant vietnamien",
+      "location": "Torcy",
+      "stage": "Top Priority",
+      "value": "2,138",
+      "rating": 5
+    }
+  ],
   "projects": [
+    {
+      "name": "Pulse Graphix Dashboard",
+      "status": "active",
+      "progress": 90
+    },
     {
       "name": "Prospect Pipeline",
       "status": "active",
-      "progress": 75,
-      "description": "20 local businesses identified, call scripts ready",
-      "revenue": "€4,500-12,000"
+      "progress": 75
     },
     {
-      "name": "LinkedIn Marketing",
+      "name": "LinkedIn Marketing Strategy",
       "status": "review",
-      "progress": 90,
-      "description": "5 posts drafted, awaiting approval",
-      "revenue": "Lead generation"
-    },
-    {
-      "name": "Dashboard System",
-      "status": "active",
-      "progress": 85,
-      "description": "Alex Prime + Pulse Graphix dashboards live"
+      "progress": 80
     },
     {
       "name": "Template Marketplace",
       "status": "planning",
-      "progress": 15,
-      "description": "AI-powered templates for Framer/Webflow",
-      "revenue": "€10k/mo target"
-    },
-    {
-      "name": "Client Proposals",
-      "status": "completed",
-      "progress": 100,
-      "description": "Branded proposal + devis/invoice templates done"
-    },
-    {
-      "name": "Social Media Strategy",
-      "status": "completed",
-      "progress": 100,
-      "description": "8 strategy docs across 5 platforms"
-    },
-    {
-      "name": "Cold Outreach Kit",
-      "status": "review",
-      "progress": 80,
-      "description": "Call scripts, email templates, objection handling"
+      "progress": 15
     }
   ],
-  "goals": {
-    "q1": [
-      {
-        "goal": "Close first client from outreach",
-        "target": "€3,000+",
-        "progress": 0
-      },
-      {
-        "goal": "Launch YouTube channel",
-        "target": "2 videos",
-        "progress": 0
-      },
-      {
-        "goal": "LinkedIn: 200+ connections",
-        "target": "Weekly outreach",
-        "progress": 10
-      },
-      {
-        "goal": "Template marketplace entry",
-        "target": "1 template on Framer",
-        "progress": 5
-      }
-    ],
-    "annual": [
-      {
-        "goal": "Monthly recurring revenue",
-        "target": "€10,000/mo",
-        "progress": 0
-      },
-      {
-        "goal": "Active clients",
-        "target": "15+",
-        "progress": 0
-      },
-      {
-        "goal": "Templates sold",
-        "target": "100 units",
-        "progress": 0
-      }
-    ]
-  },
-  "metrics": {
-    "files": 256,
-    "prospectsIdentified": 20,
-    "contentPieces": 13,
-    "templatesReady": 4,
-    "strategiesWritten": 5
+  "services": [
+    {
+      "name": "Website Design",
+      "icon": "🌐",
+      "starter": 1200,
+      "pro": 2500,
+      "enterprise": 5000,
+      "recurring": false
+    },
+    {
+      "name": "Branding Package",
+      "icon": "🎨",
+      "starter": 800,
+      "pro": 1500,
+      "enterprise": 3000,
+      "recurring": false
+    },
+    {
+      "name": "E-commerce Site",
+      "icon": "🛒",
+      "starter": 2000,
+      "pro": 4000,
+      "enterprise": 8000,
+      "recurring": false
+    },
+    {
+      "name": "SEO & Marketing",
+      "icon": "📈",
+      "starter": 300,
+      "pro": 600,
+      "enterprise": 1200,
+      "recurring": true
+    },
+    {
+      "name": "Website Maintenance",
+      "icon": "🔧",
+      "starter": 150,
+      "pro": 300,
+      "enterprise": 600,
+      "recurring": true
+    }
+  ],
+  "shopProducts": [
+    {
+      "name": "SaaS Website Template",
+      "price": 79,
+      "originalPrice": null,
+      "badge": "New"
+    },
+    {
+      "name": "Restaurant Template",
+      "price": 49,
+      "originalPrice": 79,
+      "badge": "Bestseller"
+    },
+    {
+      "name": "Portfolio Template",
+      "price": 39,
+      "originalPrice": null,
+      "badge": null
+    }
+  ],
+  "socialMedia": {
+    "linkedin": {
+      "status": "planning",
+      "profileExists": true,
+      "postsDrafted": 5,
+      "contentPlanned": true,
+      "nextPost": "2026-02-25"
+    },
+    "instagram": {
+      "status": "planning",
+      "profileExists": false,
+      "postsDrafted": 0,
+      "contentPlanned": true,
+      "nextPost": null
+    },
+    "youtube": {
+      "status": "pending",
+      "profileExists": false,
+      "postsDrafted": 0,
+      "contentPlanned": false,
+      "nextPost": null
+    },
+    "tiktok": {
+      "status": "pending",
+      "profileExists": false,
+      "postsDrafted": 0,
+      "contentPlanned": false,
+      "nextPost": null
+    },
+    "facebook": {
+      "status": "pending",
+      "profileExists": false,
+      "postsDrafted": 0,
+      "contentPlanned": false,
+      "nextPost": null
+    }
   }
 }
