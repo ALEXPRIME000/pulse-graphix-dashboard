@@ -473,7 +473,7 @@
         // Load data
         async function loadData() {
             try {
-                const response = await fetch('data.json');
+                const response = await fetch('data.json?t=' + Date.now());
                 dashboardData = await response.json();
                 renderDashboard();
             } catch (error) {
@@ -704,6 +704,167 @@
                     </div>
                 </div>
             `).join('');
+        }
+        
+        // Render prospects
+        let currentProspectFilter = 'all';
+        function renderProspects() {
+            const list = document.getElementById('prospectsList');
+            const filtered = currentProspectFilter === 'all' 
+                ? dashboardData.prospectLeads 
+                : dashboardData.prospectLeads.filter(p => p.tier === currentProspectFilter);
+            
+            list.innerHTML = filtered.map(prospect => {
+                const tierColors = {
+                    hot: 'border-red-500 bg-red-500/5',
+                    warm: 'border-orange-500 bg-orange-500/5',
+                    new: 'border-blue-500 bg-blue-500/5',
+                    cold: 'border-gray-500 bg-gray-500/5'
+                };
+                const tierIcons = { hot: '🔥', warm: '🟠', new: '🆕', cold: '❄️' };
+                
+                return `
+                    <div class="glass-card rounded-xl p-5 border-l-4 ${tierColors[prospect.tier]}">
+                        <div class="flex justify-between items-start mb-3">
+                            <div>
+                                <div class="flex items-center gap-2 mb-1">
+                                    <span>${tierIcons[prospect.tier]}</span>
+                                    <h3 class="font-bold text-white">${prospect.name}</h3>
+                                </div>
+                                <p class="text-sm text-gray-400">${prospect.type}</p>
+                            </div>
+                            <span class="text-lg font-bold neon-text">€${prospect.estimatedValue}</span>
+                        </div>
+                        <div class="space-y-1 text-xs text-gray-400">
+                            <p>📍 ${prospect.address}</p>
+                            <p>📞 ${prospect.phone}</p>
+                            <p class="text-red-400">🌐 ${prospect.webStatus}</p>
+                        </div>
+                        <div class="mt-3 pt-3 border-t border-gray-800 flex justify-between items-center">
+                            <span class="text-xs text-gray-500">Stage: ${prospect.stage}</span>
+                            <div class="star-rating text-xs">${'★'.repeat(prospect.rating)}${'☆'.repeat(5 - prospect.rating)}</div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        function filterProspects(tier) {
+            currentProspectFilter = tier;
+            renderProspects();
+            
+            // Update button states
+            document.querySelectorAll('[id^="filter-"]').forEach(btn => {
+                btn.classList.remove('bg-green-600', 'bg-red-600', 'bg-orange-600', 'bg-blue-600', 'bg-gray-500');
+                btn.classList.add('bg-gray-800');
+            });
+            
+            const activeBtn = document.getElementById('filter-' + tier);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-gray-800');
+                if (tier === 'all') activeBtn.classList.add('bg-green-600');
+                else if (tier === 'hot') activeBtn.classList.add('bg-red-600');
+                else if (tier === 'warm') activeBtn.classList.add('bg-orange-600');
+                else if (tier === 'new') activeBtn.classList.add('bg-blue-600');
+                else if (tier === 'cold') activeBtn.classList.add('bg-gray-500');
+            }
+        }
+        
+        // Render tasks
+        function renderTasks() {
+            // Update counts
+            document.getElementById('blockedCount').textContent = dashboardData.tasks.blocked.length;
+            document.getElementById('pendingCount').textContent = dashboardData.tasks.pending.length;
+            document.getElementById('completedCount').textContent = dashboardData.tasks.completed.length;
+            
+            // Render blocked tasks
+            const blockedList = document.getElementById('blockedTasksList');
+            blockedList.innerHTML = dashboardData.tasks.blocked.map(task => {
+                const priorityColors = {
+                    HIGH: 'border-red-500 bg-red-500/10',
+                    MEDIUM: 'border-yellow-500 bg-yellow-500/10',
+                    LOW: 'border-blue-500 bg-blue-500/10'
+                };
+                return `
+                    <div class="glass-card rounded-xl p-4 border-l-4 ${priorityColors[task.priority]}">
+                        <div class="flex justify-between items-start">
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-white mb-1">${task.name}</h4>
+                                <p class="text-sm text-gray-400">Need: ${task.need}</p>
+                            </div>
+                            <span class="px-2 py-1 rounded text-xs font-bold ${
+                                task.priority === 'HIGH' ? 'bg-red-500/20 text-red-400' :
+                                task.priority === 'MEDIUM' ? 'bg-yellow-500/20 text-yellow-400' :
+                                'bg-blue-500/20 text-blue-400'
+                            }">${task.priority}</span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            
+            // Render pending tasks
+            const pendingList = document.getElementById('pendingTasksList');
+            pendingList.innerHTML = dashboardData.tasks.pending.map(task => `
+                <div class="glass-card rounded-xl p-4">
+                    <div class="flex items-start gap-3">
+                        <input type="checkbox" class="mt-1">
+                        <div class="flex-1">
+                            <h4 class="font-semibold text-white">${task.name}</h4>
+                            <p class="text-sm text-gray-400 mt-1">${task.description}</p>
+                        </div>
+                        <span class="px-2 py-1 rounded text-xs font-bold bg-yellow-500/20 text-yellow-400">${task.priority}</span>
+                    </div>
+                </div>
+            `).join('');
+            
+            // Render completed tasks
+            const completedList = document.getElementById('completedTasksList');
+            completedList.innerHTML = dashboardData.tasks.completed.slice(0, 10).map(task => `
+                <div class="glass-card rounded-xl p-3 flex items-center gap-3">
+                    <span class="text-green-400">✅</span>
+                    <div class="flex-1">
+                        <h4 class="font-medium text-gray-300">${task.name}</h4>
+                        <p class="text-xs text-gray-500">${task.description}</p>
+                    </div>
+                    <span class="text-xs text-gray-500">${task.date}</span>
+                </div>
+            `).join('');
+        }
+        
+        // Render marketing
+        function renderMarketing() {
+            const list = document.getElementById('linkedinPostsList');
+            list.innerHTML = dashboardData.marketing.linkedin.posts.map(post => {
+                const engagementColors = {
+                    High: 'text-green-400',
+                    'Medium-High': 'text-blue-400',
+                    Medium: 'text-yellow-400'
+                };
+                
+                return `
+                    <div class="glass-card rounded-xl p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="font-bold text-white">${post.title}</h3>
+                            <span class="px-2 py-1 rounded text-xs font-bold bg-purple-500/20 text-purple-400">${post.type}</span>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-4 italic">"${post.hook}"</p>
+                        <div class="flex justify-between items-center text-xs">
+                            <div>
+                                <span class="text-gray-500">📅 ${post.scheduledDay}</span>
+                                <span class="text-gray-500 ml-2">🕐 ${post.scheduledTime}</span>
+                            </div>
+                            <span class="${engagementColors[post.estimatedEngagement]}">
+                                📈 ${post.estimatedEngagement} engagement
+                            </span>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-800">
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-gray-700 text-gray-300">
+                                Status: ${post.status}
+                            </span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
         }
         
         // Render social media
