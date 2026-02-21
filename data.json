@@ -1,9 +1,9 @@
 {
-  "lastGenerated": "2026-02-21T13:29:01.390Z",
+  "lastGenerated": "2026-02-21T15:29:01.393Z",
   "keyMetrics": {
     "totalProspects": 20,
     "qualifiedProspects": 11,
-    "pipelineValue": 36882,
+    "pipelineValue": 35755,
     "revenueThisMonth": 0,
     "shopProducts": 0,
     "services": 5,
@@ -45,7 +45,7 @@
       "phone": "01 60 05 28 84",
       "webStatus": "NO WEBSITE",
       "tier": "hot",
-      "estimatedValue": 1781,
+      "estimatedValue": 2324,
       "rating": 5,
       "stage": "Top Priority",
       "location": "Torcy"
@@ -58,7 +58,7 @@
       "phone": "09 87 32 46 79",
       "webStatus": "NO WEBSITE",
       "tier": "hot",
-      "estimatedValue": 1546,
+      "estimatedValue": 1532,
       "rating": 5,
       "stage": "Top Priority",
       "location": "Torcy"
@@ -71,7 +71,7 @@
       "phone": "01 60 05 31 44",
       "webStatus": "NO REAL WEBSITE",
       "tier": "hot",
-      "estimatedValue": 2195,
+      "estimatedValue": 2173,
       "rating": 5,
       "stage": "Top Priority",
       "location": "Torcy"
@@ -84,7 +84,7 @@
       "phone": "01 60 17 26 32",
       "webStatus": "NO WEBSITE (FB only)",
       "tier": "hot",
-      "estimatedValue": 2352,
+      "estimatedValue": 1812,
       "rating": 5,
       "stage": "Top Priority",
       "location": "Torcy"
@@ -97,7 +97,7 @@
       "phone": "Via Planity",
       "webStatus": "NO OWN WEBSITE (uses Planity)",
       "tier": "warm",
-      "estimatedValue": 1944,
+      "estimatedValue": 1807,
       "rating": 4,
       "stage": "Research",
       "location": "Torcy"
@@ -110,7 +110,7 @@
       "phone": "Via Pages Jaunes",
       "webStatus": "NO OWN WEBSITE (uses Treatwell)",
       "tier": "warm",
-      "estimatedValue": 1456,
+      "estimatedValue": 1979,
       "rating": 4,
       "stage": "Research",
       "location": "Torcy"
@@ -123,7 +123,7 @@
       "phone": "Via Pages Jaunes",
       "webStatus": "NO WEBSITE",
       "tier": "warm",
-      "estimatedValue": 1884,
+      "estimatedValue": 1512,
       "rating": 4,
       "stage": "Research",
       "location": "Torcy"
@@ -136,7 +136,7 @@
       "phone": "Via Pages Jaunes",
       "webStatus": "NO OWN WEBSITE",
       "tier": "warm",
-      "estimatedValue": 1328,
+      "estimatedValue": 1430,
       "rating": 4,
       "stage": "Research",
       "location": "Torcy"
@@ -149,7 +149,7 @@
       "phone": "Via Pages Jaunes",
       "webStatus": "NO WEBSITE",
       "tier": "warm",
-      "estimatedValue": 1674,
+      "estimatedValue": 1577,
       "rating": 4,
       "stage": "Research",
       "location": "Torcy"
@@ -162,7 +162,7 @@
       "phone": "Via Pages Jaunes",
       "webStatus": "VERIFY",
       "tier": "warm",
-      "estimatedValue": 1392,
+      "estimatedValue": 1870,
       "rating": 4,
       "stage": "Research",
       "location": "Torcy"
@@ -175,7 +175,7 @@
       "phone": "Via Pages Jaunes",
       "webStatus": "VERIFY",
       "tier": "warm",
-      "estimatedValue": 1942,
+      "estimatedValue": 1354,
       "rating": 4,
       "stage": "Research",
       "location": "Torcy"
@@ -188,7 +188,7 @@
       "phone": "Via Mappy",
       "webStatus": "VERIFY",
       "tier": "new",
-      "estimatedValue": 1625,
+      "estimatedValue": 1545,
       "rating": 4,
       "stage": "Research",
       "location": "Torcy"
@@ -201,7 +201,7 @@
       "phone": "01 60 17 17 17",
       "webStatus": "HAS BASIC SITE",
       "tier": "new",
-      "estimatedValue": 1545,
+      "estimatedValue": 1744,
       "rating": 4,
       "stage": "Research",
       "location": "Torcy"
@@ -214,7 +214,7 @@
       "phone": "Via Mappy",
       "webStatus": "VERIFY",
       "tier": "new",
-      "estimatedValue": 1983,
+      "estimatedValue": 1857,
       "rating": 4,
       "stage": "Research",
       "location": "Torcy"
@@ -227,7 +227,7 @@
       "phone": "01 60 05 21 51",
       "webStatus": "OUTDATED SITE (institut-elisa-elisa.fr)",
       "tier": "cold",
-      "estimatedValue": 2285,
+      "estimatedValue": 1143,
       "rating": 3,
       "stage": "Research",
       "location": "Torcy"
@@ -240,7 +240,7 @@
       "phone": "Via Planity",
       "webStatus": "NO OWN WEBSITE",
       "tier": "cold",
-      "estimatedValue": 1732,
+      "estimatedValue": 2418,
       "rating": 3,
       "stage": "Research",
       "location": "Torcy"
@@ -253,7 +253,7 @@
       "phone": "01 60 17 53 78",
       "webStatus": "FRANCHISE — lower priority",
       "tier": "cold",
-      "estimatedValue": 1934,
+      "estimatedValue": 2289,
       "rating": 3,
       "stage": "Research",
       "location": "Torcy"
@@ -266,7 +266,7 @@
       "phone": "01 64 68 05 33",
       "webStatus": "VERIFY",
       "tier": "cold",
-      "estimatedValue": 2456,
+      "estimatedValue": 1928,
       "rating": 3,
       "stage": "Research",
       "location": "Torcy"
@@ -279,7 +279,7 @@
       "phone": "Via Pages Jaunes",
       "webStatus": "NO WEBSITE",
       "tier": "cold",
-      "estimatedValue": 1342,
+      "estimatedValue": 1122,
       "rating": 3,
       "stage": "Research",
       "location": "Torcy"
@@ -292,7 +292,7 @@
       "phone": "Via OpenStreetMap",
       "webStatus": "VERIFY",
       "tier": "cold",
-      "estimatedValue": 2486,
+      "estimatedValue": 2339,
       "rating": 3,
       "stage": "Research",
       "location": "Torcy"
@@ -625,7 +625,7 @@
       "type": "Boulangerie-Pâtisserie",
       "location": "Torcy",
       "stage": "Top Priority",
-      "value": "1,781",
+      "value": "2,324",
       "rating": 5
     },
     {
@@ -633,7 +633,7 @@
       "type": "Boulangerie-Pâtisserie",
       "location": "Torcy",
       "stage": "Top Priority",
-      "value": "1,546",
+      "value": "1,532",
       "rating": 5
     },
     {
@@ -641,7 +641,7 @@
       "type": "Bistrot-Restaurant",
       "location": "Torcy",
       "stage": "Top Priority",
-      "value": "2,195",
+      "value": "2,173",
       "rating": 5
     },
     {
@@ -649,7 +649,7 @@
       "type": "Restaurant vietnamien",
       "location": "Torcy",
       "stage": "Top Priority",
-      "value": "2,352",
+      "value": "1,812",
       "rating": 5
     },
     {
@@ -657,7 +657,7 @@
       "type": "Salon coiffure",
       "location": "Torcy",
       "stage": "Research",
-      "value": "1,944",
+      "value": "1,807",
       "rating": 4
     },
     {
@@ -665,7 +665,7 @@
       "type": "Salon coiffure",
       "location": "Torcy",
       "stage": "Research",
-      "value": "1,456",
+      "value": "1,979",
       "rating": 4
     },
     {
@@ -673,7 +673,7 @@
       "type": "Barbier-coiffeur",
       "location": "Torcy",
       "stage": "Research",
-      "value": "1,884",
+      "value": "1,512",
       "rating": 4
     },
     {
@@ -681,7 +681,7 @@
       "type": "Salon coiffure",
       "location": "Torcy",
       "stage": "Research",
-      "value": "1,328",
+      "value": "1,430",
       "rating": 4
     },
     {
@@ -689,7 +689,7 @@
       "type": "Institut de beauté",
       "location": "Torcy",
       "stage": "Research",
-      "value": "1,674",
+      "value": "1,577",
       "rating": 4
     },
     {
@@ -697,7 +697,7 @@
       "type": "Institut de beauté",
       "location": "Torcy",
       "stage": "Research",
-      "value": "1,392",
+      "value": "1,870",
       "rating": 4
     },
     {
@@ -705,7 +705,7 @@
       "type": "Institut de beauté",
       "location": "Torcy",
       "stage": "Research",
-      "value": "1,942",
+      "value": "1,354",
       "rating": 4
     },
     {
@@ -713,7 +713,7 @@
       "type": "Boulangerie-Pâtisserie",
       "location": "Torcy",
       "stage": "Research",
-      "value": "1,625",
+      "value": "1,545",
       "rating": 4
     },
     {
@@ -721,7 +721,7 @@
       "type": "Pizzeria/livraison",
       "location": "Torcy",
       "stage": "Research",
-      "value": "1,545",
+      "value": "1,744",
       "rating": 4
     },
     {
@@ -729,7 +729,7 @@
       "type": "Chocolatier",
       "location": "Torcy",
       "stage": "Research",
-      "value": "1,983",
+      "value": "1,857",
       "rating": 4
     },
     {
@@ -737,7 +737,7 @@
       "type": "Institut de beauté",
       "location": "Torcy",
       "stage": "Research",
-      "value": "2,285",
+      "value": "1,143",
       "rating": 3
     },
     {
@@ -745,7 +745,7 @@
       "type": "Barbier",
       "location": "Torcy",
       "stage": "Research",
-      "value": "1,732",
+      "value": "2,418",
       "rating": 3
     },
     {
@@ -753,7 +753,7 @@
       "type": "Salon (franchise VOG)",
       "location": "Torcy",
       "stage": "Research",
-      "value": "1,934",
+      "value": "2,289",
       "rating": 3
     },
     {
@@ -761,7 +761,7 @@
       "type": "Opticien",
       "location": "Torcy",
       "stage": "Research",
-      "value": "2,456",
+      "value": "1,928",
       "rating": 3
     },
     {
@@ -769,7 +769,7 @@
       "type": "Salon coiffure",
       "location": "Torcy",
       "stage": "Research",
-      "value": "1,342",
+      "value": "1,122",
       "rating": 3
     },
     {
@@ -777,7 +777,7 @@
       "type": "Fleuriste",
       "location": "Torcy",
       "stage": "Research",
-      "value": "2,486",
+      "value": "2,339",
       "rating": 3
     }
   ],
