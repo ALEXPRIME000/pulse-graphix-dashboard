@@ -1,0 +1,19 @@
+{
+  "files": [
+    {"name": "content-week-1.md", "category": "marketing", "path": "downloads/marketing/content-week-1.md", "size": "7.0 KB"},
+    {"name": "likelemba-gtm-strategy.md", "category": "marketing", "path": "downloads/marketing/likelemba-gtm-strategy.md", "size": "6.8 KB"},
+    {"name": "nexus-ai-academy-landing-page.md", "category": "marketing", "path": "downloads/marketing/nexus-ai-academy-landing-page.md", "size": "7.2 KB"},
+    {"name": "social-media-templates-specs.md", "category": "marketing", "path": "downloads/marketing/social-media-templates-specs.md", "size": "3.6 KB"},
+    {"name": "devis-fr.html", "category": "proposals", "path": "downloads/proposals/devis-fr.html", "size": "6.9 KB"},
+    {"name": "proposal-pulse-graphix.html", "category": "proposals", "path": "downloads/proposals/proposal-pulse-graphix.html", "size": "1.4 KB"},
+    {"name": "quotation-en.html", "category": "proposals", "path": "downloads/proposals/quotation-en.html", "size": "6.8 KB"},
+    {"name": "devis-pulse-v2.html", "category": "templates", "path": "downloads/templates/devis-pulse-v2.html", "size": "21 KB"},
+    {"name": "invoice-en.html", "category": "templates", "path": "downloads/templates/invoice-en.html", "size": "7.1 KB"},
+    {"name": "invoice-fr.html", "category": "templates", "path": "downloads/templates/invoice-fr.html", "size": "7.3 KB"},
+    {"name": "proposal-pulse-graphix.html", "category": "templates", "path": "downloads/templates/proposal-pulse-graphix.html", "size": "1.4 KB"},
+    {"name": "quotation-en.html", "category": "templates", "path": "downloads/templates/quotation-en.html", "size": "7.4 KB"},
+    {"name": "daily-backup.sh", "category": "scripts", "path": "downloads/scripts/daily-backup.sh", "size": "1.4 KB"},
+    {"name": "pricing-calculator.sh", "category": "scripts", "path": "downloads/scripts/pricing-calculator.sh", "size": "2.7 KB"},
+    {"name": "update-dashboard.sh", "category": "scripts", "path": "downloads/scripts/update-dashboard.sh", "size": "2.1 KB"}
+  ]
+}
