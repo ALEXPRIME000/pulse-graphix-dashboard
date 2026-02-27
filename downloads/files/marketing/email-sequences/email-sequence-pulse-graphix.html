@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Sequence - Pulse Graphix</title>
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 20px; background: #121212; color: #fff; }
+.email-preview { max-width: 600px; margin: 20px auto; background: #1e1e1e; border-radius: 12px; overflow: hidden; border: 1px solid #2a2a2a; }
+.email-header { background: linear-gradient(135deg, #00FF00, #00CC00); padding: 20px; text-align: center; }
+.email-header img { height: 40px; }
+.email-body { padding: 30px; }
+.email-body h2 { color: #00FF00; margin-top: 0; }
+.email-body p { line-height: 1.7; color: #ccc; }
+.cta-button { display: inline-block; background: linear-gradient(135deg, #00FF00, #00CC00); color: #000 !important; padding: 14px 28px; text-decoration: none; border-radius: 8px; font-weight: 600; margin: 20px 0; }
+.email-footer { padding: 20px 30px; background: #1a1a1a; border-top: 1px solid #2a2a2a; font-size: 12px; color: #666; text-align: center; }
+.divider { border-top: 1px solid #2a2a2a; margin: 40px 0; }
+.subject-line { background: #2a2a2a; padding: 10px 15px; border-radius: 6px; margin-bottom: 15px; font-weight: 500; }
+.send-timing { color: #F7931A; font-size: 12px; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+
+<!-- EMAIL 1: Introduction -->
+<div class="subject-line">📧 OBJET: {{business_name}} — Votre site web mérite mieux</div>
+<div class="send-timing">⏱️ ENVOYER: Jour 0 (immédiatement après première prise de contact)</div>
+
+<div class="email-preview">
+  <div class="email-body">
+    <h2>Bonjour {{first_name}},</h2>
+    
+    <p>Je suis passé devant {{business_name}} aujourd'hui et j'ai remarqué quelque chose : vous avez établi une belle réputation locale, mais votre présence en ligne ne reflète pas la qualité de votre travail.</p>
+    
+    <p>En 2025, 82% des clients recherchent un prestataire en ligne avant de franchir votre seuil. Pourtant, je n'ai trouvé que {{current_online_presence}}.</p>
+    
+    <p>Chez <strong style="color:#00FF00;">Pulse Graphix</strong>, on aide les établissements comme le vôtre à :</p>
+    <ul style="color:#ccc; line-height:1.8;">
+      <li>Créer un site web professionnel qui convertit les visiteurs en clients</li>
+      <li>Maîtriser votre image digitale (Google, avis, réseaux)</li>
+      <li>Rester visible là où vos concurrents le sont déjà</li>
+    </ul>
+    
+    <p>La bonne nouvelle ? On peut démarrer dès cette semaine.</p>
+    
+    <a href="{{calendar_link}}" class="cta-button">📅 Réserver un appel de 15 min</a>
+    
+    <p style="font-size: 13px; color: #888;">Pas intéressé ? Répondez "NON" et je ne vous recontacterai pas.</p>
+    
+    <p>Cordialement,<br>
+    <strong style="color:#00FF00;">Chicco Kabundji</strong><br>
+    Directeur, Pulse Graphix<br>
+    📧 hello@pulsegfx.com | 📱 +33 6 12 77 64 98</p>
+  </div>
+  
+  <div class="email-footer">
+    Pulse Graphix — Création & Refonte de Sites Web<br>
+    <a href="{{unsubscribe_link}}" style="color:#666;">Se désabonner</a>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- EMAIL 2: Value/Case Study -->
+<div class="subject-line">📧 OBJET: Résultat concret : +40% de réservations en 30 jours</div>
+<div class="send-timing">⏱️ ENVOYER: Jour 3 (3 jours après Email 1, si pas de réponse)</div>
+
+<div class="email-preview">
+  <div class="email-body">
+    <h2>{{first_name}}, une histoire rapide :</h2>
+    
+    <p>En décembre, on a accompagné <strong>Le Trente-Six</strong>, un restaurant du 17ème dans votre situation : excellente cuisine, clientèle fidèle, mais un site obsolète qui ne vendait rien.</p>
+    
+    <p><strong>Résultat après notre refonte :</strong></p>
+    <ul style="color:#ccc; line-height:1.8;">
+      <li>🚀 <strong style="color:#00FF00;">+40%</strong> de réservations en ligne en 30 jours</li>
+      <li>⭐ <strong style="color:#00FF00;">+127 avis Google</strong> (contre 23 avant)</li>
+      <li>💰 <strong style="color:#00FF00;">+€8,200</strong> de CA additionnel le premier mois</li>
+    </ul>
+    
+    <p>Leur propriétaire m'a dit : <em style="color:#ccc;">"J'aurais dû faire ça 2 ans plus tôt. Le site paie déjà sa création."</em></p>
+    
+    <p>Le même playbook fonctionne pour {{business_type}} — surtout quand vous avez déjà une base client comme la vôtre.</p>
+    
+    <p>Je vous envoie un <strong>audit gratuit de votre présence en ligne</strong> — 5 points à corriger pour doubler votre visibilité :</p>
+    
+    <a href="{{audit_form_link}}" class="cta-button">📊 Recevoir mon audit gratuit</a>
+    
+    <p>Sans engagement, sans appel forcé.</p>
+    
+    <p>Cordialement,<br>
+    <strong style="color:#00FF00;">Chicco</strong></p>
+  </div>
+  
+  <div class="email-footer">
+    Pulse Graphix — Site web qui vend<br>
+    <a href="{{unsubscribe_link}}" style="color:#666;">Se désabonner</a>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- EMAIL 3: Final CTA -->
+<div class="subject-line">📧 OBJET: Dernier message — garder le contact ?</div>
+<div class="send-timing">⏱️ ENVOYER: Jour 7 (7 jours après Email 1, if pas de réponse)</div>
+
+<div class="email-preview">
+  <div class="email-body">
+    <h2>{{first_name}},</h2>
+    
+    <p>Je ne vous dérangerai plus — les entrepreneurs occupés comme vous n'ont pas de temps à perdre.</p>
+    
+    <p>Mais avant de refermer ce dossier, deux options :</p>
+    
+    <p><strong style="color:#00FF00;">Option 1 :</strong> Vous reconnaissez que votre site actuel ne reflète pas votre excellent travail. On en parle 15 minutes cette semaine :</p>
+    
+    <a href="{{calendar_link}}" class="cta-button">📅 Choisir un créneau</a>
+    
+    <p><strong style="color:#00FF00;">Option 2 :</strong> Vous avez la situation en main. Dans ce cas, je vous souhaite le meilleur et je mets à jour mes fichiers.</p>
+    
+    <p>Quelque chose à changer ? Répondez <strong>"OUI"</strong> ou cliquez ci-dessus.</p>
+    
+    <p>Sinon, je vous tiens informé une fois par trimestre des tendances digitales pour {{business_type}} — utile sans être intrusif.</p>
+    
+    <p>Bonne continuation,</p>
+    
+    <p><strong style="color:#00FF00;">Chicco Kabundji</strong><br>
+    Pulse Graphix<br>
+    <a href="https://www.pulsegfx.com" style="color:#00FF00;">www.pulsegfx.com</a></p>
+    
+    <hr style="border-color: #2a2a2a; margin: 30px 0;">
+    <p style="font-size: 12px; color: #666;">
+      <strong>P.S.</strong> Vos concurrents ne dorment pas. Je viens de faire une recherche : {{competitor_1}} et {{competitor_2}} ont tous deux relancé leur site cette année. Juste un fait.
+    </p>
+  </div>
+  
+  <div class="email-footer">
+    Pulse Graphix — Création Digitale<br>
+    <a href="{{unsubscribe_link}}" style="color:#666;">Se désabonner</a>
+  </div>
+</div>
+
+</body>
+</html>

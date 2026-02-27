@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Carousel Template Specification</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 1200px; margin: 40px auto; padding: 20px; background: #f5f5f5; }
+        .header { background: #0A66C2; color: white; padding: 30px; border-radius: 8px; margin-bottom: 30px; }
+        .section { background: white; padding: 25px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h1 { margin: 0; font-size: 2em; }
+        h2 { color: #0A66C2; border-bottom: 3px solid #0A66C2; padding-bottom: 10px; }
+        h3 { color: #333; margin-top: 20px; }
+        .spec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
+        .spec-item { background: #f9f9f9; padding: 15px; border-radius: 5px; border-left: 4px solid #0A66C2; }
+        .spec-label { font-weight: bold; color: #666; font-size: 0.9em; margin-bottom: 5px; }
+        .spec-value { font-size: 1.1em; color: #333; }
+        .color-palette { display: flex; gap: 15px; flex-wrap: wrap; margin: 20px 0; }
+        .color-swatch { width: 120px; }
+        .color-box { height: 80px; border-radius: 5px; margin-bottom: 8px; border: 2px solid #ddd; }
+        .color-label { font-size: 0.85em; font-weight: bold; text-align: center; }
+        .color-code { font-size: 0.75em; text-align: center; color: #666; font-family: monospace; }
+        .safe-zone-diagram { background: #e8e8e8; padding: 30px; border-radius: 8px; text-align: center; margin: 20px 0; }
+        .slide-box { display: inline-block; width: 300px; height: 300px; background: white; border: 3px solid #0A66C2; position: relative; }
+        .safe-area { position: absolute; top: 40px; left: 40px; right: 40px; bottom: 40px; border: 2px dashed #ff6b6b; background: rgba(255, 107, 107, 0.1); }
+        .dimension-label { font-size: 0.9em; color: #666; margin: 10px 0; font-weight: bold; }
+        ul { line-height: 1.8; }
+        .example-box { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 8px; color: white; margin: 20px 0; }
+        .grid-overlay { background-image: linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px); background-size: 60px 60px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📊 LinkedIn Carousel Template</h1>
+        <p>Professional carousel design specifications for maximum engagement</p>
+    </div>
+
+    <div class="section">
+        <h2>📐 Core Dimensions</h2>
+        <div class="spec-grid">
+            <div class="spec-item">
+                <div class="spec-label">Slide Dimensions</div>
+                <div class="spec-value">1080 × 1080 pixels</div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-label">Aspect Ratio</div>
+                <div class="spec-value">1:1 (Square)</div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-label">Number of Slides</div>
+                <div class="spec-value">5-10 slides (optimal: 7-8)</div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-label">File Format</div>
+                <div class="spec-value">PDF or Image Sequence (PNG/JPG)</div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-label">Resolution</div>
+                <div class="spec-value">72 DPI (web optimized)</div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-label">Max File Size</div>
+                <div class="spec-value">100 MB total (PDF method)</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🎯 Safe Zones & Layout Grid</h2>
+        <div class="safe-zone-diagram">
+            <div class="slide-box grid-overlay">
+                <div class="safe-area"></div>
+            </div>
+            <div class="dimension-label">1080 × 1080 px outer boundary</div>
+            <div class="dimension-label" style="color: #ff6b6b;">Safe zone: 1000 × 1000 px (40px margin all sides)</div>
+        </div>
+        
+        <h3>Critical Guidelines:</h3>
+        <ul>
+            <li><strong>Content Safe Zone:</strong> Keep all text, logos, and important elements within 40px from edges (1000×1000px safe area)</li>
+            <li><strong>Grid System:</strong> 18-column grid (60px per column) for consistent alignment</li>
+            <li><strong>Logo Placement:</strong> Top-left or top-right corner, minimum 50px from edges</li>
+            <li><strong>Slide Numbers:</strong> Bottom-right corner (e.g., "3/7"), 30px from bottom-right corner</li>
+            <li><strong>Navigation Arrows:</strong> LinkedIn overlays arrows on left/right edges — avoid placing text there</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>🎨 Color Palettes by Company</h2>
+        
+        <h3>Pulse Graphix</h3>
+        <div class="color-palette">
+            <div class="color-swatch">
+                <div class="color-box" style="background: #FF6B35;"></div>
+                <div class="color-label">Primary Orange</div>
+                <div class="color-code">#FF6B35</div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-box" style="background: #004E89;"></div>
+                <div class="color-label">Deep Blue</div>
+                <div class="color-code">#004E89</div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-box" style="background: #1A1A1D;"></div>
+                <div class="color-label">Charcoal Black</div>
+                <div class="color-code">#1A1A1D</div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-box" style="background: #F7F7F7;"></div>
+                <div class="color-label">Off White</div>
+                <div class="color-code">#F7F7F7</div>
+            </div>
+        </div>
+
+        <h3>Nexus AI</h3>
+        <div class="color-palette">
+            <div class="color-swatch">
+                <div class="color-box" style="background: #00D9FF;"></div>
+                <div class="color-label">Cyber Cyan</div>
+                <div class="color-code">#00D9FF</div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-box" style="background: #7B2CBF;"></div>
+                <div class="color-label">AI Purple</div>
+                <div class="color-code">#7B2CBF</div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-box" style="background: #0A0E27;"></div>
+                <div class="color-label">Deep Space</div>
+                <div class="color-code">#0A0E27</div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-box" style="background: #FFFFFF;"></div>
+                <div class="color-label">Pure White</div>
+                <div class="color-code">#FFFFFF</div>
+            </div>
+        </div>
+
+        <h3>Invest Congo</h3>
+        <div class="color-palette">
+            <div class="color-swatch">
+                <div class="color-box" style="background: #FFD700;"></div>
+                <div class="color-label">Gold</div>
+                <div class="color-code">#FFD700</div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-box" style="background: #006B3F;"></div>
+                <div class="color-label">Forest Green</div>
+                <div class="color-code">#006B3F</div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-box" style="background: #C41E3A;"></div>
+                <div class="color-label">Congo Red</div>
+                <div class="color-code">#C41E3A</div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-box" style="background: #1C1C1C;"></div>
+                <div class="color-label">Rich Black</div>
+                <div class="color-code">#1C1C1C</div>
+            </div>
+        </div>
+
+        <h3>Pulse Architects</h3>
+        <div class="color-palette">
+            <div class="color-swatch">
+                <div class="color-box" style="background: #2C3E50;"></div>
+                <div class="color-label">Slate Blue</div>
+                <div class="color-code">#2C3E50</div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-box" style="background: #E8B923;"></div>
+                <div class="color-label">Architectural Gold</div>
+                <div class="color-code">#E8B923</div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-box" style="background: #95A5A6;"></div>
+                <div class="color-label">Concrete Grey</div>
+                <div class="color-code">#95A5A6</div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-box" style="background: #ECF0F1;"></div>
+                <div class="color-label">Light Stone</div>
+                <div class="color-code">#ECF0F1</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>✍️ Typography Recommendations</h2>
+        
+        <h3>Primary Headlines (Slide Titles)</h3>
+        <ul>
+            <li><strong>Font:</strong> Montserrat Bold, Poppins Bold, or Inter Bold</li>
+            <li><strong>Size:</strong> 64-80px</li>
+            <li><strong>Line Height:</strong> 1.2</li>
+            <li><strong>Color:</strong> High contrast with background (black on light, white on dark)</li>
+            <li><strong>Max Characters:</strong> 40-50 characters per line (2-3 lines max)</li>
+        </ul>
+
+        <h3>Body Text</h3>
+        <ul>
+            <li><strong>Font:</strong> Open Sans Regular, Roboto Regular, or Inter Regular</li>
+            <li><strong>Size:</strong> 32-40px</li>
+            <li><strong>Line Height:</strong> 1.5</li>
+            <li><strong>Max Lines:</strong> 6-8 lines per slide</li>
+        </ul>
+
+        <h3>Supporting Text / Captions</h3>
+        <ul>
+            <li><strong>Font:</strong> Same as body, but lighter weight or smaller size</li>
+            <li><strong>Size:</strong> 24-28px</li>
+            <li><strong>Use For:</strong> Sources, footnotes, slide numbers</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>📋 Carousel Structure Best Practices</h2>
+        <ol>
+            <li><strong>Slide 1 (Hook):</strong> Eye-catching title, question, or bold statement</li>
+            <li><strong>Slides 2-6 (Content):</strong> One key point per slide, use numbers or icons</li>
+            <li><strong>Slide 7 (Summary):</strong> Recap key takeaways</li>
+            <li><strong>Slide 8 (CTA):</strong> Call-to-action (Follow, Comment, Link in bio, DM)</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>🖼️ Example Asset Description</h2>
+        <div class="example-box">
+            <h3 style="margin-top: 0;">Slide 1 Example: "5 Secrets to 10X Your Website Conversions"</h3>
+            <p><strong>Layout:</strong> Centered text with gradient background (Nexus AI purple-to-cyan gradient)</p>
+            <p><strong>Elements:</strong></p>
+            <ul>
+                <li>Top-right: Nexus AI logo (80×80px, white version)</li>
+                <li>Center: Headline "5 Secrets to" (Montserrat Bold, 72px, white)</li>
+                <li>Center: "10X Your Website" (Montserrat Bold, 80px, white)</li>
+                <li>Center: "Conversions" (Montserrat Bold, 80px, cyan #00D9FF accent)</li>
+                <li>Bottom-center: Small icon or emoji (📈)</li>
+                <li>Bottom-right: "1/8" slide counter (28px, white, 50% opacity)</li>
+            </ul>
+            <p><strong>Visual Style:</strong> Modern, clean, high-contrast. Gradient from #7B2CBF (top) to #0A0E27 (bottom) with subtle grid pattern overlay.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>✅ Pre-Flight Checklist</h2>
+        <ul>
+            <li>☐ All slides are exactly 1080×1080px</li>
+            <li>☐ Content stays within safe zone (40px margins)</li>
+            <li>☐ Text is readable at thumbnail size (test at 200px wide)</li>
+            <li>☐ Consistent branding across all slides</li>
+            <li>☐ Slide numbers included (1/7, 2/7, etc.)</li>
+            <li>☐ Clear progression/narrative flow</li>
+            <li>☐ Final slide has clear CTA</li>
+            <li>☐ File size under 100MB</li>
+        </ul>
+    </div>
+</body>
+</html>

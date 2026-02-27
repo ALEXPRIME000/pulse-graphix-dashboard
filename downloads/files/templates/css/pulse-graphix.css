@@ -1,0 +1,352 @@
+/* Pulse Graphix - Invoice/Quotation Styles */
+/* Brand Colors: #00FF00 (Neon Green), Black, White */
+
+:root {
+  --neon-green: #00FF00;
+  --dark: #0D0D0D;
+  --light: #FFFFFF;
+  --gray: #333333;
+  --light-gray: #F5F5F5;
+  --medium-gray: #888888;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  background: #f0f0f0;
+  padding: 20px;
+  line-height: 1.6;
+  color: var(--dark);
+}
+
+.invoice-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--light);
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  padding: 40px;
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid var(--neon-green);
+}
+
+.logo-section {
+  flex: 1;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--neon-green);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 0 var(--dark);
+  margin-bottom: 10px;
+}
+
+.company-info {
+  font-size: 12px;
+  color: var(--gray);
+  line-height: 1.8;
+}
+
+.document-type {
+  text-align: right;
+}
+
+.doc-label {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--dark);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.doc-number {
+  font-size: 14px;
+  color: var(--medium-gray);
+  margin-top: 5px;
+}
+
+/* Document Details */
+.doc-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  background: var(--light-gray);
+  padding: 20px;
+  border-left: 4px solid var(--neon-green);
+}
+
+.detail-group {
+  flex: 1;
+}
+
+.detail-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--medium-gray);
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.detail-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+/* Client Info */
+.client-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.client-box {
+  flex: 1;
+  padding: 20px;
+  background: var(--dark);
+  color: var(--light);
+  margin-right: 20px;
+}
+
+.client-box:last-child {
+  margin-right: 0;
+  background: var(--neon-green);
+  color: var(--dark);
+}
+
+.client-title {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.client-name {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.client-details {
+  font-size: 12px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Table Styles */
+.items-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+.items-table thead {
+  background: var(--dark);
+  color: var(--light);
+}
+
+.items-table th {
+  padding: 15px 10px;
+  text-align: left;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.items-table th:last-child,
+.items-table td:last-child {
+  text-align: right;
+}
+
+.items-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+}
+
+.items-table tbody tr:hover {
+  background: var(--light-gray);
+}
+
+.item-description {
+  font-weight: 500;
+}
+
+.item-qty, .item-unit, .item-price {
+  color: var(--medium-gray);
+}
+
+.item-total {
+  font-weight: 600;
+}
+
+/* Totals Section */
+.totals-section {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+}
+
+.totals-box {
+  width: 300px;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+}
+
+.total-row.grand-total {
+  border-top: 3px solid var(--neon-green);
+  border-bottom: none;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 15px 0;
+  margin-top: 10px;
+}
+
+.total-row.grand-total .total-label,
+.total-row.grand-total .total-value {
+  color: var(--neon-green);
+}
+
+/* Payment Terms */
+.payment-section {
+  background: var(--light-gray);
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+
+.payment-title {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  color: var(--dark);
+  font-weight: 600;
+}
+
+.payment-content {
+  font-size: 12px;
+  color: var(--gray);
+  line-height: 1.8;
+}
+
+/* Notes & Footer */
+.notes-section {
+  margin-bottom: 30px;
+  font-size: 11px;
+  color: var(--medium-gray);
+  line-height: 1.8;
+}
+
+.footer {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 2px solid var(--light-gray);
+  font-size: 10px;
+  color: var(--medium-gray);
+}
+
+.footer-brand {
+  color: var(--neon-green);
+  font-weight: 700;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+/* Status Badge */
+.status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 20px;
+}
+
+.status-paid {
+  background: var(--neon-green);
+  color: var(--dark);
+}
+
+.status-pending {
+  background: #FFD700;
+  color: var(--dark);
+}
+
+.status-overdue {
+  background: #FF4444;
+  color: var(--light);
+}
+
+.status-draft {
+  background: var(--gray);
+  color: var(--light);
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white;
+    padding: 0;
+  }
+  
+  .invoice-container {
+    box-shadow: none;
+    padding: 20px;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Language Toggle */
+.lang-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--dark);
+  padding: 10px 20px;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.lang-toggle a {
+  color: var(--light);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0 10px;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.lang-toggle a.active,
+.lang-toggle a:hover {
+  background: var(--neon-green);
+  color: var(--dark);
+}

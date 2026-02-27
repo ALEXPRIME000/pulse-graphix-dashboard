@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facture - Pulse Graphix</title>
+    <link rel="stylesheet" href="pulse-graphix-professional.css">
+</head>
+<body>
+    <!-- Document Type Badge -->
+    <div class="text-center">
+        <span class="doc-badge invoice">FACTURE</span>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-section">
+            <h1>PULSE GRAPHIX</h1>
+            <p class="tagline">Création de sites web professionnels</p>
+        </div>
+        <div class="company-info">
+            <div class="name">PULSE GRAPHIX</div>
+            <div>3 Rue Jacques Prévert</div>
+            <div>77200 TORCY, FRANCE</div>
+            <div>Tél: +33 6 12 77 64 98</div>
+            <div>Email: chicco@pulsegraphix.net</div>
+            <div>Site: www.pulsegraphix.net</div>
+            <div class="siret">SIRET: 123 456 789 00012 | TVA: FR12 345 678 901</div>
+        </div>
+    </header>
+
+    <!-- Two Columns: Client Info & Document Details -->
+    <div class="two-columns">
+        <div class="column-left">
+            <div class="section-box">
+                <div class="section-title">Facturer à</div>
+                <div class="client-name">{{CLIENT_NAME}}</div>
+                <div class="contact-detail">{{CONTACT_NAME}}</div>
+                <div class="contact-detail">Email: {{CLIENT_EMAIL}}</div>
+                <div class="contact-detail">Tél: {{CLIENT_PHONE}}</div>
+                <div class="contact-detail">{{CLIENT_ADDRESS}}</div>
+                <div class="contact-detail">{{CLIENT_CITY}}, {{CLIENT_COUNTRY}}</div>
+            </div>
+        </div>
+        <div class="column-right">
+            <div class="section-box">
+                <div class="section-title">Détails de la Facture</div>
+                <div class="details-grid">
+                    <div class="detail-row">
+                        <span class="detail-label">Facture #</span>
+                        <span class="detail-value">{{INVOICE_NUMBER}}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Date</span>
+                        <span class="detail-value">{{INVOICE_DATE}}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Échéance</span>
+                        <span class="detail-value">{{DUE_DATE}}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Devis réf.</span>
+                        <span class="detail-value">{{QUOTE_REF}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Description -->
+    <div class="project-description">
+        <h3>Description des Prestations</h3>
+        <p>{{PROJECT_DESCRIPTION}}</p>
+    </div>
+
+    <!-- Items Table -->
+    <table class="items-table">
+        <thead>
+            <tr>
+                <th class="article-col">Article</th>
+                <th class="desc-col">Description</th>
+                <th class="qty-col">Qté</th>
+                <th class="price-col numeric">Prix Unitaire</th>
+                <th class="total-col numeric">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Line items will be populated here -->
+            <tr>
+                <td>1</td>
+                <td>
+                    <strong>{{ITEM_1_TITLE}}</strong>
+                    <div class="description-text">{{ITEM_1_DESCRIPTION}}</div>
+                </td>
+                <td class="numeric">{{ITEM_1_QTY}}</td>
+                <td class="numeric">{{ITEM_1_UNIT_PRICE}} €</td>
+                <td class="numeric">{{ITEM_1_TOTAL}} €</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Totals Section -->
+    <div class="totals-section">
+        <div class="totals-box">
+            <div class="total-row">
+                <span class="total-label">Sous-total HT</span>
+                <span class="total-value">{{SUBTOTAL}} €</span>
+            </div>
+            <div class="total-row">
+                <span class="total-label">TVA (20%)</span>
+                <span class="total-value">{{TVA_AMOUNT}} €</span>
+            </div>
+            <div class="total-row grand-total">
+                <span class="total-label">Total TTC</span>
+                <span class="total-value">{{TOTAL_TTC}} €</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Amount in Letters -->
+    <div style="margin: 20px 0; font-style: italic; color: #666;">
+        <strong>Montant en lettres:</strong> {{AMOUNT_IN_LETTERS}} euros TTC
+    </div>
+
+    <!-- Payment Information -->
+    <div class="payment-section">
+        <div class="payment-title">Informations de Paiement</div>
+        <div class="payment-terms">
+            <strong>Conditions de Paiement:</strong> {{PAYMENT_TERMS}}
+        </div>
+    </div>
+
+    <!-- Bank Details -->
+    <div class="bank-section">
+        <div class="bank-title">Coordonnées Bancaires</div>
+        <div class="bank-details">
+            <div class="bank-row">
+                <span class="bank-label">Titulaire du compte:</span>
+                <span class="bank-value">M. KABUNDJI Chicco Mutombo</span>
+            </div>
+            <div class="bank-row">
+                <span class="bank-label">Banque:</span>
+                <span class="bank-value">BoursoBank</span>
+            </div>
+            <div class="bank-row">
+                <span class="bank-label">IBAN:</span>
+                <span class="bank-value">FR76 4061 8803 8100 0401 1470 394</span>
+            </div>
+            <div class="bank-row">
+                <span class="bank-label">BIC:</span>
+                <span class="bank-value">BOUSFRPPXXX</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Reference -->
+    <div class="reference-note">
+        <strong>Référence de paiement:</strong> Facture {{INVOICE_NUMBER}} - {{CLIENT_NAME}}
+    </div>
+
+    <!-- Legal Mentions -->
+    <div class="terms-section">
+        <div class="terms-title">Mentions Légales</div>
+        <ul class="terms-list">
+            <li>TVA applicable selon la législation en vigueur.</li>
+            <li>En cas de retard de paiement, des pénalités de retard seront appliquées conformément à la loi.</li>
+            <li>Les équipements et logiciels restent la propriété de Pulse Graphix jusqu'au paiement intégral.</li>
+            <li>Cette facture est payable à réception.</li>
+        </ul>
+    </div>
+
+    <!-- Footer -->
+    <footer class="document-footer">
+        <div class="footer-company">PULSE GRAPHIX | 3 RUE JACQUES PRÉVERT, 77200 TORCY, FRANCE</div>
+        <div class="footer-contact">Téléphone: +33 6 12 77 64 98 | Email: chicco@pulsegraphix.net | Site: www.pulsegraphix.net</div>
+    </footer>
+
+    <!-- Print Button (hidden when printing) -->
+    <div class="no-print" style="text-align: center; margin-top: 30px;">
+        <button onclick="window.print()" style="padding: 12px 30px; background: #00FF00; color: #000; border: none; font-weight: bold; cursor: pointer; font-size: 12pt;">
+            Imprimer / Enregistrer en PDF
+        </button>
+    </div>
+</body>
+</html>

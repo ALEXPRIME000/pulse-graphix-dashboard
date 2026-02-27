@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pulse Graphix - Invoice & Quotation Templates</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(135deg, #0D0D0D 0%, #1a1a2e 100%);
+      min-height: 100vh;
+      color: #fff;
+      padding: 40px 20px;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 60px;
+      padding-bottom: 40px;
+      border-bottom: 3px solid #00FF00;
+    }
+    
+    .logo {
+      font-size: 48px;
+      font-weight: 800;
+      color: #00FF00;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      text-shadow: 3px 3px 0 #000;
+      margin-bottom: 10px;
+    }
+    
+    .subtitle {
+      font-size: 18px;
+      color: #888;
+      letter-spacing: 2px;
+    }
+    
+    .page-title {
+      font-size: 32px;
+      margin-bottom: 40px;
+      text-align: center;
+      color: #fff;
+    }
+    
+    .page-title span {
+      color: #00FF00;
+    }
+    
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+    
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(0,255,0,0.3);
+      border-radius: 12px;
+      padding: 30px;
+      transition: all 0.3s ease;
+    }
+    
+    .card:hover {
+      border-color: #00FF00;
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,255,0,0.1);
+    }
+    
+    .card-title {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #00FF00;
+    }
+    
+    .card-desc {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+    
+    .links {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .btn {
+      flex: 1;
+      display: inline-block;
+      padding: 12px 20px;
+      background: transparent;
+      border: 2px solid #00FF00;
+      color: #00FF00;
+      text-decoration: none;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-align: center;
+      transition: all 0.3s ease;
+      border-radius: 4px;
+    }
+    
+    .btn:hover {
+      background: #00FF00;
+      color: #000;
+    }
+    
+    .feature-list {
+      margin: 60px auto;
+      max-width: 800px;
+      background: rgba(255,255,255,0.03);
+      padding: 40px;
+      border-radius: 12px;
+      border-left: 4px solid #00FF00;
+    }
+    
+    .feature-list h3 {
+      font-size: 24px;
+      margin-bottom: 25px;
+      color: #00FF00;
+    }
+    
+    .feature-list ul {
+      list-style: none;
+    }
+    
+    .feature-list li {
+      padding: 12px 0;
+      padding-left: 30px;
+      position: relative;
+      font-size: 15px;
+      color: #ccc;
+    }
+    
+    .feature-list li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #00FF00;
+      font-weight: bold;
+    }
+    
+    .footer {
+      text-align: center;
+      padding-top: 40px;
+      border-top: 1px solid #333;
+      color: #666;
+      font-size: 14px;
+    }
+    
+    .footer a {
+      color: #00FF00;
+      text-decoration: none;
+    }
+    
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    
+    @media (max-width: 768px) {
+      .logo {
+        font-size: 32px;
+      }
+      
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .links {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">Pulse Graphix</div>
+      <div class="subtitle">Invoice & Quotation System</div>
+    </div>
+    
+    <h1 class="page-title"><span>Professional</span> Document Templates</h1>
+    
+    <div class="grid">
+      <div class="card">
+        <h3 class="card-title">📄 Invoices</h3>
+        <p class="card-desc">Professional invoices with Pulse Graphix branding. Includes legal mentions (TVA, SIREN), payment terms, and full itemization.</p>
+        <div class="links">
+          <a href="invoices/invoice-fr.html" class="btn">Français</a>
+          <a href="invoices/invoice-en.html" class="btn">English</a>
+        </div>
+      </div>
+      
+      <div class="card">
+        <h3 class="card-title">📋 Quotations</h3>
+        <p class="card-desc">Detailed project quotations with validity periods, milestone payments, and comprehensive service breakdowns.</p>
+        <div class="links">
+          <a href="devis/devis-fr.html" class="btn">Français</a>
+          <a href="devis/quotation-en.html" class="btn">English</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="feature-list">
+      <h3>✨ Features</h3>
+      <ul>
+        <li>Pulse Graphix neon green branding (#00FF00)</li>
+        <li>French legal compliance (TVA, SIREN, late payment clauses)</li>
+        <li>Print-friendly format with @media print styles</li>
+        <li>Responsive design for all screen sizes</li>
+        <li>Language toggle between FR/EN versions</li>
+        <li>Professional typography and layout</li>
+        <li>Status badges (Paid, Pending, Draft, etc.)</li>
+        <li>Complete payment terms and bank details</li>
+      </ul>
+    </div>
+    
+    <div class="footer">
+      <p>Pulse Graphix | 3 Rue Jacques Prévert, 77200 Torcy, France</p>
+      <p><a href="mailto:chicco@pulsegraphix.net">chicco@pulsegraphix.net</a> | <a href="https://www.pulsegraphix.net">www.pulsegraphix.net</a></p>
+      <p style="margin-top: 20px; font-size: 12px;">Built by Alex Prime | 2026</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposition — PULSE GRAPHIX</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        @page { size: A4; margin: 0; }
+
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            font-size: 9pt;
+            color: #333;
+            background: #fff;
+            line-height: 1.5;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            position: relative;
+            background: #fff;
+            page-break-after: always;
+        }
+
+        /* ============ HEADER ============ */
+        .header-banner {
+            background: linear-gradient(135deg, #2a5c3a 0%, #1e4a2e 50%, #2e6b42 100%);
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-banner::before {
+            content: '';
+            position: absolute;
+            top: -30px; left: -50px;
+            width: 300px; height: 200px;
+            background: rgba(255,255,255,0.04);
+            border-radius: 50%;
+            transform: rotate(-15deg);
+        }
+
+        .logo-text { display: flex; flex-direction: column; z-index: 1; }
+        .logo-pulse { font-size: 24pt; font-weight: 700; color: #76ff03; letter-spacing: 2px; line-height: 1; }
+        .logo-graphix { font-size: 9pt; font-weight: 400; color: rgba(255,255,255,0.85); letter-spacing: 4px; text-transform: uppercase; }
+
+        .header-right { text-align: right; color: rgba(255,255,255,0.9); font-size: 7.5pt; line-height: 1.6; z-index: 1; }
+        .header-right a { color: #76ff03; text-decoration: none; }
+
+        /* ============ COVER PAGE ============ */
+        .cover-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: calc(297mm - 100px - 50px);
+            text-align: center;
+            padding: 40px;
+        }
+
+        .cover-label {
+            font-size: 9pt;
+            font-weight: 600;
+            color: #2e7d32;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+        }
+
+        .cover-title {
+            font-size: 28pt;
+            font-weight: 700;
+            color: #1a3a5c;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        .cover-subtitle {
+            font-size: 14pt;
+            font-weight: 300;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        .cover-divider {
+            width: 80px;
+            height: 3px;
+            background: #76ff03;
+            margin: 0 auto 40px;
+        }
+
+        .cover-meta {
+            font-size: 10pt;
+            color: #666;
+            line-height: 2;
+        }
+
+        .cover-meta strong { color: #1a3a5c; }
+
+        /* ============ CONTENT ============ */
+        .content { padding: 30px 35px; }
+
+        .section-title {
+            font-size: 14pt;
+            font-weight: 700;
+            color: #1a3a5c;
+            margin-bottom: 6px;
+            padding-bottom: 6px;
+            border-bottom: 3px solid #76ff03;
+            display: inline-block;
+        }
+
+        .section-intro {
+            font-size: 9.5pt;
+            color: #555;
+            margin: 12px 0 18px;
+            line-height: 1.6;
+        }
+
+        /* Problem / Solution boxes */
+        .challenge-list { list-style: none; padding: 0; margin-bottom: 24px; }
+        .challenge-list li {
+            padding: 10px 14px 10px 36px;
+            margin-bottom: 8px;
+            background: #fef8f0;
+            border-left: 3px solid #e65100;
+            border-radius: 3px;
+            font-size: 9pt;
+            position: relative;
+        }
+        .challenge-list li::before {
+            content: '⚠';
+            position: absolute;
+            left: 12px;
+            top: 10px;
+            font-size: 10pt;
+        }
+
+        .solution-list { list-style: none; padding: 0; margin-bottom: 24px; }
+        .solution-list li {
+            padding: 10px 14px 10px 36px;
+            margin-bottom: 8px;
+            background: #f0faf2;
+            border-left: 3px solid #2e7d32;
+            border-radius: 3px;
+            font-size: 9pt;
+            position: relative;
+        }
+        .solution-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 12px;
+            top: 10px;
+            font-size: 11pt;
+            color: #2e7d32;
+            font-weight: 700;
+        }
+
+        /* Deliverables table */
+        .deliverables-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 24px;
+            font-size: 8.5pt;
+        }
+
+        .deliverables-table thead tr { background: #1a3a5c; color: #fff; }
+        .deliverables-table thead th {
+            padding: 8px 12px;
+            font-weight: 600;
+            font-size: 8pt;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-align: left;
+        }
+
+        .deliverables-table tbody tr { border-bottom: 1px solid #e8e8e8; }
+        .deliverables-table tbody tr:nth-child(even) { background: #f9faf9; }
+        .deliverables-table tbody td { padding: 8px 12px; vertical-align: top; }
+        .deliverables-table .check { color: #2e7d32; font-weight: 700; text-align: center; font-size: 12pt; }
+
+        /* Timeline */
+        .timeline { margin-bottom: 24px; }
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 30px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            background: #2e7d32;
+            border-radius: 50%;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 13px;
+            top: 20px;
+            width: 2px;
+            height: calc(100% + 4px);
+            background: #ddd;
+        }
+        .timeline-item:last-child::after { display: none; }
+        .timeline-phase {
+            font-weight: 700;
+            color: #1a3a5c;
+            min-width: 140px;
+            font-size: 9pt;
+        }
+        .timeline-desc { font-size: 9pt; color: #555; }
+
+        /* Pricing tiers */
+        .pricing-row {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .pricing-card {
+            flex: 1;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px 16px;
+            text-align: center;
+            position: relative;
+            transition: all 0.2s;
+        }
+
+        .pricing-card.recommended {
+            border-color: #2e7d32;
+            background: #f0faf2;
+            transform: scale(1.03);
+        }
+
+        .pricing-card.recommended::after {
+            content: '★ RECOMMANDÉ';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #2e7d32;
+            color: #fff;
+            font-size: 7pt;
+            font-weight: 700;
+            padding: 3px 12px;
+            border-radius: 10px;
+            letter-spacing: 1px;
+        }
+
+        .pricing-name {
+            font-size: 11pt;
+            font-weight: 700;
+            color: #1a3a5c;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .pricing-price {
+            font-size: 22pt;
+            font-weight: 700;
+            color: #2e7d32;
+            margin-bottom: 6px;
+        }
+
+        .pricing-price small { font-size: 9pt; font-weight: 400; color: #999; }
+
+        .pricing-features {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            font-size: 8pt;
+            color: #555;
+        }
+
+        .pricing-features li {
+            padding: 4px 0 4px 16px;
+            position: relative;
+        }
+        .pricing-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #2e7d32;
+            font-weight: 700;
+        }
+
+        /* Why us */
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .why-card {
+            background: #f8faf8;
+            border-radius: 6px;
+            padding: 16px;
+            border-left: 3px solid #76ff03;
+        }
+
+        .why-card h4 {
+            font-size: 9.5pt;
+            font-weight: 700;
+            color: #1a3a5c;
+            margin-bottom: 4px;
+        }
+
+        .why-card p { font-size: 8.5pt; color: #555; line-height: 1.5; }
+
+        /* Signature */
+        .signature-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .sig-row {
+            display: flex;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .sig-box {
+            flex: 1;
+            border-bottom: 1px solid #999;
+            padding-bottom: 40px;
+            font-size: 8.5pt;
+            color: #666;
+        }
+
+        .sig-box strong { color: #1a3a5c; display: block; margin-bottom: 4px; }
+
+        .acceptance-note {
+            font-size: 8pt;
+            color: #666;
+            margin-top: 16px;
+            padding: 10px 14px;
+            background: #f0faf2;
+            border-left: 3px solid #2e7d32;
+            border-radius: 3px;
+        }
+
+        /* Footer */
+        .document-footer {
+            background: #1a3a5c;
+            color: rgba(255,255,255,0.85);
+            text-align: center;
+            padding: 8px 35px;
+            font-size: 7pt;
+            line-height: 1.6;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .document-footer strong { color: #76ff03; }
+
+        /* Print */
+        @media print {
+            body { margin: 0; }
+            .page { width: 100%; min-height: auto; }
+            .no-print { display: none !important; }
+        }
+
+        .no-print { text-align: center; margin-top: 20px; }
+        .print-btn {
+            padding: 12px 30px;
+            background: #2e7d32;
+            color: #fff;
+            border: none;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 10pt;
+            border-radius: 4px;
+        }
+        .print-btn:hover { background: #1b5e20; }
+    </style>
+</head>
+<body>
+
+<!-- ==================== PAGE 1: COVER ==================== -->
+<div class="page">
+    <div class="header-banner">
+        <div class="logo-text">
+            <div class="logo-pulse">PULSE</div>
+            <div class="logo-graphix">GRAPHIX</div>
+        </div>
+        <div class="header-right">
+            <a href="https://www.pulsegraphix.net">www.pulsegraphix.net</a><br>
+            3 Rue Jacques Prévert, 77200 Torcy<br>
+            chicco@pulsegraphix.net
+        </div>
+    </div>
+
+    <div class="cover-content">
+        <div class="cover-label">Proposition Commerciale</div>
+        <div class="cover-title">{{PROJECT_TITLE}}</div>
+        <div class="cover-subtitle">Solution web sur mesure pour {{CLIENT_COMPANY}}</div>
+        <div class="cover-divider"></div>
+        <div class="cover-meta">
+            <strong>Préparée pour :</strong> {{CLIENT_CONTACT}}, {{CLIENT_COMPANY}}<br>
+            <strong>Date :</strong> {{DATE}}<br>
+            <strong>Valide jusqu'au :</strong> {{VALID_UNTIL}}<br>
+            <strong>Réf :</strong> PROP-{{QUOTE_NUMBER}}
+        </div>
+    </div>
+
+    <div class="document-footer">
+        <strong>PULSE GRAPHIX</strong> | 3 Rue Jacques Prévert, 77200 Torcy | +33 6 12 77 64 98 | chicco@pulsegraphix.net
+    </div>
+</div>
+
+<!-- ==================== PAGE 2: PROBLEM + SOLUTION ==================== -->
+<div class="page">
+    <div class="header-banner">
+        <div class="logo-text">
+            <div class="logo-pulse">PULSE</div>
+            <div class="logo-graphix">GRAPHIX</div>
+        </div>
+        <div class="header-right">
+            <a href="https://www.pulsegraphix.net">www.pulsegraphix.net</a><br>
+            chicco@pulsegraphix.net
+        </div>
+    </div>
+
+    <div class="content">
+        <!-- EXECUTIVE SUMMARY -->
+        <div class="section-title">Résumé Exécutif</div>
+        <p class="section-intro">
+            {{CLIENT_COMPANY}} est une entreprise reconnue localement, mais l'absence de présence web
+            professionnelle représente un frein significatif à sa croissance. Cette proposition détaille
+            comment Pulse Graphix peut concevoir et développer un site web moderne, performant et
+            optimisé pour convertir vos visiteurs en clients.
+        </p>
+
+        <!-- THE CHALLENGE -->
+        <div class="section-title">Le Défi</div>
+        <p class="section-intro">Voici les obstacles actuels que nous avons identifiés :</p>
+        <ul class="challenge-list">
+            <li><strong>Absence de site web :</strong> 73% des consommateurs recherchent un site web avant de visiter un commerce local. Sans site, vous êtes invisible pour ces prospects.</li>
+            <li><strong>Perte de clients potentiels :</strong> Vos concurrents avec un site web captent les clients qui vous cherchent en ligne — estimé à {{LOST_REVENUE}} par an.</li>
+            <li><strong>Dépendance aux réseaux sociaux :</strong> Les plateformes sociales limitent votre portée et ne vous appartiennent pas. Un site web est votre vitrine permanente.</li>
+            <li><strong>Impossibilité de commandes/réservations en ligne :</strong> Les clients modernes attendent de pouvoir interagir avec votre entreprise 24h/24.</li>
+        </ul>
+
+        <!-- OUR SOLUTION -->
+        <div class="section-title">Notre Solution</div>
+        <p class="section-intro">Pulse Graphix propose une solution clé en main :</p>
+        <ul class="solution-list">
+            <li><strong>Site web professionnel et responsive</strong> — Design sur mesure, adapté à tous les écrans (mobile, tablette, desktop).</li>
+            <li><strong>Système de gestion de contenu (CMS)</strong> — Mettez à jour vos contenus, menus et photos en autonomie, sans connaissances techniques.</li>
+            <li><strong>Optimisation SEO</strong> — Apparaissez en première page Google pour les recherches locales pertinentes.</li>
+            <li><strong>Fonctionnalités métier</strong> — Réservations, commandes en ligne, galerie photos, avis clients, newsletter.</li>
+            <li><strong>Hébergement sécurisé + SSL</strong> — Performance, sécurité et disponibilité garanties.</li>
+        </ul>
+    </div>
+
+    <div class="document-footer">
+        <strong>PULSE GRAPHIX</strong> | Proposition {{QUOTE_NUMBER}} | Page 2
+    </div>
+</div>
+
+<!-- ==================== PAGE 3: DELIVERABLES + TIMELINE ==================== -->
+<div class="page">
+    <div class="header-banner">
+        <div class="logo-text">
+            <div class="logo-pulse">PULSE</div>
+            <div class="logo-graphix">GRAPHIX</div>
+        </div>
+        <div class="header-right">
+            <a href="https://www.pulsegraphix.net">www.pulsegraphix.net</a><br>
+            chicco@pulsegraphix.net
+        </div>
+    </div>
+
+    <div class="content">
+        <!-- DELIVERABLES -->
+        <div class="section-title">Livrables</div>
+        <p class="section-intro">Détail complet des éléments inclus dans votre projet :</p>
+
+        <table class="deliverables-table">
+            <thead>
+                <tr>
+                    <th style="width:5%">#</th>
+                    <th style="width:30%">Livrable</th>
+                    <th style="width:50%">Description</th>
+                    <th style="width:15%" class="check">Inclus</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><strong>Maquette UI/UX</strong></td>
+                    <td>Design graphique sur mesure avec 2 révisions incluses</td>
+                    <td class="check">✓</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><strong>Développement Web</strong></td>
+                    <td>Intégration HTML/CSS/JS responsive + CMS</td>
+                    <td class="check">✓</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><strong>{{NUM_PAGES}} Pages</strong></td>
+                    <td>Accueil, À propos, Services, Menu/Galerie, Contact</td>
+                    <td class="check">✓</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><strong>SEO de base</strong></td>
+                    <td>Meta tags, sitemap, Google Business Profile, schema markup</td>
+                    <td class="check">✓</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><strong>Hébergement 1 an</strong></td>
+                    <td>Serveur sécurisé, SSL, domaine inclus</td>
+                    <td class="check">✓</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><strong>Formation</strong></td>
+                    <td>Session de 1h pour gérer votre site en autonomie</td>
+                    <td class="check">✓</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td><strong>Support 30 jours</strong></td>
+                    <td>Corrections et ajustements post-lancement</td>
+                    <td class="check">✓</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- TIMELINE -->
+        <div class="section-title">Calendrier du Projet</div>
+        <p class="section-intro">Délai estimé : {{TIMELINE_WEEKS}} semaines après signature</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="timeline-phase">Semaine 1</span>
+                <span class="timeline-desc">Réunion de lancement · Brief créatif · Collecte des contenus</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-phase">Semaine 2</span>
+                <span class="timeline-desc">Maquette graphique · Validation du design · Révisions</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-phase">Semaine 3</span>
+                <span class="timeline-desc">Développement · Intégration CMS · Tests responsifs</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-phase">Semaine 4</span>
+                <span class="timeline-desc">Mise en ligne · Formation · Lancement 🚀</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="document-footer">
+        <strong>PULSE GRAPHIX</strong> | Proposition {{QUOTE_NUMBER}} | Page 3
+    </div>
+</div>
+
+<!-- ==================== PAGE 4: PRICING + WHY US + SIGNATURE ==================== -->
+<div class="page">
+    <div class="header-banner">
+        <div class="logo-text">
+            <div class="logo-pulse">PULSE</div>
+            <div class="logo-graphix">GRAPHIX</div>
+        </div>
+        <div class="header-right">
+            <a href="https://www.pulsegraphix.net">www.pulsegraphix.net</a><br>
+            chicco@pulsegraphix.net
+        </div>
+    </div>
+
+    <div class="content">
+        <!-- PRICING -->
+        <div class="section-title">Investissement</div>
+        <p class="section-intro">Choisissez la formule adaptée à vos besoins :</p>
+
+        <div class="pricing-row">
+            <div class="pricing-card">
+                <div class="pricing-name">Starter</div>
+                <div class="pricing-price">1 497 € <small>HT</small></div>
+                <ul class="pricing-features">
+                    <li>5 pages sur mesure</li>
+                    <li>Design responsive</li>
+                    <li>SEO de base</li>
+                    <li>Hébergement 1 an</li>
+                    <li>Formulaire de contact</li>
+                    <li>Support 30 jours</li>
+                </ul>
+            </div>
+            <div class="pricing-card recommended">
+                <div class="pricing-name">Professional</div>
+                <div class="pricing-price">2 997 € <small>HT</small></div>
+                <ul class="pricing-features">
+                    <li>8 pages + blog</li>
+                    <li>CMS intégré</li>
+                    <li>SEO avancé</li>
+                    <li>Hébergement 1 an</li>
+                    <li>Réservations en ligne</li>
+                    <li>Google Analytics</li>
+                    <li>Support 60 jours</li>
+                </ul>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-name">Enterprise</div>
+                <div class="pricing-price">5 997 € <small>HT</small></div>
+                <ul class="pricing-features">
+                    <li>Pages illimitées</li>
+                    <li>E-commerce complet</li>
+                    <li>SEO premium + blog</li>
+                    <li>Hébergement 2 ans</li>
+                    <li>Paiement en ligne</li>
+                    <li>Multi-langue</li>
+                    <li>Support 6 mois</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- WHY US -->
+        <div class="section-title">Pourquoi Pulse Graphix</div>
+        <div class="why-grid">
+            <div class="why-card">
+                <h4>🎯 Expertise Locale</h4>
+                <p>Basés à Torcy, nous connaissons votre marché et vos clients. Un partenaire de proximité, pas une agence distante.</p>
+            </div>
+            <div class="why-card">
+                <h4>🎨 Design Premium</h4>
+                <p>21 ans d'expérience en design. Chaque site est une œuvre unique qui reflète votre identité de marque.</p>
+            </div>
+            <div class="why-card">
+                <h4>⚡ Livraison Rapide</h4>
+                <p>Votre site en ligne en 4 semaines maximum. Pas de délais interminables, des résultats concrets.</p>
+            </div>
+            <div class="why-card">
+                <h4>🤝 Accompagnement</h4>
+                <p>Formation incluse + support après lancement. Vous ne serez jamais seul face à votre site.</p>
+            </div>
+        </div>
+
+        <!-- NEXT STEPS -->
+        <div class="section-title">Prochaines Étapes</div>
+        <div class="acceptance-note">
+            <strong>Pour démarrer votre projet :</strong><br>
+            1. Choisissez votre formule (Starter, Professional ou Enterprise)<br>
+            2. Signez cette proposition ci-dessous<br>
+            3. Réglez l'acompte de 50% pour lancer les travaux<br>
+            4. Nous planifions la réunion de lancement sous 48h
+        </div>
+
+        <div class="signature-section">
+            <div class="sig-row">
+                <div class="sig-box">
+                    <strong>Pour {{CLIENT_COMPANY}} :</strong>
+                    Nom : ____________________________<br><br>
+                    Date : ____________________________<br><br>
+                    Signature :
+                </div>
+                <div class="sig-box">
+                    <strong>Pour Pulse Graphix :</strong>
+                    Chicco Mutombo Kabundji<br><br>
+                    Date : {{DATE}}<br><br>
+                    Signature :
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="document-footer">
+        <strong>PULSE GRAPHIX</strong> | Proposition {{QUOTE_NUMBER}} | Page 4 |
+        Conditions : Devis valable 30 jours · Acompte 50% à la signature · Solde à la livraison
+    </div>
+</div>
+
+<!-- PRINT BUTTON -->
+<div class="no-print">
+    <button class="print-btn" onclick="window.print()">Imprimer / Enregistrer en PDF</button>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devis - PULSE HOLDING</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+            font-size: 9pt;
+            color: #333;
+            background: #fff;
+            line-height: 1.4;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            position: relative;
+            background: #fff;
+        }
+
+        /* ============ HEADER BANNER ============ */
+        .header-banner {
+            background: linear-gradient(135deg, #2a5c3a 0%, #1e4a2e 50%, #2e6b42 100%);
+            height: 140px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 35px;
+        }
+
+        .header-banner::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            left: -50px;
+            width: 300px;
+            height: 200px;
+            background: rgba(255,255,255,0.04);
+            border-radius: 50%;
+            transform: rotate(-15deg);
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 1;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-pulse {
+            font-size: 26pt;
+            font-weight: 700;
+            color: #76ff03;
+            letter-spacing: 2px;
+            line-height: 1;
+        }
+
+        .logo-graphix {
+            font-size: 10pt;
+            font-weight: 400;
+            color: rgba(255,255,255,0.85);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .header-right {
+            text-align: right;
+            color: rgba(255,255,255,0.9);
+            font-size: 8pt;
+            line-height: 1.6;
+            z-index: 1;
+        }
+
+        .header-right a {
+            color: #76ff03;
+            text-decoration: none;
+        }
+
+        /* ============ BODY CONTENT ============ */
+        .content {
+            padding: 25px 35px;
+        }
+
+        /* Two-column client/details row */
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+
+        .info-box {
+            flex: 1;
+        }
+
+        .info-box-label {
+            font-size: 8pt;
+            font-weight: 700;
+            color: #1a3a5c;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            padding-bottom: 4px;
+            border-bottom: 2px solid #76ff03;
+        }
+
+        .info-box p {
+            font-size: 9pt;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .info-box p strong {
+            color: #1a1a1a;
+        }
+
+        /* Details grid (right side) */
+        .details-grid {
+            display: grid;
+            grid-template-columns: 130px 1fr;
+            gap: 4px 10px;
+            font-size: 9pt;
+        }
+
+        .details-grid .label {
+            font-weight: 600;
+            color: #1a3a5c;
+        }
+
+        .details-grid .value {
+            color: #333;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 2px 10px;
+            background: #e8f5e9;
+            color: #2e7d32;
+            border-radius: 3px;
+            font-weight: 600;
+            font-size: 8pt;
+        }
+
+        /* ============ PROJECT DESCRIPTION ============ */
+        .project-desc {
+            background: #f8faf8;
+            border-left: 3px solid #2e7d32;
+            padding: 12px 16px;
+            margin-bottom: 20px;
+            font-size: 9pt;
+            line-height: 1.5;
+        }
+
+        .project-desc h3 {
+            font-size: 9pt;
+            font-weight: 700;
+            color: #1a3a5c;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* ============ ITEMS TABLE ============ */
+        .items-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 16px;
+            font-size: 8.5pt;
+        }
+
+        .items-table thead tr {
+            background: #1a3a5c;
+            color: #fff;
+        }
+
+        .items-table thead th {
+            padding: 8px 10px;
+            font-weight: 600;
+            font-size: 8pt;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-align: left;
+        }
+
+        .items-table thead th.numeric {
+            text-align: right;
+        }
+
+        .items-table tbody tr {
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .items-table tbody tr:nth-child(even) {
+            background: #f9faf9;
+        }
+
+        .items-table tbody tr:hover {
+            background: #f0f4f0;
+        }
+
+        .items-table tbody td {
+            padding: 8px 10px;
+            vertical-align: top;
+        }
+
+        .items-table tbody td.numeric {
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        .items-table .item-title {
+            font-weight: 600;
+            color: #1a1a1a;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .items-table .item-desc {
+            font-size: 7.5pt;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .items-table .discount-row {
+            color: #c62828;
+        }
+
+        .items-table .discount-row td {
+            color: #c62828;
+        }
+
+        /* ============ TOTALS ============ */
+        .totals-wrapper {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+
+        .totals-box {
+            width: 260px;
+        }
+
+        .totals-box .total-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 12px;
+            font-size: 9pt;
+        }
+
+        .totals-box .total-row.subtotal {
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .totals-box .total-row.tva {
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .totals-box .total-row.grand-total {
+            background: #1a3a5c;
+            color: #fff;
+            font-weight: 700;
+            font-size: 11pt;
+            border-radius: 3px;
+            margin-top: 4px;
+            padding: 8px 12px;
+        }
+
+        /* ============ PAYMENT SECTION ============ */
+        .payment-section {
+            margin-bottom: 16px;
+        }
+
+        .section-heading {
+            font-size: 10pt;
+            font-weight: 700;
+            color: #1a3a5c;
+            margin-bottom: 8px;
+            padding-bottom: 4px;
+            border-bottom: 2px solid #76ff03;
+        }
+
+        .payment-terms {
+            font-size: 9pt;
+            margin-bottom: 6px;
+        }
+
+        .payment-options {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+
+        .payment-option {
+            font-size: 7.5pt;
+            padding: 4px 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            color: #666;
+        }
+
+        .payment-option.active {
+            background: #e8f5e9;
+            border-color: #2e7d32;
+            color: #2e7d32;
+            font-weight: 600;
+        }
+
+        /* ============ BANK DETAILS ============ */
+        .bank-section {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            padding: 14px 16px;
+            margin-bottom: 14px;
+        }
+
+        .bank-section h4 {
+            font-size: 9pt;
+            font-weight: 700;
+            color: #1a3a5c;
+            margin-bottom: 8px;
+        }
+
+        .bank-grid {
+            display: grid;
+            grid-template-columns: 160px 1fr;
+            gap: 3px 10px;
+            font-size: 8.5pt;
+        }
+
+        .bank-grid .label {
+            font-weight: 600;
+            color: #1a3a5c;
+        }
+
+        .bank-grid .value {
+            color: #333;
+        }
+
+        .bank-codes {
+            margin-top: 6px;
+            font-size: 8pt;
+            color: #555;
+        }
+
+        .bank-codes span {
+            font-weight: 600;
+            color: #1a3a5c;
+        }
+
+        .reference-note {
+            font-size: 8.5pt;
+            margin-bottom: 16px;
+            padding: 8px 12px;
+            background: #fffde7;
+            border-left: 3px solid #f9a825;
+            border-radius: 2px;
+        }
+
+        .reference-note strong {
+            color: #1a3a5c;
+        }
+
+        /* ============ TERMS ============ */
+        .terms-section {
+            margin-bottom: 16px;
+        }
+
+        .terms-section h4 {
+            font-size: 9pt;
+            font-weight: 700;
+            color: #1a3a5c;
+            margin-bottom: 6px;
+        }
+
+        .terms-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .terms-section ul li {
+            font-size: 7.5pt;
+            color: #666;
+            padding: 2px 0;
+            padding-left: 12px;
+            position: relative;
+        }
+
+        .terms-section ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #2e7d32;
+        }
+
+        /* ============ FOOTER ============ */
+        .document-footer {
+            background: #1a3a5c;
+            color: rgba(255,255,255,0.85);
+            text-align: center;
+            padding: 10px 35px;
+            font-size: 7.5pt;
+            line-height: 1.6;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .document-footer strong {
+            color: #76ff03;
+        }
+
+        /* ============ PRINT ============ */
+        @media print {
+            body { margin: 0; }
+            .page { width: 100%; min-height: auto; }
+            .no-print { display: none !important; }
+            .page-break { page-break-before: always; }
+        }
+
+        .no-print {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .print-btn {
+            padding: 12px 30px;
+            background: #2e7d32;
+            color: #fff;
+            border: none;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 10pt;
+            border-radius: 4px;
+        }
+
+        .print-btn:hover {
+            background: #1b5e20;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+    <!-- HEADER BANNER -->
+    <div class="header-banner">
+        <div class="logo-area">
+            <div class="logo-text">
+                <div class="logo-pulse">PULSE</div>
+                <div class="logo-graphix">GRAPHIX</div>
+            </div>
+        </div>
+        <div class="header-right">
+            <a href="https://www.pulsegraphix.net">www.pulsegraphix.net</a><br>
+            3 Jacques Prévert Torcy 77200<br>
+            chicco007@gmail.com<br>
+            chicco@pulsegraphix.net
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+        <!-- CLIENT INFO + DEVIS DETAILS -->
+        <div class="info-row">
+            <div class="info-box">
+                <div class="info-box-label">Facturer À</div>
+                <p>
+                    <strong>Entreprise :</strong> {{CLIENT_COMPANY}}<br>
+                    <strong>Contact :</strong> {{CLIENT_CONTACT}}<br>
+                    <strong>Email :</strong> {{CLIENT_EMAIL}}<br>
+                    <strong>Téléphone :</strong> {{CLIENT_PHONE}}<br>
+                    <strong>Adresse :</strong> {{CLIENT_ADDRESS}}<br>
+                    {{CLIENT_CITY}}, {{CLIENT_COUNTRY}}
+                </p>
+            </div>
+            <div class="info-box">
+                <div class="info-box-label">Détails du Devis</div>
+                <div class="details-grid">
+                    <span class="label">Devis # :</span>
+                    <span class="value">{{QUOTE_NUMBER}}</span>
+                    <span class="label">Date :</span>
+                    <span class="value">{{QUOTE_DATE}}</span>
+                    <span class="label">Valide jusqu'au :</span>
+                    <span class="value">{{VALID_UNTIL}}</span>
+                    <span class="label">Statut :</span>
+                    <span class="value"><span class="status-badge">{{STATUS}}</span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJECT DESCRIPTION -->
+        <div class="project-desc">
+            <h3>Description du Projet</h3>
+            <p>{{PROJECT_DESCRIPTION}}</p>
+        </div>
+
+        <!-- ITEMS TABLE -->
+        <table class="items-table">
+            <thead>
+                <tr>
+                    <th style="width:25%">Article</th>
+                    <th style="width:40%">Description</th>
+                    <th style="width:5%" class="numeric">Qté</th>
+                    <th style="width:15%" class="numeric">Prix Unitaire</th>
+                    <th style="width:15%" class="numeric">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- ITEMS START -->
+                <tr>
+                    <td><span class="item-title">Conception Graphique et Design UI/UX</span></td>
+                    <td><span class="item-desc">Création d'une maquette graphique sur mesure, sobre et professionnelle, et conception de l'expérience utilisateur (responsive design).</span></td>
+                    <td class="numeric">1</td>
+                    <td class="numeric">300 €</td>
+                    <td class="numeric">300 €</td>
+                </tr>
+                <tr>
+                    <td><span class="item-title">Développement et Intégration CMS</span></td>
+                    <td><span class="item-desc">Développement technique du site et intégration d'un système de gestion de contenu (CMS) pour une mise à jour facile.</span></td>
+                    <td class="numeric">1</td>
+                    <td class="numeric">500 €</td>
+                    <td class="numeric">500 €</td>
+                </tr>
+                <tr>
+                    <td><span class="item-title">Création des pages et intégration des contenus</span></td>
+                    <td><span class="item-desc">Création de la structure des 8 pages et intégration des textes et images fournis par le client.</span></td>
+                    <td class="numeric">1</td>
+                    <td class="numeric">200 €</td>
+                    <td class="numeric">200 €</td>
+                </tr>
+                <tr>
+                    <td><span class="item-title">Module de fonctionnalités (Adhésion, Dons)</span></td>
+                    <td><span class="item-desc">Intégration d'un formulaire d'adhésion et d'un module de dons en ligne (type PayPal, Stripe). Inclut aussi la newsletter et le calendrier.</span></td>
+                    <td class="numeric">1</td>
+                    <td class="numeric">150 €</td>
+                    <td class="numeric">150 €</td>
+                </tr>
+                <tr>
+                    <td><span class="item-title">Nom de domaine, Hébergement et SEO de base (1 an)</span></td>
+                    <td><span class="item-desc">Achat du nom de domaine, configuration de l'hébergement sécurisé (SSL) et optimisation SEO initiale.</span></td>
+                    <td class="numeric">1</td>
+                    <td class="numeric">50 €</td>
+                    <td class="numeric">50 €</td>
+                </tr>
+                <tr>
+                    <td><span class="item-title">Formation à l'utilisation du site</span></td>
+                    <td><span class="item-desc">Session de formation pour permettre à l'équipe de gérer le contenu du site de manière autonome.</span></td>
+                    <td class="numeric">1</td>
+                    <td class="numeric">100 €</td>
+                    <td class="numeric">100 €</td>
+                </tr>
+                <tr class="discount-row">
+                    <td><span class="item-title">Remise Spéciale Projet Associatif</span></td>
+                    <td><span class="item-desc">Remise exceptionnelle accordée pour soutenir la mission de l'association Agir Pour l'Éducation.</span></td>
+                    <td class="numeric">1</td>
+                    <td class="numeric">-550 €</td>
+                    <td class="numeric">-550 €</td>
+                </tr>
+                <!-- ITEMS END -->
+            </tbody>
+        </table>
+
+        <!-- TOTALS -->
+        <div class="totals-wrapper">
+            <div class="totals-box">
+                <div class="total-row subtotal">
+                    <span>Sous-total :</span>
+                    <span>{{SUBTOTAL}} €</span>
+                </div>
+                <div class="total-row tva">
+                    <span>TVA (20%) :</span>
+                    <span>{{TVA}} €</span>
+                </div>
+                <div class="total-row grand-total">
+                    <span>Total :</span>
+                    <span>{{TOTAL}} €</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAYMENT INFORMATION -->
+        <div class="payment-section">
+            <div class="section-heading">Informations de Paiement</div>
+            <div class="payment-terms">
+                <strong>Conditions de Paiement:</strong> {{PAYMENT_TERMS}}
+            </div>
+            <div class="payment-options">
+                <span class="payment-option active">50% d'acompte + 50% à la livraison</span>
+                <span class="payment-option">30% d'acompte + 40% à mi-parcours + 30% final</span>
+                <span class="payment-option">60% d'acompte + 40% à la livraison</span>
+            </div>
+
+            <!-- BANK DETAILS -->
+            <div class="bank-section">
+                <h4>Coordonnées Bancaires</h4>
+                <div class="bank-grid">
+                    <span class="label">Titulaire du compte:</span>
+                    <span class="value">M. KABUNDJI Chicco Mutombo</span>
+                    <span class="label">Banque:</span>
+                    <span class="value">BoursoBank</span>
+                    <span class="label">Adresse:</span>
+                    <span class="value">44 rue Traversière, 92772 BOULOGNE-BILLANCOURT CEDEX, FRANCE</span>
+                    <span class="label">IBAN:</span>
+                    <span class="value">FR76 4061 8803 8100 0401 1470 394</span>
+                </div>
+                <div class="bank-codes">
+                    <span>BIC:</span> BOUS FRPP XXX &nbsp;|&nbsp;
+                    <span>Code Banque:</span> 40618 &nbsp;|&nbsp;
+                    <span>Code Guichet:</span> 80381 &nbsp;|&nbsp;
+                    <span>N° de compte:</span> 00040114703 &nbsp;|&nbsp;
+                    <span>Clé RIB:</span> 94
+                </div>
+            </div>
+
+            <!-- REFERENCE -->
+            <div class="reference-note">
+                <strong>Référence:</strong> Veuillez inclure le numéro de devis {{QUOTE_NUMBER}} dans votre référence de paiement.
+            </div>
+        </div>
+
+        <!-- TERMS & CONDITIONS -->
+        <div class="terms-section">
+            <h4>Conditions Générales</h4>
+            <ul>
+                <li>Ce devis est valable 30 jours à compter de la date d'émission.</li>
+                <li>Tous les prix sont hors taxes applicables sauf indication contraire.</li>
+                <li>Les travaux commenceront à réception du devis signé et de l'acompte requis.</li>
+                <li>Toute modification du périmètre de travail sera facturée en supplément.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="document-footer">
+        <strong>PULSE HOLDING</strong> | 3 RUE JACQUES PRÉVERT, 77200 TORCY, FRANCE<br>
+        Téléphone : +33 61277 6498 | Email : chicco007@gmail.com | chicco@pulsegraphix.net | Site web : www.pulsegraphix.net
+    </div>
+</div>
+
+<!-- PRINT BUTTON -->
+<div class="no-print">
+    <button class="print-btn" onclick="window.print()">Imprimer / Enregistrer en PDF</button>
+</div>
+
+</body>
+</html>

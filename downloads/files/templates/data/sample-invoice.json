@@ -1,0 +1,101 @@
+{
+  "document": {
+    "type": "invoice",
+    "number": "FAC-2024-001",
+    "date": "2024-01-15",
+    "dueDate": "2024-02-15",
+    "currency": "EUR",
+    "language": "fr",
+    "notes": "TVA applicable selon la législation en vigueur. Pour tout règlement par virement, merci de préciser le numéro de facture."
+  },
+  
+  "project": {
+    "name": "Refonte Site Web E-commerce",
+    "reference": "PROJ-2024-001"
+  },
+  
+  "company": {
+    "name": "Pulse Graphix",
+    "siren": "123 456 789 00012",
+    "address": "3 Rue Jacques Prévert",
+    "postalCode": "77200",
+    "city": "Torcy",
+    "country": "France",
+    "phone": "+33 6 12 77 64 98",
+    "email": "chicco@pulsegraphix.net",
+    "website": "www.pulsegraphix.net",
+    "tvaNumber": "FR12 123 456 789"
+  },
+  
+  "client": {
+    "type": "company",
+    "name": "Éclaircies Design SARL",
+    "contactPerson": "Marie Dupont",
+    "address": "25 Avenue des Champs-Élysées",
+    "postalCode": "75008",
+    "city": "Paris",
+    "country": "France",
+    "email": "contact@eclairciesdesign.fr",
+    "phone": "+33 1 23 45 67 89",
+    "siren": "987 654 321 00021",
+    "tvaNumber": "FR21 987 654 321"
+  },
+  
+  "lineItems": [
+    {
+      "id": 1,
+      "description": "Analyse des besoins et cahier des charges",
+      "quantity": 8,
+      "unit": "heure",
+      "unitPrice": 85.00,
+      "discount": 0
+    },
+    {
+      "id": 2,
+      "description": "Design UX/UI - Maquettes haute fidélité",
+      "quantity": 24,
+      "unit": "heure",
+      "unitPrice": 95.00,
+      "discount": 0
+    },
+    {
+      "id": 3,
+      "description": "Développement front-end (React + Tailwind)",
+      "quantity": 40,
+      "unit": "heure",
+      "unitPrice": 110.00,
+      "discount": 5
+    },
+    {
+      "id": 4,
+      "description": "Intégration CMS et configuration",
+      "quantity": 16,
+      "unit": "heure",
+      "unitPrice": 95.00,
+      "discount": 0
+    },
+    {
+      "id": 5,
+      "description": "Tests, déploiement et formation",
+      "quantity": 12,
+      "unit": "heure",
+      "unitPrice": 85.00,
+      "discount": 0
+    }
+  ],
+  
+  "totals": {
+    "subtotal": 11400.00,
+    "discountAmount": 220.00,
+    "taxRate": 20,
+    "taxAmount": 2236.00,
+    "total": 13416.00
+  },
+  
+  "payment": {
+    "deposit": 30,
+    "netDays": 30,
+    "paymentMethods": ["Virement bancaire", "Chèque"],
+    "lateFee": 10
+  }
+}

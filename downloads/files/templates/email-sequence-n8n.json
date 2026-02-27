@@ -1,0 +1,47 @@
+{
+  "name": "Pulse Graphix - Email Sequence",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 26
+            }
+          ]
+        }
+      },
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger"
+    },
+    {
+      "parameters": {
+        "to": "={{ $json.email }}",
+        "subject": "Suite à notre échange — Pulse Graphix",
+        "text": "Bonjour {{ $json.prenom }},\n\nMerci pour votre temps hier.\n\nComme promis, voici 3 exemples de sites que j'ai livrés récemment :\n• Resto Italien Paris — +40% de réservations\n• Salon Beauté Lyon — 15 nouveaux clients/mois\n• Boulangerie Marseille — vitrine en ligne complète\n\nVotre audit personnalisé est prêt. On se voit cette semaine ?\n\nChicco Kabundji\nPulse Graphix"
+      },
+      "name": "Email 1 - Follow-up",
+      "type": "n8n-nodes-base.emailSend"
+    },
+    {
+      "parameters": {
+        "to": "={{ $json.email }}",
+        "subject": "Dernier jour — votre audit expire",
+        "text": "Bonjour {{ $json.prenom }},\n\nVotre audit gratuit expire demain.\n\n3 raisons de passer à l'action maintenant :\n1. Vos concurrents investissent déjà\n2. Chaque jour sans site = clients perdus\n3. Mon offre de lancement expire vendredi\n\nUn appel de 15 min suffit. Répondez OUI à ce mail.\n\nChicco Kabundji"
+      },
+      "name": "Email 2 - Urgency",
+      "type": "n8n-nodes-base.emailSend"
+    },
+    {
+      "parameters": {
+        "to": "={{ $json.email }}",
+        "subject": "Dernière chance — Pulse Graphix",
+        "text": "Bonjour {{ $json.prenom }},\n\nJe ferme votre dossier demain.\n\nSi vous changez d'avis, mon guide gratuit \"10 erreurs qui tuent votre site web\" est ici :\nhttps://pulsegraphix.com/guide-gratuit\n\nBonne continuation,\nChicco"
+      },
+      "name": "Email 3 - Breakup",
+      "type": "n8n-nodes-base.emailSend"
+    }
+  ],
+  "connections": {}
+}

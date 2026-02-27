@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Sequence - Invest in Congo</title>
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 20px; background: #121212; color: #fff; }
+.email-preview { max-width: 600px; margin: 20px auto; background: #1e1e1e; border-radius: 12px; overflow: hidden; border: 1px solid #2a2a2a; }
+.email-header { background: linear-gradient(135deg, #F1E8A4, #D4AF37); padding: 20px; text-align: center; }
+.email-body { padding: 30px; }
+.email-body h2 { color: #F1E8A4; margin-top: 0; }
+.email-body p { line-height: 1.7; color: #ccc; }
+.cta-button { display: inline-block; background: linear-gradient(135deg, #F1E8A4, #D4AF37); color: #233042 !important; padding: 14px 28px; text-decoration: none; border-radius: 8px; font-weight: 700; margin: 20px 0; }
+.email-footer { padding: 20px 30px; background: #1a1a1a; border-top: 1px solid #2a2a2a; font-size: 12px; color: #666; text-align: center; }
+.divider { border-top: 1px solid #2a2a2a; margin: 40px 0; }
+.subject-line { background: #2a2a2a; padding: 10px 15px; border-radius: 6px; margin-bottom: 15px; font-weight: 500; }
+.send-timing { color: #F7931A; font-size: 12px; margin-bottom: 10px; }
+.stat-box { background: #233042; padding: 15px; border-radius: 8px; border-left: 3px solid #F1E8A4; margin: 15px 0; }
+</style>
+</head>
+<body>
+
+<!-- EMAIL 1: Introduction -->
+<div class="subject-line">📧 OBJET: Opportunité d'investissement RDC — secteur {{sector}}</div>
+<div class="send-timing">⏱️ ENVOYER: Jour 0 (immédiatement après premier contact)</div>
+
+<div class="email-preview">
+  <div class="email-body">
+    <h2>Bonjour {{first_name}},</h2>
+    
+    <p>J'ai identifié {{company_name}} comme un investisseur potentiellement intéressé par les opportunités émergentes en Afrique centrale. Particulièrement dans le secteur {{sector}} en RDC.</p>
+    
+    <p>Voici pourquoi la RDC mérite votre attention en 2025:</p>
+    
+    <div class="stat-box">
+      <strong style="color:#F1E8A4;">📈 +6.5% de croissance PIB</strong> attendue en 2025 (Banque Mondiale)<br>
+      <strong style="color:#F1E8A4;">🏭 {{investment_potential}}</strong><br>
+      <strong style="color:#F1E8A4;">🔰 Réformes</strong> du code des investissements (2024)
+    </div>
+    
+    <p>Plus précisément, le secteur {{sector}} connaît une transformation rapide:</p>
+    <ul style="color:#ccc; line-height:1.8;">
+      <li>{{sector_opportunity_1}}</li>
+      <li>{{sector_opportunity_2}}</li>
+      <li>{{sector_opportunity_3}}</li>
+    </ul>
+    
+    <p>Chez <strong style="color:#F1E8A4;">Invest in Congo</strong>, nous connectons des investisseurs comme vous avec des opportunités validées, des partenaires locaux fiables, et la conformité juridique complète.</p>
+    
+    <p>Notre plateforme vous donne accès à :</p>
+    <ul style="color:#ccc; line-height:1.8;">
+      <li>📋 <strong style="color:#F1E8A4;">Due diligence vérifiée</strong> sur chaque projet</li>
+      <li>🤝 <strong style="color:#F1E8A4;">Partenaires locaux audités</strong> (notaires, avocats, fiscalistes)</li>
+      <li>📊 <strong style="color:#F1E8A4;">Data sectorielle</strong> en temps réel</li>
+    </ul>
+    
+    <p>Intéressé par un briefing confidentiel sur {{sector}} ?</p>
+    
+    <a href="{{calendar_link}}" class="cta-button">📅 Recevoir le dossier sectoriel</a>
+    
+    <p style="font-size: 13px; color: #888;">Pas intéressé ? Répondez "NON" — pas de relance.</p>
+    
+    <p>Cordialement,<br>
+    <strong style="color:#F1E8A4;">Chicco Kabundji</strong><br>
+    Fondateur, Invest in Congo<br>
+    📧 contact@investcongo.io</p>
+  </div>
+  
+  <div class="email-footer">
+    Invest in Congo — Votre passerelle vers l'investissement en RDC<br>
+    <a href="{{unsubscribe_link}}" style="color:#666;">Se désabonner</a>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- EMAIL 2: Value/Deal Flow -->
+<div class="subject-line">📧 OBJET: Nouveau deal flow — {{sector}} en RDC</div>
+<div class="send-timing">⏱️ ENVOYER: Jour 5 (5 jours après Email 1, traductions internationales)</div>
+
+<div class="email-preview">
+  <div class="email-body">
+    <h2>{{first_name}},</h2>
+    
+    <p>Nous venons de valider deux nouvelles opportunités dans le secteur {{sector}} — avant publication publique.</p>
+    
+    <div class="stat-box">
+      <strong style="color:#F1E8A4;">📍 Localisation:</strong> {{location}}<br>
+      <strong style="color:#F1E8A4;">💰 Ticket d'entrée:</strong> {{ticket_min}} — {{ticket_max}}<br>
+      <strong style="color:#F1E8A4;">⏱️ Horizon:</strong> {{timeline_return}}<br>
+      <strong style="color:#F1E8A4;">✅ Statut:</strong> Due diligence complète réalisée
+    </div>
+    
+    <p>Ces opportunités correspondent à votre profil : {{investor_profile_match}}.</p>
+    
+    <p>Ce que nos investisseurs partenaires apprécient :</p>
+    <ul style="color:#ccc; line-height:1.8;">
+      <li>Accès privé aux deals avant mise en ligne</li>
+      <li>Intermédiation juridique incluse</li>
+      <li>Reporting trimestriel détaillé</li>
+      <li>Sortie structurée planifiée</li>
+    </ul>
+    
+    <p>Les détails confidentiels sont disponibles sous NDA.</p>
+    
+    <a href="{{nda_form_link}}" class="cta-button">📝 Recevoir le NDA + Dossier</a>
+    
+    <p>Aucun engagement. Juste de l'information vérifiée.</p>
+    
+    <p>Cordialement,<br>
+    <strong style="color:#F1E8A4;">Chicco</strong></p>
+  </div>
+  
+  <div class="email-footer">
+    Invest in Congo — Deals validés, partenaires audités<br>
+    <a href="{{unsubscribe_link}}" style="color:#666;">Se désabonner</a>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- EMAIL 3: Final Opportunity -->
+<div class="subject-line">📧 OBJET: Dernière opportunité — briefing trimestriel</div>
+<div class="send-timing">⏱️ ENVOYER: Jour 14 (14 jours après Email 1)</div>
+
+<div class="email-preview">
+  <div class="email-body">
+    <h2>{{first_name}},</h2>
+    
+    <p>Je clos ce dossier de prospection active — respect de votre temps.</p>
+    
+    <p>Avant d'arrêter, deux options:</p>
+    
+    <p><strong style="color:#F1E8A4;">Option A:</strong> Vous souhaitez explorer la RDC. Je vous ajoute à notre liste pour le <strong>Briefing Trimestriel Investisseurs</strong> (publié début {{next_quarter}}):</p>
+    
+    <a href="{{briefing_signup_link}}" class="cta-button">📊 S'inscrire au briefing trimestriel</a>
+    
+    <p><strong style="color:#F1E8A4;">Option B:</strong> RDC n'est pas prioritaire — je mets à jour mes fichiers.</p>
+    
+    <p>Quel est votre choix ? Répondez "BRIEFING" ou ignorez ce message.</p>
+    
+    <p>Quoi qu'il advienne, je vous souhaite des investissements fructueux.</p>
+    
+    <p><strong style="color:#F1E8A4;">Chicco Kabundji</strong><br>
+    Fondateur, Invest in Congo<br>
+    <a href="https://investcongo.io" style="color:#F1E8A4;">investcongo.io</a></p>
+  </div>
+  
+  <div class="email-footer">
+    Invest in Congo — Gateway to DRC Investment<br>
+    <a href="{{unsubscribe_link}}" style="color:#666;">Se désabonner</a>
+  </div>
+</div>
+
+</body>
+</html>

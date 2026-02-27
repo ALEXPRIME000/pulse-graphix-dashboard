@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok/Reels Cover Template Specification</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 1200px; margin: 40px auto; padding: 20px; background: #f5f5f5; }
+        .header { background: linear-gradient(135deg, #FF0050 0%, #00F2EA 100%); color: white; padding: 30px; border-radius: 8px; margin-bottom: 30px; }
+        .section { background: white; padding: 25px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h1 { margin: 0; font-size: 2em; }
+        h2 { color: #FF0050; border-bottom: 3px solid #FF0050; padding-bottom: 10px; }
+        h3 { color: #333; margin-top: 20px; }
+        .spec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
+        .spec-item { background: #f9f9f9; padding: 15px; border-radius: 5px; border-left: 4px solid #FF0050; }
+        .spec-label { font-weight: bold; color: #666; font-size: 0.9em; margin-bottom: 5px; }
+        .spec-value { font-size: 1.1em; color: #333; }
+        .color-palette { display: flex; gap: 15px; flex-wrap: wrap; margin: 20px 0; }
+        .color-swatch { width: 120px; }
+        .color-box { height: 80px; border-radius: 5px; margin-bottom: 8px; border: 2px solid #ddd; }
+        .color-label { font-size: 0.85em; font-weight: bold; text-align: center; }
+        .color-code { font-size: 0.75em; text-align: center; color: #666; font-family: monospace; }
+        .safe-zone-diagram { background: #e8e8e8; padding: 30px; border-radius: 8px; text-align: center; margin: 20px 0; }
+        .vertical-box { display: inline-block; width: 270px; height: 480px; background: white; border: 3px solid #FF0050; position: relative; }
+        .feed-safe { position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%); height: 150px; border: 2px dashed #00F2EA; background: rgba(0, 242, 234, 0.1); }
+        .top-overlay { position: absolute; top: 0; left: 0; right: 0; height: 60px; background: rgba(0, 0, 0, 0.5); color: white; font-size: 10px; display: flex; align-items: center; justify-content: center; }
+        .bottom-ui { position: absolute; bottom: 0; right: 0; width: 50px; height: 200px; background: rgba(0, 0, 0, 0.3); font-size: 8px; color: white; display: flex; flex-direction: column; align-items: center; justify-content: space-around; padding: 10px 0; }
+        .dimension-label { font-size: 0.9em; color: #666; margin: 10px 0; font-weight: bold; }
+        ul { line-height: 1.8; }
+        .example-box { background: linear-gradient(180deg, #FF0050 0%, #7B2CBF 100%); padding: 30px; border-radius: 8px; color: white; margin: 20px 0; }
+        .warning-box { background: #FFF3CD; border-left: 4px solid #FFC107; padding: 15px; margin: 20px 0; border-radius: 4px; }
+        .mobile-first { background: #E3F2FD; border-left: 4px solid #2196F3; padding: 15px; margin: 20px 0; border-radius: 4px; color: #1565C0; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📱 TikTok/Reels Cover Template</h1>
+        <p>Vertical video cover design for feed preview optimization</p>
+    </div>
+
+    <div class="section">
+        <h2>📐 Core Dimensions</h2>
+        <div class="spec-grid">
+            <div class="spec-item">
+                <div class="spec-label">Canvas Dimensions</div>
+                <div class="spec-value">1080 × 1920 pixels</div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-label">Aspect Ratio</div>
+                <div class="spec-value">9:16 (Vertical)</div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-label">Resolution</div>
+                <div class="spec-value">72 DPI (web optimized)</div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-label">File Format</div>
+                <div class="spec-value">JPG, PNG (for static covers)</div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-label">Feed Preview Size</div>
+                <div class="spec-value">Variable (middle ~600px height visible)</div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-label">Max File Size</div>
+                <div class="spec-value">5 MB (recommended < 2 MB)</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🎯 Feed Safe Zone (Critical!)</h2>
+        <div class="safe-zone-diagram">
+            <div class="vertical-box">
+                <div class="top-overlay">Profile Info Area</div>
+                <div class="feed-safe">
+                    <div style="color: #00F2EA; font-weight: bold; font-size: 12px; margin-top: 50px;">
+                        FEED PREVIEW<br>
+                        SAFE ZONE<br>
+                        (Middle 600px)
+                    </div>
+                </div>
+                <div class="bottom-ui">
+                    <div>❤️</div>
+                    <div>💬</div>
+                    <div>➤</div>
+                    <div>🎵</div>
+                </div>
+                <div style="position: absolute; bottom: 100px; left: 20px; right: 60px; background: rgba(0,0,0,0.6); color: white; padding: 10px; font-size: 10px; border-radius: 3px;">
+                    Caption text appears here...
+                </div>
+            </div>
+            <div class="dimension-label">1080 × 1920 px full canvas</div>
+            <div class="dimension-label" style="color: #00F2EA;">Feed safe zone: Center ~600px height (vertically centered)</div>
+        </div>
+        
+        <h3>Critical Guidelines:</h3>
+        <ul>
+            <li><strong>Feed Preview Zone:</strong> Center your key visual and text in the MIDDLE 600px height (approx. pixels 660-1260 from top)</li>
+            <li><strong>Top Area:</strong> Top ~180px can be obscured by profile picture, username, and "Follow" button</li>
+            <li><strong>Bottom Area:</strong> Bottom ~480px contains caption, engagement buttons (like, comment, share), and audio info</li>
+            <li><strong>Right Edge:</strong> Right ~60px reserved for vertical button stack — avoid placing text here</li>
+            <li><strong>The Golden Rule:</strong> Your cover must be compelling when viewed in grid/feed format (middle section only)</li>
+        </ul>
+
+        <div class="mobile-first">
+            <strong>📱 Mobile-First Design:</strong> 99% of TikTok/Reels views happen on mobile. Always design and test at mobile scale. What looks good on desktop might be invisible on a phone.
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🎨 Color Palettes by Company</h2>
+        
+        <h3>Pulse Graphix</h3>
+        <div class="color-palette">
+            <div class="color-swatch">
+                <div class="color-box" style="background: #FF6B35;"></div>
+                <div class="color-label">Primary Orange</div>
+                <div class="color-code">#FF6B35</div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-box" style="background: #004E89;"></div>
+                <div class="color-label">Deep Blue</div>
+                <div class="color-code">#004E89</div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-box" style="background: #F7F7F7;"></div>
+                <div class="color-label">Bright White</div>
+                <div class="color-code">#F7F7F7</div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-box" style="background: #FFD700;"></div>
+                <div class="color-label">Accent Gold</div>
+                <div class="color-code">#FFD700</div>
+            </div>
+        </div>
+
+        <h3>Nexus AI</h3>
+        <div class="color-palette">
+            <div class="color-swatch">
+                <div class="color-box" style="background: #00D9FF;"></div>
+                <div class="color-label">Cyber Cyan</div>
+                <div class="color-code">#00D9FF</div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-box" style="background: #7B2CBF;"></div>
+                <div class="color-label">AI Purple</div>
+                <div class="color-code">#7B2CBF</div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-box" style="background: #FF0055;"></div>
+                <div class="color-label">Hot Pink</div>
+                <div class="color-code">#FF0055</div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-box" style="background: #FFFFFF;"></div>
+                <div class="color-label">Pure White</div>
+                <div class="color-code">#FFFFFF</div>
+            </div>
+        </div>
+
+        <h3>Invest Congo</h3>
+        <div class="color-palette">
+            <div class="color-swatch">
+                <div class="color-box" style="background: #FFD700;"></div>
+                <div class="color-label">Gold</div>
+                <div class="color-code">#FFD700</div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-box" style="background: #006B3F;"></div>
+                <div class="color-label">Forest Green</div>
+                <div class="color-code">#006B3F</div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-box" style="background: #C41E3A;"></div>
+                <div class="color-label">Congo Red</div>
+                <div class="color-code">#C41E3A</div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-box" style="background: #FFFFFF;"></div>
+                <div class="color-label">Clean White</div>
+                <div class="color-code">#FFFFFF</div>
+            </div>
+        </div>
+
+        <h3>Pulse Architects</h3>
+        <div class="color-palette">
+            <div class="color-swatch">
+                <div class="color-box" style="background: #2C3E50;"></div>
+                <div class="color-label">Slate Blue</div>
+                <div class="color-code">#2C3E50</div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-box" style="background: #E8B923;"></div>
+                <div class="color-label">Architectural Gold</div>
+                <div class="color-code">#E8B923</div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-box" style="background: #ECF0F1;"></div>
+                <div class="color-label">Light Stone</div>
+                <div class="color-code">#ECF0F1</div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-box" style="background: #E74C3C;"></div>
+                <div class="color-label">Accent Red</div>
+                <div class="color-code">#E74C3C</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>✍️ Typography Recommendations</h2>
+        
+        <h3>Primary Headline (2-4 Words)</h3>
+        <ul>
+            <li><strong>Font:</strong> Montserrat Black, Bebas Neue, or Anton</li>
+            <li><strong>Size:</strong> 100-140px (LARGE for mobile visibility)</li>
+            <li><strong>Weight:</strong> Extra Bold / Black</li>
+            <li><strong>Stroke:</strong> 8-12px contrasting outline (white on dark, black on light)</li>
+            <li><strong>Placement:</strong> Centered vertically in feed safe zone (middle 600px)</li>
+            <li><strong>Line Height:</strong> 1.1 (tight spacing for impact)</li>
+            <li><strong>Max Lines:</strong> 2-3 lines maximum</li>
+        </ul>
+
+        <h3>Secondary Text (Optional)</h3>
+        <ul>
+            <li><strong>Font:</strong> Open Sans Bold or Roboto Bold</li>
+            <li><strong>Size:</strong> 48-64px</li>
+            <li><strong>Use For:</strong> Supporting context, episode number, category</li>
+            <li><strong>Placement:</strong> Above or below headline, within safe zone</li>
+        </ul>
+
+        <h3>Branding / Logo</h3>
+        <ul>
+            <li><strong>Size:</strong> 60-90px height</li>
+            <li><strong>Placement:</strong> Top-left or top-center (if above safe zone) OR bottom-left (if below safe zone)</li>
+            <li><strong>Margin:</strong> 40px from edges</li>
+            <li><strong>Opacity:</strong> Consider 70-80% opacity if overlaying video content</li>
+        </ul>
+
+        <div class="warning-box">
+            <strong>⚠️ Text Readability:</strong> Vertical videos scroll fast. If someone can't read your text in 0.5 seconds, it's too complex. Keep it BOLD, SHORT, and HIGH CONTRAST.
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>📱 Layout Grid & Composition</h2>
+        <h3>Vertical Zones (1080px width × 1920px height):</h3>
+        <ul>
+            <li><strong>Zone 1 (Top 0-660px):</strong> Background/ambient visual only — can be obscured by UI</li>
+            <li><strong>Zone 2 (Middle 660-1260px):</strong> 🎯 FEED SAFE ZONE — Place all critical content here</li>
+            <li><strong>Zone 3 (Bottom 1260-1920px):</strong> Secondary content, branding — partially obscured by caption/buttons</li>
+        </ul>
+
+        <h3>Horizontal Grid:</h3>
+        <ul>
+            <li>Use 12-column grid (90px per column)</li>
+            <li>Center content in columns 2-11 (leaving 90px margins on left/right)</li>
+            <li>Right column 12 reserved for engagement buttons — avoid text</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>🖼️ Example Asset Description</h2>
+        <div class="example-box">
+            <h3 style="margin-top: 0;">Example: "5-Second Website Hack" Reels Cover</h3>
+            <p><strong>Layout:</strong> Vertical gradient background with centered text in feed safe zone</p>
+            <p><strong>Elements (Top to Bottom):</strong></p>
+            <ul>
+                <li><strong>Zone 1 (Top):</strong>
+                    <ul>
+                        <li>Gradient background: #7B2CBF to #FF0055 (top to middle)</li>
+                        <li>Subtle animated code particles floating upward (if video)</li>
+                        <li>Nexus AI logo (70px height) top-left corner, 40px margins, 70% opacity</li>
+                    </ul>
+                </li>
+                <li><strong>Zone 2 (Middle - SAFE ZONE):</strong>
+                    <ul>
+                        <li>Main text: "5-SECOND" (Bebas Neue, 120px, white with black 10px stroke)</li>
+                        <li>Main text: "WEBSITE" (Bebas Neue, 130px, cyan #00D9FF with black 10px stroke)</li>
+                        <li>Main text: "HACK" (Bebas Neue, 140px, white with black 10px stroke)</li>
+                        <li>Small emoji below text: "⚡" (80px)</li>
+                        <li>All text center-aligned, vertically stacked</li>
+                    </ul>
+                </li>
+                <li><strong>Zone 3 (Bottom):</strong>
+                    <ul>
+                        <li>Continue gradient to #0A0E27 (dark space)</li>
+                        <li>Small floating UI mockup elements (subtle, not competing with text)</li>
+                    </ul>
+                </li>
+            </ul>
+            <p><strong>Visual Style:</strong> Bold, energetic, optimized for quick scroll-stopping power. Text is 100% readable even when caption and buttons overlay bottom portion.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🎬 Platform-Specific Considerations</h2>
+        
+        <h3>TikTok vs Instagram Reels:</h3>
+        <div class="spec-grid">
+            <div class="spec-item">
+                <div class="spec-label">TikTok</div>
+                <div class="spec-value">
+                    • Bottom UI is more prominent<br>
+                    • Feed grid shows square crop of middle<br>
+                    • Profile overlay covers more of top<br>
+                    • Recommended: Center content lower (pixels 700-1200)
+                </div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-label">Instagram Reels</div>
+                <div class="spec-value">
+                    • Cleaner interface, less overlay<br>
+                    • Feed grid shows full vertical preview<br>
+                    • More top space visible<br>
+                    • Recommended: Can use full middle 600px zone
+                </div>
+            </div>
+        </div>
+
+        <h3>Cover vs Video:</h3>
+        <ul>
+            <li><strong>Static Cover:</strong> Used when uploading video — shows in feed before play. Keep simple, bold text.</li>
+            <li><strong>First Frame:</strong> If no custom cover, first frame of video is used. Design your intro frame following these specs.</li>
+            <li><strong>Motion:</strong> If video cover, subtle motion (floating elements, slow zoom) increases engagement.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>✨ Design Elements for Vertical Format</h2>
+        <ul>
+            <li>✅ <strong>Vertical Emphasis:</strong> Stack elements vertically, not horizontally</li>
+            <li>✅ <strong>Center Alignment:</strong> Keep key elements center-aligned for symmetry</li>
+            <li>✅ <strong>Bold Shapes:</strong> Large circles, arrows, or boxes to frame content</li>
+            <li>✅ <strong>Gradients:</strong> Vertical gradients work beautifully (top-to-bottom color flow)</li>
+            <li>✅ <strong>Face Placement:</strong> If including a face, center it in feed safe zone, 300-400px height</li>
+            <li>✅ <strong>Emojis:</strong> 1-2 large emojis (70-100px) for emotion/context</li>
+            <li>✅ <strong>Minimal Text:</strong> 2-5 words maximum — this is vertical video, not a blog post</li>
+            <li>❌ <strong>Avoid Horizontal Layouts:</strong> Don't try to fit horizontal website mockups — won't read well</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>✅ Pre-Flight Checklist</h2>
+        <ul>
+            <li>☐ Dimensions are exactly 1080×1920px (9:16 vertical)</li>
+            <li>☐ Main content centered in middle 600px (feed safe zone)</li>
+            <li>☐ Text readable when bottom 480px is covered by caption/UI</li>
+            <li>☐ Right 60px clear of text (engagement buttons area)</li>
+            <li>☐ Top 180px doesn't contain critical info (profile overlay)</li>
+            <li>☐ Text is LARGE (100px+ font size)</li>
+            <li>☐ High contrast (text has stroke/outline)</li>
+            <li>☐ Maximum 2-5 words of text</li>
+            <li>☐ File size under 2 MB (for fast loading)</li>
+            <li>☐ Tested at mobile phone size (not just desktop)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>💡 Pro Tips</h2>
+        <ul>
+            <li>🎯 <strong>Stop-the-Scroll Test:</strong> Would this make YOU stop scrolling? If not, redesign.</li>
+            <li>📱 <strong>Phone Test:</strong> Always view your cover on an actual phone before publishing.</li>
+            <li>⚡ <strong>0.5 Second Rule:</strong> If message isn't clear in half a second, simplify.</li>
+            <li>🎨 <strong>Contrast is King:</strong> When in doubt, make it MORE contrasty.</li>
+            <li>🔥 <strong>Curiosity Gap:</strong> Tease the value, don't give it all away — make them watch.</li>
+        </ul>
+    </div>
+</body>
+</html>

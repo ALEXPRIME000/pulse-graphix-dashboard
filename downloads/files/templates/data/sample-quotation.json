@@ -1,0 +1,109 @@
+{
+  "document": {
+    "type": "quotation",
+    "number": "DEV-2024-023",
+    "date": "2024-02-04",
+    "validUntil": "2024-04-04",
+    "currency": "EUR",
+    "language": "fr",
+    "notes": "Ce devis est valable 60 jours à compter de sa date d'émission. Toute modification des spécifications après validation du devis pourra entraîner un ajustement tarifaire.",
+    "terms": "Conditions: Acompte de 30% à la signature, 40% à la livraison des maquettes validées, solde à la mise en ligne. Délai estimé: 6 semaines à réception de l'acompte."
+  },
+  
+  "project": {
+    "name": "Identité Visuelle Complète",
+    "reference": "PROJ-2024-023"
+  },
+  
+  "company": {
+    "name": "Pulse Graphix",
+    "siren": "123 456 789 00012",
+    "address": "3 Rue Jacques Prévert",
+    "postalCode": "77200",
+    "city": "Torcy",
+    "country": "France",
+    "phone": "+33 6 12 77 64 98",
+    "email": "chicco@pulsegraphix.net",
+    "website": "www.pulsegraphix.net",
+    "tvaNumber": "FR12 123 456 789"
+  },
+  
+  "client": {
+    "type": "company",
+    "name": "Boulangerie Artisanale Le Fournil",
+    "contactPerson": "Jean Martin",
+    "address": "12 Rue de la Boulangerie",
+    "postalCode": "69002",
+    "city": "Lyon",
+    "country": "France",
+    "email": "contact@lefournil-lyon.fr",
+    "phone": "+33 4 78 12 34 56",
+    "siren": "789 123 456 00034"
+  },
+  
+  "lineItems": [
+    {
+      "id": 1,
+      "description": "Étude de marché et benchmark concurrentiel",
+      "quantity": 4,
+      "unit": "heure",
+      "unitPrice": 85.00,
+      "discount": 0
+    },
+    {
+      "id": 2,
+      "description": "Création du logo et identité visuelle (3 propositions)",
+      "quantity": 1,
+      "unit": "forfait",
+      "unitPrice": 2500.00,
+      "discount": 0
+    },
+    {
+      "id": 3,
+      "description": "Charte graphique complète (couleurs, typographies, usages)",
+      "quantity": 1,
+      "unit": "forfait",
+      "unitPrice": 1200.00,
+      "discount": 0
+    },
+    {
+      "id": 4,
+      "description": "Papeterie (cartes de visite, en-tête, carte de fidélité)",
+      "quantity": 1,
+      "unit": "forfait",
+      "unitPrice": 800.00,
+      "discount": 0
+    },
+    {
+      "id": 5,
+      "description": "Kit réseaux sociaux (bannières, templates posts)",
+      "quantity": 1,
+      "unit": "forfait",
+      "unitPrice": 600.00,
+      "discount": 10
+    },
+    {
+      "id": 6,
+      "description": "Signalétique extérieure (étude + fichiers production)",
+      "quantity": 1,
+      "unit": "forfait",
+      "unitPrice": 900.00,
+      "discount": 0
+    }
+  ],
+  
+  "totals": {
+    "subtotal": 6540.00,
+    "discountAmount": 60.00,
+    "taxRate": 20,
+    "taxAmount": 1296.00,
+    "total": 7776.00
+  },
+  
+  "payment": {
+    "deposit": 30,
+    "netDays": 15,
+    "paymentMethods": ["Virement bancaire", "Chèque"],
+    "lateFee": 0
+  }
+}

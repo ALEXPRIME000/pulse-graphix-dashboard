@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facture - Pulse Graphix</title>
+    <link rel="stylesheet" href="../css/pulse-graphix.css">
+</head>
+<body>
+    <div class="invoice-container">
+        <!-- HEADER -->
+        <div class="header">
+            <div class="logo-section">
+                <div class="logo">Pulse Graphix</div>
+                <div class="company-info">
+                    <strong>SIREN:</strong> [À REMPLIR]<br>
+                    <strong>TVA:</strong> [À REMPLIR]<br>
+                    3 Rue Jacques Prévert<br>
+                    77200 Torcy, France<br>
+                    +33 6 12 77 64 98<br>
+                    chicco@pulsegraphix.net<br>
+                    www.pulsegraphix.net
+                </div>
+            </div>
+            <div class="document-type">
+                <div class="doc-label facture-label">Facture</div>
+                <div class="doc-number">N° FAC-2026-001</div>
+            </div>
+        </div>
+
+        <!-- DOCUMENT DETAILS -->
+        <div class="doc-details">
+            <div class="detail-group">
+                <div class="detail-label">Date d'émission</div>
+                <div class="detail-value">[DATE]</div>
+            </div>
+            <div class="detail-group">
+                <div class="detail-label">Date d'échéance</div>
+                <div class="detail-value">[DATE + 30 jours]</div>
+            </div>
+            <div class="detail-group">
+                <div class="detail-label">Projet</div>
+                <div class="detail-value">[NOM DU PROJET]</div>
+            </div>
+            <div class="detail-group">
+                <div class="detail-label">Statut</div>
+                <div class="detail-value"><span class="status-badge status-pending">En attente</span></div>
+            </div>
+        </div>
+
+        <!-- CLIENT INFO -->
+        <div class="client-section">
+            <div class="client-box">
+                <div class="client-title">Facturer à</div>
+                <div class="client-name">[NOM DU CLIENT]</div>
+                <div class="client-details">
+                    <strong>[CONTACT]</strong><br>
+                    [ADRESSE]<br>
+                    [CODE POSTAL] [VILLE], France<br>
+                    SIREN: [SIREN CLIENT]<br>
+                    TVA: [TVA CLIENT]<br>
+                    [EMAIL CLIENT]
+                </div>
+            </div>
+            <div class="client-box">
+                <div class="client-title">Informations</div>
+                <div class="client-details">
+                    <strong>Référence projet:</strong> [REF]<br>
+                    <strong>Délai:</strong> 30 jours net<br>
+                    <strong>Mode de paiement:</strong> Virement bancaire<br>
+                    <strong>Acompte:</strong> 30%
+                </div>
+            </div>
+        </div>
+
+        <!-- ITEMS TABLE -->
+        <table class="items-table">
+            <thead>
+                <tr>
+                    <th>N°</th>
+                    <th>Description</th>
+                    <th>Qté</th>
+                    <th>Unité</th>
+                    <th>Prix unitaire</th>
+                    <th>Total HT</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td class="item-description">[DESCRIPTION SERVICE 1]</td>
+                    <td class="item-qty">[QTE]</td>
+                    <td class="item-unit">[UNITÉ]</td>
+                    <td class="item-price">[PRIX] €</td>
+                    <td class="item-total">[TOTAL] €</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="item-description">[DESCRIPTION SERVICE 2]</td>
+                    <td class="item-qty">[QTE]</td>
+                    <td class="item-unit">[UNITÉ]</td>
+                    <td class="item-price">[PRIX] €</td>
+                    <td class="item-total">[TOTAL] €</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="item-description">[DESCRIPTION SERVICE 3]</td>
+                    <td class="item-qty">[QTE]</td>
+                    <td class="item-unit">[UNITÉ]</td>
+                    <td class="item-price">[PRIX] €</td>
+                    <td class="item-total">[TOTAL] €</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- TOTALS -->
+        <div class="totals-section">
+            <div class="totals-box">
+                <div class="total-row">
+                    <span class="total-label">Total HT</span>
+                    <span class="total-value">[TOTAL HT] €</span>
+                </div>
+                <div class="total-row">
+                    <span class="total-label">TVA 20%</span>
+                    <span class="total-value">[TVA] €</span>
+                </div>
+                <div class="total-row grand-total">
+                    <span class="total-label">TOTAL TTC</span>
+                    <span class="total-value">[TOTAL TTC] €</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAYMENT TERMS -->
+        <div class="payment-section">
+            <div class="payment-title">Conditions de paiement</div>
+            <div class="payment-content">
+                <strong>Acompte (30%):</strong> [30% DU TOTAL] € à la commande<br>
+                <strong>Solde:</strong> [70% DU TOTAL] € à 30 jours net<br>
+                <strong>IBAN:</strong> [À REMPLIR]<br>
+                <strong>BIC:</strong> [À REMPLIR]
+            </div>
+        </div>
+
+        <!-- LEGAL NOTES -->
+        <div class="notes-section">
+            <p><strong>Clause de réserve de propriété:</strong> Conformément à la loi 80.335 du 12 mai 1980, nous nous réservons la propriété des marchandises jusqu'au paiement intégral du prix et des frais annexes.</p>
+            <p><strong>Pénalités de retard:</strong> En cas de retard de paiement, une indemnité forfaitaire de 40 € sera due (Article L441-6 du Code de commerce). Taux d'intérêt de retard: 3 fois le taux d'intérêt légal.</p>
+            <p><strong>Escompte:</strong> Aucun escompte pour paiement anticipé.</p>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="footer-brand">Pulse Graphix</div>
+            <p>SIREN [À REMPLIR] | TVA [À REMPLIR]</p>
+            <p>3 Rue Jacques Prévert, 77200 Torcy, France | +33 6 12 77 64 98</p>
+            <p>chicco@pulsegraphix.net | www.pulsegraphix.net</p>
+        </div>
+    </div>
+</body>
+</html>

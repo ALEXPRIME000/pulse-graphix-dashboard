@@ -1,0 +1,120 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Pulse Graphix Invoice/Quotation Data Schema",
+  "description": "Standard data structure for generating invoices and quotations",
+  
+  "definitions": {
+    "company": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "siren": { "type": "string", "description": "French company registration number" },
+        "address": { "type": "string" },
+        "postalCode": { "type": "string" },
+        "city": { "type": "string" },
+        "country": { "type": "string", "default": "France" },
+        "phone": { "type": "string" },
+        "email": { "type": "string" },
+        "website": { "type": "string" },
+        "tvaNumber": { "type": "string", "description": "TVA intracommunautaire" },
+        "logo": { "type": "string", "description": "URL or path to logo" }
+      },
+      "required": ["name", "address", "city", "email"]
+    },
+    
+    "client": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string", "enum": ["individual", "company"], "default": "company" },
+        "name": { "type": "string", "description": "Person or company name" },
+        "contactPerson": { "type": "string" },
+        "address": { "type": "string" },
+        "postalCode": { "type": "string" },
+        "city": { "type": "string" },
+        "country": { "type": "string", "default": "France" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "siren": { "type": "string", "description": "For companies" },
+        "tvaNumber": { "type": "string", "description": "TVA intracommunautaire if applicable" }
+      },
+      "required": ["name", "address", "city"]
+    },
+    
+    "lineItem": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "number" },
+        "description": { "type": "string" },
+        "quantity": { "type": "number", "minimum": 0 },
+        "unit": { "type": "string", "enum": ["heure", "jour", "mois", "unité", "forfait", "lot", "m²", "page", "projet"], "default": "unité" },
+        "unitPrice": { "type": "number", "minimum": 0 },
+        "discount": { "type": "number", "default": 0, "description": "Percentage discount" }
+      },
+      "required": ["description", "quantity", "unitPrice"]
+    },
+    
+    "paymentTerms": {
+      "type": "object",
+      "properties": {
+        "deposit": { "type": "number", "default": 30, "description": "Percentage upfront" },
+        "netDays": { "type": "number", "default": 30, "description": "Days until full payment due" },
+        "paymentMethods": { 
+          "type": "array", 
+          "items": { "type": "string" },
+          "default": ["Virement bancaire", "Chèque"]
+        },
+        "lateFee": { "type": "number", "default": 0, "description": "Late payment penalty percentage" }
+      }
+    }
+  },
+  
+  "properties": {
+    "document": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string", "enum": ["invoice", "quotation"] },
+        "number": { "type": "string", "description": "FAC-XXXX or DEV-XXXX" },
+        "date": { "type": "string", "format": "date" },
+        "dueDate": { "type": "string", "format": "date" },
+        "validUntil": { "type": "string", "format": "date", "description": "For quotations only" },
+        "currency": { "type": "string", "default": "EUR" },
+        "language": { "type": "string", "default": "fr" },
+        "notes": { "type": "string" },
+        "terms": { "type": "string" }
+      },
+      "required": ["type", "number", "date"]
+    },
+    
+    "company": { "$ref": "#/definitions/company" },
+    "client": { "$ref": "#/definitions/client" },
+    
+    "project": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "reference": { "type": "string" }
+      }
+    },
+    
+    "lineItems": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/lineItem" }
+    },
+    
+    "totals": {
+      "type": "object",
+      "properties": {
+        "subtotal": { "type": "number" },
+        "discountAmount": { "type": "number", "default": 0 },
+        "taxRate": { "type": "number", "default": 20 },
+        "taxAmount": { "type": "number" },
+        "total": { "type": "number" }
+      }
+    },
+    
+    "payment": { "$ref": "#/definitions/paymentTerms" }
+  },
+  
+  "required": ["document", "company", "client", "lineItems", "totals"]
+}

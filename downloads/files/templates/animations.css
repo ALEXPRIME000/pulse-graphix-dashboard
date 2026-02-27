@@ -1,0 +1,253 @@
+/*
+ * Pulse Graphix — Animation Library
+ * Reusable CSS animations for premium landing pages
+ * Based on Template Blueprint Strategy (Feb 2026)
+ * 
+ * Animations: beam, marquee, fade-in, blur-in, slide-in, 
+ * sonar, scroll-reveal, hover-glow, text-gradient
+ */
+
+/* ============================================
+   1. BEAM ANIMATION (Button borders)
+   ============================================ */
+.beam-border {
+  position: relative;
+  overflow: hidden;
+  border-radius: 9999px;
+}
+.beam-border::before {
+  content: '';
+  position: absolute;
+  top: -2px; left: -2px; right: -2px; bottom: -2px;
+  background: conic-gradient(from 0deg, transparent 0%, var(--beam-color, #00FF00) 10%, transparent 20%);
+  border-radius: inherit;
+  animation: beam-spin 3s linear infinite;
+  z-index: -1;
+}
+.beam-border::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  background: inherit;
+  border-radius: inherit;
+  z-index: -1;
+}
+@keyframes beam-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Beam speed variants */
+.beam-slow::before { animation-duration: 5s; }
+.beam-fast::before { animation-duration: 1.5s; }
+
+/* ============================================
+   2. MARQUEE ANIMATION (Logo scrollers)
+   ============================================ */
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.marquee-track {
+  display: inline-flex;
+  animation: marquee-scroll var(--marquee-speed, 30s) linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Reverse direction */
+.marquee-reverse .marquee-track {
+  animation-direction: reverse;
+}
+
+/* ============================================
+   3. FADE IN + BLUR IN (Section reveals)
+   ============================================ */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.6s ease-out forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.blur-in {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(20px);
+  animation: blurIn 0.8s ease-out forwards;
+}
+@keyframes blurIn {
+  to { opacity: 1; filter: blur(0); transform: translateY(0); }
+}
+
+/* Staggered delays for children */
+.stagger > :nth-child(1) { animation-delay: 0.1s; }
+.stagger > :nth-child(2) { animation-delay: 0.2s; }
+.stagger > :nth-child(3) { animation-delay: 0.3s; }
+.stagger > :nth-child(4) { animation-delay: 0.4s; }
+.stagger > :nth-child(5) { animation-delay: 0.5s; }
+.stagger > :nth-child(6) { animation-delay: 0.6s; }
+
+/* ============================================
+   4. SLIDE IN (From directions)
+   ============================================ */
+.slide-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: slideUp 0.6s ease-out forwards;
+}
+@keyframes slideUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: slideLeft 0.6s ease-out forwards;
+}
+@keyframes slideLeft {
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.slide-right {
+  opacity: 0;
+  transform: translateX(40px);
+  animation: slideRight 0.6s ease-out forwards;
+}
+@keyframes slideRight {
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* ============================================
+   5. SONAR / PULSE (Attention elements)
+   ============================================ */
+.sonar {
+  position: relative;
+}
+.sonar::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid var(--sonar-color, #00FF00);
+  animation: sonar-pulse 2s ease-out infinite;
+}
+@keyframes sonar-pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+.pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 var(--glow-color, rgba(0,255,0,0.4)); }
+  50% { box-shadow: 0 0 20px 10px var(--glow-color, rgba(0,255,0,0.1)); }
+}
+
+/* ============================================
+   6. SCROLL-TRIGGERED REVEALS (IntersectionObserver)
+   ============================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ============================================
+   7. HOVER EFFECTS (Buttons, cards)
+   ============================================ */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+.hover-glow {
+  transition: box-shadow 0.3s ease;
+}
+.hover-glow:hover {
+  box-shadow: 0 0 30px var(--glow-color, rgba(0,255,0,0.3));
+}
+
+.hover-scale {
+  transition: transform 0.2s ease;
+}
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* ============================================
+   8. TEXT GRADIENT ANIMATION
+   ============================================ */
+.text-gradient {
+  background: linear-gradient(135deg, var(--grad-1, #00FF00), var(--grad-2, #00ccff), var(--grad-1, #00FF00));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textGradient 3s linear infinite;
+}
+@keyframes textGradient {
+  to { background-position: 200% center; }
+}
+
+/* ============================================
+   9. COUNTER / NUMBER ANIMATION
+   ============================================ */
+.count-up {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ============================================
+   10. GRID LINES (Decorative)
+   ============================================ */
+.grid-lines {
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.grid-dots {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* ============================================
+   SCROLL OBSERVER (JavaScript helper)
+   Include this script to activate .reveal elements:
+   
+   <script>
+   const observer = new IntersectionObserver((entries) => {
+     entries.forEach(entry => {
+       if (entry.isIntersecting) {
+         entry.target.classList.add('visible');
+       }
+     });
+   }, { threshold: 0.1 });
+   document.querySelectorAll('.reveal, .reveal-scale').forEach(el => observer.observe(el));
+   </script>
+   ============================================ */

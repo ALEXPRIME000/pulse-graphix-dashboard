@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Sequence - Nexus AI Academy</title>
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 20px; background: #121212; color: #fff; }
+.email-preview { max-width: 600px; margin: 20px auto; background: #1e1e1e; border-radius: 12px; overflow: hidden; border: 1px solid #2a2a2a; }
+.email-header { background: linear-gradient(135deg, #1171B6, #202F62); padding: 20px; text-align: center; }
+.email-body { padding: 30px; }
+.email-body h2 { color: #1171B6; margin-top: 0; }
+.email-body p { line-height: 1.7; color: #ccc; }
+.cta-button { display: inline-block; background: linear-gradient(135deg, #1171B6, #1a5a9c); color: #fff !important; padding: 14px 28px; text-decoration: none; border-radius: 8px; font-weight: 600; margin: 20px 0; }
+.email-footer { padding: 20px 30px; background: #1a1a1a; border-top: 1px solid #2a2a2a; font-size: 12px; color: #666; text-align: center; }
+.divider { border-top: 1px solid #2a2a2a; margin: 40px 0; }
+.subject-line { background: #2a2a2a; padding: 10px 15px; border-radius: 6px; margin-bottom: 15px; font-weight: 500; }
+.send-timing { color: #F7931A; font-size: 12px; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+
+<!-- EMAIL 1: Introduction -->
+<div class="subject-line">📧 SUBJECT: {{company_name}} — Your team's AI skills gap (and how to close it)</div>
+<div class="send-timing">⏱️ SEND: Day 0 (immediately after first contact)</div>
+
+<div class="email-preview">
+  <div class="email-body">
+    <h2>Hi {{first_name}},</h2>
+    
+    <p>I came across {{company_name}} while researching {{industry}} companies that are investing in digital transformation. Here's what caught my attention:</p>
+    
+    <p>You've built {{company_description}}, but I notice a pattern — your team is missing practical AI skills that could 10x their productivity.</p>
+    
+    <p>Every week without AI training, your team loses hours to:</p>
+    <ul style="color:#ccc; line-height:1.8;">
+      <li>Manual data processing that AI could automate</li>
+      <li>Repetitive tasks that tools like Claude or ChatGPT handle in seconds</li>
+      <li>Decision-making without AI-powered insights</li>
+    </ul>
+    
+    <p>At <strong style="color:#1171B6;">Nexus AI Academy</strong>, we've trained {{industry}} teams to:</p>
+    <ul style="color:#ccc; line-height:1.8;">
+      <li>⚡ Reduce report time by 70% with AI automation</li>
+      <li>🎯 Make data-driven decisions 3x faster</li>
+      <li>💼 Upskill 90%+ of staff in 8 weeks (not 8 months)</li>
+    </ul>
+    
+    <p>We're launching cohort-based programs specifically for {{industry}} companies.</p>
+    
+    <a href="{{calendar_link}}" class="cta-button">📅 Book a 15-min AI readiness call</a>
+    
+    <p style="font-size: 13px; color: #888;">Not interested? Reply "NO" and I'll remove you from my list.</p>
+    
+    <p>Best regards,<br>
+    <strong style="color:#1171B6;">Chicco Kabundji</strong><br>
+    Founder, Nexus AI Academy<br>
+    📧 learn@nexusai.academy</p>
+  </div>
+  
+  <div class="email-footer">
+    Nexus AI Academy — AI Training for Modern Teams<br>
+    <a href="{{unsubscribe_link}}" style="color:#666;">Unsubscribe</a>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- EMAIL 2: Value/Case Study -->
+<div class="subject-line">📧 SUBJECT: How {{similar_company}} saved 120 hours/month with AI training</div>
+<div class="send-timing">⏱️ SEND: Day 3 (3 days after Email 1, if no response)</div>
+
+<div class="email-preview">
+  <div class="email-body">
+    <h2>{{first_name}}, quick story:</h2>
+    
+    <p>Three months ago, <strong>{{similar_company}}</strong> (a {{company_size}} {{industry}} firm like yours) was skeptical about AI training.</p>
+    
+    <p>Their operations manager told me: <em style="color:#ccc;">"We've tried training before. It never sticks."</em></p>
+    
+    <p>Here's what changed after 8 weeks with Nexus AI Academy:</p>
+    
+    <ul style="color:#ccc; line-height:1.8;">
+      <li>📊 <strong style="color:#1171B6;">87%</strong> of their team now uses AI tools daily</li>
+      <li>⏱️ <strong style="color:#1171B6;">120 hours/month</strong> saved on repetitive tasks</li>
+      <li>💰 <strong style="color:#1171B6;">ROI achieved in 6 weeks</strong> (vs. 6 months projected)</li>
+    </ul>
+    
+    <p>The difference? We don't teach theory. We implement AI into their actual workflows — from day one.</p>
+    
+    <p>I'm sharing our <strong>AI Skills Gap Assessment</strong> — a 10-point diagnostic showing exactly where your team stands (and which tools will have maximum impact):</p>
+    
+    <a href="{{assessment_link}}" class="cta-button">🎯 Get my team's AI assessment</a>
+    
+    <p>No pressure, no sales call required.</p>
+    
+    <p>Best,<br>
+    <strong style="color:#1171B6;">Chicco</strong></p>
+  </div>
+  
+  <div class="email-footer">
+    Nexus AI Academy — AI Training That Actually Works<br>
+    <a href="{{unsubscribe_link}}" style="color:#666;">Unsubscribe</a>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- EMAIL 3: Final CTA -->
+<div class="subject-line">📧 SUBJECT: Final message — keep in touch?</div>
+<div class="send-timing">⏱️ SEND: Day 7 (7 days after Email 1, if no response)</div>
+
+<div class="email-preview">
+  <div class="email-body">
+    <h2>{{first_name}},</h2>
+    
+    <p>I won't keep following up — busy professionals don't need inbox clutter.</p>
+    
+    <p>Before I close this thread, two paths:</p>
+    
+    <p><strong style="color:#1171B6;">Path 1:</strong> You're ready to explore AI training for your team. Let's talk for 15 minutes this week:</p>
+    
+    <a href="{{calendar_link}}" class="cta-button">📅 Schedule a quick call</a>
+    
+    <p><strong style="color:#1171B6;">Path 2:</strong> You're handling training internally or it's not a priority. I respect that — and I'll archive this conversation.</p>
+    
+    <p>Either works. Just let me know by replying <strong>"YES"</strong> or clicking above.</p>
+    
+    <p>If neither, I'll send you our quarterly <strong>AI-in-{{industry}}</strong> briefing — relevant insights, zero spam.</p>
+    
+    <p>Thanks for your time,</p>
+    
+    <p><strong style="color:#1171B6;">Chicco Kabundji</strong><br>
+    Nexus AI Academy<br>
+    <a href="https://nexusai.academy" style="color:#1171B6;">nexusai.academy</a></p>
+    
+    <hr style="border-color: #2a2a2a; margin: 30px 0;">
+    <p style="font-size: 12px; color: #666;">
+      <strong>P.S.</strong> Your competitors aren't waiting. {{competitor_1}} and {{competitor_2}} both announced AI initiatives last quarter. The gap is widening — but it's not too late to leapfrog.
+    </p>
+  </div>
+  
+  <div class="email-footer">
+    Nexus AI Academy — Practical AI Training<br>
+    <a href="{{unsubscribe_link}}" style="color:#666;">Unsubscribe</a>
+  </div>
+</div>
+
+</body>
+</html>

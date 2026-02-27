@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Sequence - Pulse Architects</title>
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 20px; background: #121212; color: #fff; }
+.email-preview { max-width: 600px; margin: 20px auto; background: #1e1e1e; border-radius: 12px; overflow: hidden; border: 1px solid #2a2a2a; }
+.email-header { background: linear-gradient(135deg, #07BE8A, #172023); padding: 20px; text-align: center; }
+.email-body { padding: 30px; }
+.email-body h2 { color: #07BE8A; margin-top: 0; }
+.email-body p { line-height: 1.7; color: #ccc; }
+.cta-button { display: inline-block; background: linear-gradient(135deg, #07BE8A, #06a87a); color: #fff !important; padding: 14px 28px; text-decoration: none; border-radius: 8px; font-weight: 600; margin: 20px 0; }
+.email-footer { padding: 20px 30px; background: #1a1a1a; border-top: 1px solid #2a2a2a; font-size: 12px; color: #666; text-align: center; }
+.divider { border-top: 1px solid #2a2a1e; margin: 40px 0; }
+.subject-line { background: #2a2a2a; padding: 10px 15px; border-radius: 6px; margin-bottom: 15px; font-weight: 500; }
+.send-timing { color: #F7931A; font-size: 12px; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+
+<!-- EMAIL 1: Introduction -->
+<div class="subject-line">📧 OBJET: {{architect_name}} — Vos plans en ligne dans 48h ?</div>
+<div class="send-timing">⏱️ ENVOYER: Jour 0 (immédiatement après contact)</div>
+
+<div class="email-preview">
+  <div class="email-body">
+    <h2>Bonjour {{first_name}},</h2>
+    
+    <p>J'ai découvert votre travail sur {{discovered_platform}} — particulièrement {{notable_project}}. Vos {{specialty_style}} sont remarquables.</p>
+    
+    <p>Mais voici ce que je n'ai pas trouvé :</p>
+    <ul style="color:#ccc; line-height:1.8;">
+      <li>Un portfolio professionnel en ligne</li>
+      <li>Un système de vente de plans/documents</li>
+      <li>Une présence digitale à la hauteur de votre talent</li>
+    </ul>
+    
+    <p>En 2025, 94% des clients recherchent leur architecte en ligne d'abord.</p>
+    
+    <p>Et pire : <strong style="color:#07BE8A;">vos plans techniques</strong>, <strong style="color:#07BE8A;">vos conceptions</strong>, <strong style="color:#07BE8A;">votre expertise</strong> — ne génèrent aucun revenu passif alors qu'ils pourraient.</p>
+    
+    <p>Chez <strong style="color:#07BE8A;">Pulse Architects</strong>, nous créons des plateformes pour architectes qui veulent:</p>
+    <ul style="color:#ccc; line-height:1.8;">
+      <li>🌐 <strong style="color:#07BE8A;">Portfolio digital premium</strong> (pas un template cheap)</li>
+      <li>💰 <strong style="color:#07BE8A;">Marketplace de plans</strong> — vendez vos conceptions inutilisées</li>
+      <li>📈 <strong style="color:#07BE8A;">Génération de leads automatique</strong></li>
+    </ul>
+    
+    <p>La plupart de nos architectes partenaires récupèrent leur investissement en 2 projets.</p>
+    
+    <a href="{{portfolio_demo_link}}" class="cta-button">🎨 Voir un portfolio démo</a>
+    
+    <p style="font-size: 13px; color: #888;">Pas intéressé ? Répondez "NON" — je supprime votre contact.</p>
+    
+    <p>Cordialement,<br>
+    <strong style="color:#07BE8A;">Chicco Kabundji</strong><br>
+    Fondateur, Pulse Architects<br>
+    📧 hello@pulsearchitects.com</p>
+  </div>
+  
+  <div class="email-footer">
+    Pulse Architects — Digital Platform for Architects<br>
+    <a href="{{unsubscribe_link}}" style="color:#666;">Se désabonner</a>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- EMAIL 2: Value/Revenue -->
+<div class="subject-line">📧 OBJET: Un plan dormant = €500-3000 de revenu passif/an</div>
+<div class="send-timing">⏱️ ENVOYER: Jour 4 (4 jours après Email 1)</div>
+
+<div class="email-preview">
+  <div class="email-body">
+    <h2>{{first_name}},</h2>
+    
+    <p>Vous avez probablement des dizaines de plans que vous n'utiliserez jamais.</p>
+    
+    <p>Des conceptions pour des projets annulés. Des alternatives non retenues. Des études de faisabilité.</p>
+    
+    <p><strong style="color:#07BE8A;">Chez Pulse Architects, on transforme ça en revenu.</strong></p>
+    
+    <p>Exemple concret :</p>
+    <ul style="color:#ccc; line-height:1.8;">
+      <li>Un plan de maison familiale simple : <strong>€150-500</strong> par vente</li>
+      <li>Un chalet de montagne complet : <strong>€800-2000</strong></li>
+      <li>Une extension de loft : <strong>€300-800</strong></li>
+    </ul>
+    
+    <p>Si vous vendez juste <strong>5 plans par mois</strong> — c'est un revenu complémentaire de <strong style="color:#07BE8A;">€9,000-30,000/an</strong> sans lever le petit doigt.</p>
+    
+    <p>Notre plateforme se charge de:</p>
+    <ul style="color:#ccc; line-height:1.8;">
+      <li>La mise en ligne et le formatage PDF/DWG</li>
+      <li>Le paiement sécurisé</li>
+      <li>La protection des droits d'auteur</li>
+      <li>Le support client</li>
+    </ul>
+    
+    <p>Vous recevez juste un virement mensuel.</p>
+    
+    <a href="{{revenue_calculator_link}}" class="cta-button">💰 Calculer mon potentiel de revenus</a>
+    
+    <p>Cordialement,<br>
+    <strong style="color:#07BE8A;">Chicco</strong></p>
+  </div>
+  
+  <div class="email-footer">
+    Pulse Architects — Monétisez votre expertise<br>
+    <a href="{{unsubscribe_link}}" style="color:#666;">Se désabonner</a>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- EMAIL 3: Final -->
+<div class="subject-line">📧 OBJET: Dernier message — rester en contact ?</div>
+<div class="send-timing">⏱️ ENVOYER: Jour 10 (10 jours après Email 1)</div>
+
+<div class="email-preview">
+  <div class="email-body">
+    <h2>{{first_name}},</h2>
+    
+    <p>Je finis cette séquence — je respecte votre temps.</p>
+    
+    <p>Deux options :</p>
+    
+    <p><strong style="color:#07BE8A;">Option 1:</strong> L'idée d'un portfolio + marketplace vous parle. On en papote 20 minutes cette semaine:</p>
+    
+    <a href="{{calendar_link}}" class="cta-button">📅 Réserver un créneau</a>
+    
+    <p><strong style="color:#07BE8A;">Option 2:</strong> Vous préférez gérer votre présence en ligne différemment — pas de souci.</p>
+    
+    <p>Je vous maintiens dans ma liste <strong>Newsletter Architectes Digitaux</strong> — un email mensuel avec les tendances web pour architectes. Utile, pas intrusif.</p>
+    <p>Désabonnement instantané si ça ne vous sert pas.</p>
+    
+    <p>Quel que soit votre choix, je vous souhaite une excellente continuation.</p>
+    
+    <p><strong style="color:#07BE8A;">Chicco Kabundji</strong><br>
+    Pulse Architects<br>
+    <a href="https://pulsearchitects.com" style="color:#07BE8A;">pulsearchitects.com</a></p>
+    
+    <hr style="border-color: #2a2a2a; margin: 30px 0;">
+    <p style="font-size: 12px; color: #666;">
+      <strong>P.S.</strong> Vos confrères avancent. {{competitor_1}} vient de lancer sa marketplace — 23 plans vendus le premier mois. Le marché existe.
+    </p>
+  </div>
+  
+  <div class="email-footer">
+    Pulse Architects — Platform for Architects<br>
+    <a href="{{unsubscribe_link}}" style="color:#666;">Se désabonner</a>
+  </div>
+</div>
+
+</body>
+</html>

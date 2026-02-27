@@ -1,0 +1,251 @@
+/**
+ * Pulse Graphix Typography System
+ * Combining principles from:
+ * - petekp/typography (design mastery)
+ * - wondelai/web-typography (web implementation)
+ *
+ * Version: 1.0.0
+ * Last Updated: 2026-02-14
+ *
+ * Brand Colors:
+ * - Primary: #00FF00 (neon green)
+ * - Dark: #0a0a0a
+ * - Light: #ffffff
+ */
+
+/* ========================================
+   TYPE SCALE - Minor Third (1.200)
+   ======================================== */
+
+:root {
+  /* Fluid Type Scale */
+  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);    /* 12-14px */
+  --text-sm: clamp(0.875rem, 0.83rem + 0.2vw, 1rem);        /* 14-16px */
+  --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);     /* 16-18px */
+  --text-lg: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);       /* 18-20px */
+  --text-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);       /* 20-24px */
+  --text-2xl: clamp(1.5rem, 1.25rem + 1.25vw, 1.875rem);    /* 24-30px */
+  --text-3xl: clamp(1.875rem, 1.5rem + 1.5vw, 2.25rem);    /* 30-36px */
+  --text-4xl: clamp(2.25rem, 1.75rem + 2vw, 2.5rem);        /* 36-40px - adjusted for balance */
+  --text-5xl: clamp(3rem, 2rem + 3vw, 4rem);                /* 48-64px - hero sizes */
+
+  /* Font Families - Workhorse approach */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+               Roboto, 'Helvetica Neue', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo,
+               Monaco, Consolas, monospace;
+
+  /* Line Heights */
+  --leading-tight: 1.2;   /* Headings */
+  --leading-snug: 1.4;    /* UI labels */
+  --leading-normal: 1.6;  /* Body text (per wondelai) */
+  --leading-relaxed: 1.7; /* Long-form content */
+
+  /* Measure (line length) */
+  --measure-prose: 65ch;   /* Optimal per Bringhurst */
+  --measure-wide: 75ch;    /* Documentation */
+}
+
+/* ========================================
+   BASE STYLES
+   ======================================== */
+
+html {
+  /* Fluid sizing base */
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark mode: text appears heavier, reduce weight (per petekp) */
+@media (prefers-color-scheme: dark) {
+  body {
+    font-weight: 350;
+  }
+
+  h1, h2, h3, h4 {
+    font-weight: 600;
+  }
+}
+
+/* ========================================
+   HIERARCHY - 5 Levels
+   ======================================== */
+
+/* Display - Hero/Marketing */
+.display {
+  font-size: var(--text-5xl);
+  font-weight: 700;
+  line-height: var(--leading-tight);
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+/* H1 - Page Titles */
+h1, .h1 {
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  line-height: var(--leading-tight);
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+/* H2 - Section Heads */
+h2, .h2 {
+  font-size: var(--text-3xl);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+/* H3 - Subsections */
+h3, .h3 {
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  line-height: 1.3;
+  text-wrap: balance;
+  margin-top: 1.25em;
+  margin-bottom: 0.5em;
+}
+
+/* H4 - Labels/Small Heads */
+h4, .h4 {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  line-height: var(--leading-snug);
+}
+
+/* Body - Primary Content */
+p, .prose {
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  text-wrap: pretty;
+  max-width: var(--measure-prose);
+  margin-bottom: 1em;
+}
+
+/* Small - Captions, Labels, Meta */
+.small, small, .text-small {
+  font-size: var(--text-sm);
+  line-height: var(--leading-snug);
+  letter-spacing: 0.01em;
+}
+
+/* Extra Small - Legal, Fine Print */
+.xs, .text-xs {
+  font-size: var(--text-xs);
+  line-height: var(--leading-snug);
+  letter-spacing: 0.02em;
+}
+
+/* ========================================
+   UI TEXT
+   ======================================== */
+
+/* Buttons, Labels, Nav */
+.ui-text, label, button, .btn {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  line-height: var(--leading-snug);
+}
+
+/* Code, Data */
+code, pre, .mono {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums slashed-zero;
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+/* Truncation */
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Weight utilities */
+.font-light { font-weight: 300; }
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+
+/* Measure constraints */
+.max-w-prose { max-width: var(--measure-prose); }
+.max-w-wide { max-width: var(--measure-wide); }
+
+/* All caps with proper tracking */
+.uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Pulse Brand Accent */
+.text-pulse {
+  color: #00FF00;
+}
+
+.bg-pulse {
+  background-color: #00FF00;
+}
+
+/* ========================================
+   PROSE - Full Article Styles
+   ======================================== */
+
+.prose h1 { font-size: var(--text-4xl); margin-top: 0; }
+.prose h2 { font-size: var(--text-3xl); margin-top: 2em; }
+.prose h3 { font-size: var(--text-2xl); margin-top: 1.75em; }
+.prose p { margin-bottom: 1.25em; }
+.prose h1 + p, .prose h2 + p { margin-top: -0.25em; }
+
+/* ========================================
+   PERFORMANCE NOTES
+   ========================================
+   - Inter font: <50KB WOFF2 for latin
+   - Use font-display: swap for web fonts
+   - Preload critical fonts: <link rel="preload">
+   - Target <200KB total font payload
+   ======================================== */
+
+/* Font-face template for web fonts */
+/*
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 400 700;
+  unicode-range: U+0000-00FF;
+}
+*/
