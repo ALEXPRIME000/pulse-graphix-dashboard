@@ -1,9 +1,9 @@
 {
-  "lastGenerated": "2026-02-27T21:29:06.782Z",
+  "lastGenerated": "2026-02-27T23:29:02.542Z",
   "keyMetrics": {
     "totalProspects": 20,
     "qualifiedProspects": 11,
-    "pipelineValue": 33205,
+    "pipelineValue": 35714,
     "revenueThisMonth": 0,
     "shopProducts": 0,
     "services": 5,
@@ -45,7 +45,7 @@
       "phone": "01 60 05 28 84",
       "webStatus": "NO WEBSITE",
       "tier": "hot",
-      "estimatedValue": 1688,
+      "estimatedValue": 1986,
       "rating": 5,
       "stage": "Top Priority",
       "location": "Torcy"
@@ -58,7 +58,7 @@
       "phone": "09 87 32 46 79",
       "webStatus": "NO WEBSITE",
       "tier": "hot",
-      "estimatedValue": 2128,
+      "estimatedValue": 2475,
       "rating": 5,
       "stage": "Top Priority",
       "location": "Torcy"
@@ -71,7 +71,7 @@
       "phone": "01 60 05 31 44",
       "webStatus": "NO REAL WEBSITE",
       "tier": "hot",
-      "estimatedValue": 1559,
+      "estimatedValue": 2438,
       "rating": 5,
       "stage": "Top Priority",
       "location": "Torcy"
@@ -84,7 +84,7 @@
       "phone": "01 60 17 26 32",
       "webStatus": "NO WEBSITE (FB only)",
       "tier": "hot",
-      "estimatedValue": 2166,
+      "estimatedValue": 2288,
       "rating": 5,
       "stage": "Top Priority",
       "location": "Torcy"
@@ -97,7 +97,7 @@
       "phone": "Via Planity",
       "webStatus": "NO OWN WEBSITE (uses Planity)",
       "tier": "warm",
-      "estimatedValue": 1306,
+      "estimatedValue": 1530,
       "rating": 4,
       "stage": "Research",
       "location": "Torcy"
@@ -110,7 +110,7 @@
       "phone": "Via Pages Jaunes",
       "webStatus": "NO OWN WEBSITE (uses Treatwell)",
       "tier": "warm",
-      "estimatedValue": 1754,
+      "estimatedValue": 1312,
       "rating": 4,
       "stage": "Research",
       "location": "Torcy"
@@ -123,7 +123,7 @@
       "phone": "Via Pages Jaunes",
       "webStatus": "NO WEBSITE",
       "tier": "warm",
-      "estimatedValue": 1645,
+      "estimatedValue": 1541,
       "rating": 4,
       "stage": "Research",
       "location": "Torcy"
@@ -136,7 +136,7 @@
       "phone": "Via Pages Jaunes",
       "webStatus": "NO OWN WEBSITE",
       "tier": "warm",
-      "estimatedValue": 1291,
+      "estimatedValue": 1732,
       "rating": 4,
       "stage": "Research",
       "location": "Torcy"
@@ -149,7 +149,7 @@
       "phone": "Via Pages Jaunes",
       "webStatus": "NO WEBSITE",
       "tier": "warm",
-      "estimatedValue": 1479,
+      "estimatedValue": 1639,
       "rating": 4,
       "stage": "Research",
       "location": "Torcy"
@@ -162,7 +162,7 @@
       "phone": "Via Pages Jaunes",
       "webStatus": "VERIFY",
       "tier": "warm",
-      "estimatedValue": 1393,
+      "estimatedValue": 1432,
       "rating": 4,
       "stage": "Research",
       "location": "Torcy"
@@ -175,7 +175,7 @@
       "phone": "Via Pages Jaunes",
       "webStatus": "VERIFY",
       "tier": "warm",
-      "estimatedValue": 1495,
+      "estimatedValue": 1357,
       "rating": 4,
       "stage": "Research",
       "location": "Torcy"
@@ -188,7 +188,7 @@
       "phone": "Via Mappy",
       "webStatus": "VERIFY",
       "tier": "new",
-      "estimatedValue": 1979,
+      "estimatedValue": 1778,
       "rating": 4,
       "stage": "Research",
       "location": "Torcy"
@@ -201,7 +201,7 @@
       "phone": "01 60 17 17 17",
       "webStatus": "HAS BASIC SITE",
       "tier": "new",
-      "estimatedValue": 1649,
+      "estimatedValue": 1992,
       "rating": 4,
       "stage": "Research",
       "location": "Torcy"
@@ -214,7 +214,7 @@
       "phone": "Via Mappy",
       "webStatus": "VERIFY",
       "tier": "new",
-      "estimatedValue": 1616,
+      "estimatedValue": 1646,
       "rating": 4,
       "stage": "Research",
       "location": "Torcy"
@@ -227,7 +227,7 @@
       "phone": "01 60 05 21 51",
       "webStatus": "OUTDATED SITE (institut-elisa-elisa.fr)",
       "tier": "cold",
-      "estimatedValue": 2071,
+      "estimatedValue": 2129,
       "rating": 3,
       "stage": "Research",
       "location": "Torcy"
@@ -240,7 +240,7 @@
       "phone": "Via Planity",
       "webStatus": "NO OWN WEBSITE",
       "tier": "cold",
-      "estimatedValue": 2461,
+      "estimatedValue": 1136,
       "rating": 3,
       "stage": "Research",
       "location": "Torcy"
@@ -253,7 +253,7 @@
       "phone": "01 60 17 53 78",
       "webStatus": "FRANCHISE — lower priority",
       "tier": "cold",
-      "estimatedValue": 1098,
+      "estimatedValue": 1649,
       "rating": 3,
       "stage": "Research",
       "location": "Torcy"
@@ -266,7 +266,7 @@
       "phone": "01 64 68 05 33",
       "webStatus": "VERIFY",
       "tier": "cold",
-      "estimatedValue": 1939,
+      "estimatedValue": 2301,
       "rating": 3,
       "stage": "Research",
       "location": "Torcy"
@@ -279,7 +279,7 @@
       "phone": "Via Pages Jaunes",
       "webStatus": "NO WEBSITE",
       "tier": "cold",
-      "estimatedValue": 1035,
+      "estimatedValue": 2260,
       "rating": 3,
       "stage": "Research",
       "location": "Torcy"
@@ -292,7 +292,7 @@
       "phone": "Via OpenStreetMap",
       "webStatus": "VERIFY",
       "tier": "cold",
-      "estimatedValue": 1453,
+      "estimatedValue": 1093,
       "rating": 3,
       "stage": "Research",
       "location": "Torcy"
@@ -301,15 +301,21 @@
   "tasks": {
     "blocked": [
       {
-        "name": "Prospect calls",
-        "need": "Green light to start calling",
+        "name": "Telegram Groups",
+        "need": "Add bot to groups + disable BotFather privacy mode",
         "priority": "HIGH",
         "category": "general"
       },
       {
-        "name": "Google OAuth",
+        "name": "LinkedIn Profile Optimization",
+        "need": "LinkedIn credentials or approval to draft",
+        "priority": "MEDIUM",
+        "category": "general"
+      },
+      {
+        "name": "Google OAuth Fix",
         "need": "Browser re-auth session",
-        "priority": "HIGH",
+        "priority": "MEDIUM",
         "category": "general"
       },
       {
@@ -325,238 +331,74 @@
         "category": "general"
       },
       {
-        "name": "LinkedIn posts",
-        "need": "Review & approve 4 drafts",
-        "priority": "MEDIUM",
-        "category": "general"
-      },
-      {
-        "name": "Subagent Pyramid",
-        "need": "Approval to deploy",
-        "priority": "LOW",
-        "category": "general"
-      },
-      {
-        "name": "~~Company names~~",
-        "need": "✅ All 4 identified: PG, Nexus AI, Invest in Congo, Pulse Architects",
-        "priority": "✅ DONE",
-        "category": "general"
-      },
-      {
-        "name": "Existing social accounts",
-        "need": "For audit & optimization",
-        "priority": "LOW",
-        "category": "general"
-      }
-    ],
-    "pending": [
-      {
-        "name": "LinkedIn Profile Optimization",
-        "description": "Apply strategy from LINKEDIN-STRATEGY.md",
-        "priority": "MEDIUM",
-        "category": "general"
-      },
-      {
-        "name": "Fix Google OAuth",
-        "description": "Restore email/calendar access",
-        "priority": "MEDIUM",
-        "category": "general"
-      },
-      {
-        "name": "Enable UFW Firewall",
-        "description": "Security critical",
+        "name": "LinkedIn Posts Review",
+        "need": "Approve batch 1 & 2 for posting",
         "priority": "MEDIUM",
         "category": "general"
       },
       {
         "name": "First Cold Calls",
-        "description": "Call 4 qualified leads",
-        "priority": "MEDIUM",
+        "need": "Green light to start calling prospects",
+        "priority": "HIGH",
         "category": "general"
       },
       {
-        "name": "Set Up All 5 Social Accounts",
-        "description": "Profile optimization per strategy docs",
-        "priority": "MEDIUM",
+        "name": "Goal",
+        "need": "Target",
+        "priority": "DEADLINE",
         "category": "general"
       },
       {
-        "name": "First Week of Content",
-        "description": "15+ posts across all platforms",
-        "priority": "MEDIUM",
+        "name": "Monthly recurring revenue",
+        "need": "€3,000/mo",
+        "priority": "JUNE 30",
         "category": "general"
       },
       {
-        "name": "Design Social Media Templates",
-        "description": "5 Canva/Figma templates",
-        "priority": "MEDIUM",
+        "name": "LinkedIn followers",
+        "need": "1,000",
+        "priority": "JUNE 30",
         "category": "general"
       },
       {
-        "name": "Create Email Sequences",
-        "description": "Automated follow-up for leads",
-        "priority": "MEDIUM",
+        "name": "YouTube subscribers",
+        "need": "500",
+        "priority": "JUNE 30",
         "category": "general"
       },
       {
-        "name": "Close first client from cold outreach",
-        "description": "Target: 1 signed project (€3K+)",
-        "priority": "MEDIUM",
+        "name": "Active clients",
+        "need": "5",
+        "priority": "JUNE 30",
         "category": "general"
       },
       {
-        "name": "YouTube channel launch",
-        "description": "First 2 videos uploaded",
-        "priority": "MEDIUM",
+        "name": "Templates sold",
+        "need": "50 units",
+        "priority": "JUNE 30",
         "category": "general"
       },
       {
-        "name": "Aura account setup",
-        "description": "AI template builder ($20/mo)",
-        "priority": "MEDIUM",
+        "name": "Prospect calls made",
+        "need": "50",
+        "priority": "JUNE 30",
         "category": "general"
       },
       {
-        "name": "Unicorn Studio setup",
-        "description": "WebGL backgrounds for premium templates",
-        "priority": "MEDIUM",
+        "name": "Discovery calls booked",
+        "need": "15",
+        "priority": "JUNE 30",
         "category": "general"
       },
       {
-        "name": "Launch Pulse Graphix Design Shop",
-        "description": "3+ products on website",
-        "priority": "MEDIUM",
-        "category": "general"
-      },
-      {
-        "name": "First YouTube video published",
-        "description": "Tutorial: \"Build a Website in 30 Min\"",
-        "priority": "MEDIUM",
-        "category": "general"
-      },
-      {
-        "name": "LinkedIn: 200+ connections",
-        "description": "Daily outreach per strategy",
-        "priority": "MEDIUM",
-        "category": "general"
-      },
-      {
-        "name": "Second batch of prospect calls",
-        "description": "5 more leads",
-        "priority": "MEDIUM",
-        "category": "general"
-      },
-      {
-        "name": "Deploy Subagent Pyramid",
-        "description": "4 manager agents + specialized subagents",
-        "priority": "MEDIUM",
-        "category": "general"
-      },
-      {
-        "name": "First template on Framer Marketplace",
-        "description": "SaaS template ($49-79)",
-        "priority": "MEDIUM",
-        "category": "general"
-      },
-      {
-        "name": "Social media audit",
-        "description": "30-day review per MASTER-STRATEGY.md KPIs",
-        "priority": "MEDIUM",
-        "category": "general"
-      },
-      {
-        "name": "Create case study content",
-        "description": "From first client project (if closed)",
-        "priority": "MEDIUM",
-        "category": "general"
-      },
-      {
-        "name": "Monthly revenue review",
-        "description": "Track all income sources",
-        "priority": "MEDIUM",
-        "category": "general"
-      },
-      {
-        "name": "Content calendar for April",
-        "description": "Plan next month's social media",
-        "priority": "MEDIUM",
-        "category": "general"
-      },
-      {
-        "name": "Expand to Webflow Marketplace",
-        "description": "Second template platform",
-        "priority": "MEDIUM",
-        "category": "general"
-      },
-      {
-        "name": "First affiliate partnerships",
-        "description": "Apply for Webflow, hosting, tool affiliates",
-        "priority": "MEDIUM",
+        "name": "Projects closed",
+        "need": "5",
+        "priority": "JUNE 30",
         "category": "general"
       }
     ],
-    "completed": [
-      {
-        "name": "Dashboard Always Live",
-        "description": "✅ Cron job set up for 2-hour auto-sync",
-        "date": "2026-02-27"
-      },
-      {
-        "name": "Trim MEMORY.md",
-        "description": "Reduced to 99 lines ✅ (Feb 15)",
-        "date": "2026-02-27"
-      },
-      {
-        "name": "Create 5 LinkedIn Posts",
-        "description": "✅ Created Feb 20",
-        "date": "2026-02-27"
-      },
-      {
-        "name": "Prospect Call Preparation",
-        "description": "✅ APPROVED Feb 16! Prepping now",
-        "date": "2026-02-27"
-      },
-      {
-        "name": "Create Client Proposal Template",
-        "description": "✅ Created Feb 19",
-        "date": "2026-02-27"
-      },
-      {
-        "name": "Expand Prospect List to 20",
-        "description": "✅ Compiled Feb 20",
-        "date": "2026-02-27"
-      },
-      {
-        "name": "Social Media Strategy",
-        "description": "8 files, 6,004 lines, 5 platforms (MASTER, LinkedIn, YouTube, Twitter/X, Facebook, TikTok, Content Ideas, Weekly Checklist)",
-        "date": "2026-02-27"
-      },
-      {
-        "name": "Pixel-Perfect Devis Template V2",
-        "description": "`templates/devis-pulse-v2.html` matching Kabundji's PDF model",
-        "date": "2026-02-27"
-      },
-      {
-        "name": "Pulse Graphix Business Brief",
-        "description": "Saved to `business/PULSE-GRAPHIX-BRIEF.md`",
-        "date": "2026-02-27"
-      },
-      {
-        "name": "Context Memory System",
-        "description": "3-tier architecture documented at `docs/CONTEXT-MEMORY-SYSTEM.md`",
-        "date": "2026-02-27"
-      },
-      {
-        "name": "Agent Zero Analysis",
-        "description": "Full research at `docs/AGENT-ZERO-ANALYSIS.md`",
-        "date": "2026-02-27"
-      },
-      {
-        "name": "Memory Archive Structure",
-        "description": "`memory/archive/` with decisions.md + lessons.md",
-        "date": "2026-02-27"
-      }
-    ]
+    "pending": [],
+    "completed": []
   },
   "marketing": {
     "linkedin": {
@@ -625,7 +467,7 @@
       "type": "Boulangerie-Pâtisserie",
       "location": "Torcy",
       "stage": "Top Priority",
-      "value": "1,688",
+      "value": "1,986",
       "rating": 5
     },
     {
@@ -633,7 +475,7 @@
       "type": "Boulangerie-Pâtisserie",
       "location": "Torcy",
       "stage": "Top Priority",
-      "value": "2,128",
+      "value": "2,475",
       "rating": 5
     },
     {
@@ -641,7 +483,7 @@
       "type": "Bistrot-Restaurant",
       "location": "Torcy",
       "stage": "Top Priority",
-      "value": "1,559",
+      "value": "2,438",
       "rating": 5
     },
     {
@@ -649,7 +491,7 @@
       "type": "Restaurant vietnamien",
       "location": "Torcy",
       "stage": "Top Priority",
-      "value": "2,166",
+      "value": "2,288",
       "rating": 5
     },
     {
@@ -657,7 +499,7 @@
       "type": "Salon coiffure",
       "location": "Torcy",
       "stage": "Research",
-      "value": "1,306",
+      "value": "1,530",
       "rating": 4
     },
     {
@@ -665,7 +507,7 @@
       "type": "Salon coiffure",
       "location": "Torcy",
       "stage": "Research",
-      "value": "1,754",
+      "value": "1,312",
       "rating": 4
     },
     {
@@ -673,7 +515,7 @@
       "type": "Barbier-coiffeur",
       "location": "Torcy",
       "stage": "Research",
-      "value": "1,645",
+      "value": "1,541",
       "rating": 4
     },
     {
@@ -681,7 +523,7 @@
       "type": "Salon coiffure",
       "location": "Torcy",
       "stage": "Research",
-      "value": "1,291",
+      "value": "1,732",
       "rating": 4
     },
     {
@@ -689,7 +531,7 @@
       "type": "Institut de beauté",
       "location": "Torcy",
       "stage": "Research",
-      "value": "1,479",
+      "value": "1,639",
       "rating": 4
     },
     {
@@ -697,7 +539,7 @@
       "type": "Institut de beauté",
       "location": "Torcy",
       "stage": "Research",
-      "value": "1,393",
+      "value": "1,432",
       "rating": 4
     },
     {
@@ -705,7 +547,7 @@
       "type": "Institut de beauté",
       "location": "Torcy",
       "stage": "Research",
-      "value": "1,495",
+      "value": "1,357",
       "rating": 4
     },
     {
@@ -713,7 +555,7 @@
       "type": "Boulangerie-Pâtisserie",
       "location": "Torcy",
       "stage": "Research",
-      "value": "1,979",
+      "value": "1,778",
       "rating": 4
     },
     {
@@ -721,7 +563,7 @@
       "type": "Pizzeria/livraison",
       "location": "Torcy",
       "stage": "Research",
-      "value": "1,649",
+      "value": "1,992",
       "rating": 4
     },
     {
@@ -729,7 +571,7 @@
       "type": "Chocolatier",
       "location": "Torcy",
       "stage": "Research",
-      "value": "1,616",
+      "value": "1,646",
       "rating": 4
     },
     {
@@ -737,7 +579,7 @@
       "type": "Institut de beauté",
       "location": "Torcy",
       "stage": "Research",
-      "value": "2,071",
+      "value": "2,129",
       "rating": 3
     },
     {
@@ -745,7 +587,7 @@
       "type": "Barbier",
       "location": "Torcy",
       "stage": "Research",
-      "value": "2,461",
+      "value": "1,136",
       "rating": 3
     },
     {
@@ -753,7 +595,7 @@
       "type": "Salon (franchise VOG)",
       "location": "Torcy",
       "stage": "Research",
-      "value": "1,098",
+      "value": "1,649",
       "rating": 3
     },
     {
@@ -761,7 +603,7 @@
       "type": "Opticien",
       "location": "Torcy",
       "stage": "Research",
-      "value": "1,939",
+      "value": "2,301",
       "rating": 3
     },
     {
@@ -769,7 +611,7 @@
       "type": "Salon coiffure",
       "location": "Torcy",
       "stage": "Research",
-      "value": "1,035",
+      "value": "2,260",
       "rating": 3
     },
     {
@@ -777,7 +619,7 @@
       "type": "Fleuriste",
       "location": "Torcy",
       "stage": "Research",
-      "value": "1,453",
+      "value": "1,093",
       "rating": 3
     }
   ],
