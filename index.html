@@ -303,8 +303,9 @@
 
     <!-- Tab Navigation -->
     <nav class="container mx-auto px-6 mb-8">
-        <div class="flex space-x-1 border-b border-gray-800 overflow-x-auto">
+        <div class="flex space-x-1 border-b border-gray-800 overflow-x-auto pb-px scrollbar-thin" style="scrollbar-width:thin;">
             <button class="tab-button active" data-tab="overview">Overview</button>
+            <button class="tab-button" data-tab="files">📁 Files</button>
             <button class="tab-button" data-tab="prospects">🎯 Prospects</button>
             <button class="tab-button" data-tab="tasks">✅ Tasks</button>
             <button class="tab-button" data-tab="marketing">📱 Marketing</button>
@@ -313,7 +314,6 @@
             <button class="tab-button" data-tab="services">Services</button>
             <button class="tab-button" data-tab="shop">Shop</button>
             <button class="tab-button" data-tab="social">Social Media</button>
-            <button class="tab-button" data-tab="files">📁 Files</button>
         </div>
     </nav>
 
@@ -630,6 +630,9 @@
     .fe-file.active { background:rgba(0,255,0,0.15); color:#00FF00; border-left:2px solid #00FF00; }
     .fe-file-icon { font-size:14px; flex-shrink:0; }
     .fe-file-name { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; flex:1; }
+    .fe-file-dl { cursor:pointer; opacity:0; font-size:12px; padding:2px 4px; border-radius:4px; transition:opacity 0.15s; color:#00FF00; }
+    .fe-file:hover .fe-file-dl { opacity:0.7; }
+    .fe-file-dl:hover { opacity:1!important; background:#00FF0020; }
     .fe-file-size { font-size:10px; color:#666; flex-shrink:0; }
     .fe-folder-count { font-size:10px; background:#222; color:#888; padding:1px 6px; border-radius:10px; }
     .fe-preview-md { color:#d4d4d4; line-height:1.7; }
@@ -1229,6 +1232,7 @@
                   out += '<div class="fe-file'+(act?' active':'')+'" onclick="feSelect(\''+f.path.replace(/'/g,"\\'")+'\')" style="padding-left:'+((depth+1)*14+6)+'px">';
                   out += '<span class="fe-file-icon">'+f.icon+'</span>';
                   out += '<span class="fe-file-name">'+esc(f.name)+'</span>';
+                  out += '<span class="fe-file-dl" title="Download" onclick="event.stopPropagation();feDownloadPath(\''+f.path.replace(/'/g,"\\'")+'\',\''+esc(f.name)+'\')">⬇</span>';
                   out += '<span class="fe-file-size">'+f.sizeHuman+'</span></div>';
                 });
               }
@@ -1314,6 +1318,20 @@
             return code;
           }
 
+          window.feDownloadPath = function(path, name) {
+            const f = FE_FILES.find(x=>x.path===path);
+            if (f && f.content) {
+              const blob = new Blob([f.content],{type:'text/plain'});
+              const url = URL.createObjectURL(blob);
+              const a = document.createElement('a'); a.href=url; a.download=name;
+              document.body.appendChild(a); a.click(); document.body.removeChild(a);
+              URL.revokeObjectURL(url);
+            } else {
+              const a = document.createElement('a'); a.href='downloads/files/'+path; a.download=name;
+              document.body.appendChild(a); a.click(); document.body.removeChild(a);
+            }
+          };
+
           window.feDownload = function() {
             if (!FE_CURRENT) return;
             if (FE_CURRENT.content) {
@@ -1368,7 +1386,8 @@
             const el = document.getElementById('fe-preview');
             el.innerHTML = '<div class="mb-4"><span class="text-sm text-gray-400 cursor-pointer hover:text-[#00FF00]" onclick="feHome()">← Back</span><span class="text-white font-medium ml-3">'+esc(folder)+'</span></div>' +
               '<div class="fe-grid">'+files.map(f => '<div class="fe-grid-item" onclick="feSelect(\''+f.path.replace(/'/g,"\\'")+'\')">' +
-                '<div class="fe-grid-icon">'+f.icon+'</div><div class="fe-grid-name">'+esc(f.name)+'</div><div class="fe-grid-size">'+f.sizeHuman+'</div></div>').join('')+'</div>';
+                '<div class="fe-grid-icon">'+f.icon+'</div><div class="fe-grid-name">'+esc(f.name)+'</div><div class="fe-grid-size">'+f.sizeHuman+'</div>' +
+                '<div class="mt-1"><span class="text-[10px] cursor-pointer text-[#00FF00] opacity-60 hover:opacity-100" onclick="event.stopPropagation();feDownloadPath(\''+f.path.replace(/'/g,"\\'")+'\',\''+esc(f.name)+'\')">⬇ Download</span></div></div>').join('')+'</div>';
           };
 
           window.feSetView = function(m) {
