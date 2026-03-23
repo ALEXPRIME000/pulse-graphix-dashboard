@@ -1,5 +1,5 @@
 {
-  "lastGenerated": "2026-03-02T11:29:03.175Z",
+  "lastGenerated": "2026-03-23T17:42:00.000Z",
   "keyMetrics": {
     "totalProspects": 20,
     "qualifiedProspects": 11,
@@ -35,6 +35,105 @@
         "value": 3000
       }
     ]
+  },
+  "amazonEmpire": {
+    "kdpBooks": [
+      {
+        "title": "Bold & Easy Easter + Spring Coloring Book",
+        "status": "in-production",
+        "targetDate": "2026-04-06",
+        "niche": "Easter/Spring",
+        "price": 9.99
+      }
+    ],
+    "podDesigns": {
+      "planned": 15,
+      "completed": 0,
+      "platforms": ["Redbubble", "Teepublic"]
+    },
+    "fiction": {
+      "leadMagnet": "in-progress",
+      "booksPlanned": 5,
+      "genre": "Small Town Romance"
+    },
+    "revenue": {
+      "current": 0,
+      "target30Day": 500,
+      "target90Day": 6900
+    }
+  },
+  "executionPlan": {
+    "startDate": "2026-03-23",
+    "endDate": "2026-04-22",
+    "currentDay": 1,
+    "milestones": [
+      {
+        "name": "Easter Coloring Book published on KDP",
+        "targetDate": "2026-04-06",
+        "status": "in-progress"
+      },
+      {
+        "name": "15 POD designs uploaded to Redbubble & Teepublic",
+        "targetDate": "2026-04-10",
+        "status": "pending"
+      },
+      {
+        "name": "Fiction lead magnet completed",
+        "targetDate": "2026-04-15",
+        "status": "in-progress"
+      },
+      {
+        "name": "First cold calls to Torcy prospects",
+        "targetDate": "2026-03-30",
+        "status": "pending"
+      },
+      {
+        "name": "First Amazon revenue hit ($1+)",
+        "targetDate": "2026-04-15",
+        "status": "pending"
+      },
+      {
+        "name": "30-day Amazon revenue target: $500",
+        "targetDate": "2026-04-22",
+        "status": "pending"
+      }
+    ]
+  },
+  "skills": [
+    "gh-issues",
+    "github",
+    "healthcheck",
+    "node-connect",
+    "skill-creator",
+    "video-frames",
+    "weather",
+    "browser-captcha-solver",
+    "ai-social-media-content",
+    "amazon-bestseller-launch",
+    "amazon-movers-shakers",
+    "amazon-product-finder",
+    "amazon-product-search-api-skill",
+    "book-illustrator",
+    "canvas-design",
+    "content-calendar",
+    "copywriting",
+    "email-design",
+    "find-skills",
+    "kdp-listing-optimizer",
+    "keyword-research",
+    "kids-book-writer",
+    "linkedin-content",
+    "pdf-generator",
+    "playwright-web-scraper"
+  ],
+  "integrations": {
+    "gmail": "connected",
+    "googleDrive": "connected",
+    "googleCalendar": "connected",
+    "googleSheets": "connected",
+    "amazonKDP": "connected",
+    "whatsapp": "disconnected",
+    "github": "connected"
   },
   "prospectLeads": [
     {
@@ -313,12 +412,6 @@
         "category": "general"
       },
       {
-        "name": "Google OAuth Fix",
-        "need": "Browser re-auth session",
-        "priority": "MEDIUM",
-        "category": "general"
-      },
-      {
         "name": "UFW Firewall",
         "need": "Approval to enable",
         "priority": "MEDIUM",
@@ -338,9 +431,15 @@
       },
       {
         "name": "First Cold Calls",
-        "need": "Green light to start calling prospects",
+        "need": "Green light to start calling Torcy prospects",
         "priority": "HIGH",
         "category": "general"
+      },
+      {
+        "name": "WhatsApp Integration",
+        "need": "WhatsApp Business API credentials or manual pairing",
+        "priority": "MEDIUM",
+        "category": "integrations"
       },
       {
         "name": "Goal",
@@ -397,8 +496,120 @@
         "category": "general"
       }
     ],
-    "pending": [],
-    "completed": []
+    "pending": [
+      {
+        "name": "Easter Coloring Book - Interior Pages Design",
+        "priority": "HIGH",
+        "category": "amazon-empire",
+        "dueDate": "2026-04-01"
+      },
+      {
+        "name": "Easter Coloring Book - Cover Design",
+        "priority": "HIGH",
+        "category": "amazon-empire",
+        "dueDate": "2026-04-03"
+      },
+      {
+        "name": "Easter Coloring Book - KDP Upload & Publish",
+        "priority": "HIGH",
+        "category": "amazon-empire",
+        "dueDate": "2026-04-06"
+      },
+      {
+        "name": "KDP Listing Optimization (title, keywords, description)",
+        "priority": "HIGH",
+        "category": "amazon-empire",
+        "dueDate": "2026-04-06"
+      },
+      {
+        "name": "POD Design Batch #1 (5 designs) - Redbubble",
+        "priority": "MEDIUM",
+        "category": "amazon-empire",
+        "dueDate": "2026-04-08"
+      },
+      {
+        "name": "POD Design Batch #2 (5 designs) - Teepublic",
+        "priority": "MEDIUM",
+        "category": "amazon-empire",
+        "dueDate": "2026-04-10"
+      },
+      {
+        "name": "Fiction Lead Magnet - Complete draft",
+        "priority": "MEDIUM",
+        "category": "amazon-empire",
+        "dueDate": "2026-04-15"
+      },
+      {
+        "name": "First cold calls to Torcy hot prospects",
+        "priority": "HIGH",
+        "category": "pulse-graphix",
+        "dueDate": "2026-03-30"
+      },
+      {
+        "name": "LinkedIn profile optimization",
+        "priority": "MEDIUM",
+        "category": "pulse-graphix",
+        "dueDate": "2026-03-28"
+      },
+      {
+        "name": "Google Drive workspace backup structure",
+        "priority": "LOW",
+        "category": "ops",
+        "dueDate": "2026-03-25"
+      }
+    ],
+    "completed": [
+      {
+        "name": "Playwright browser automation setup",
+        "completedDate": "2026-03-23",
+        "category": "infrastructure"
+      },
+      {
+        "name": "Browser CAPTCHA solver skill installed & tested",
+        "completedDate": "2026-03-23",
+        "category": "infrastructure"
+      },
+      {
+        "name": "Google APIs connected (Gmail, Drive, Calendar, Sheets)",
+        "completedDate": "2026-03-23",
+        "category": "integrations"
+      },
+      {
+        "name": "Amazon KDP integration connected",
+        "completedDate": "2026-03-23",
+        "category": "integrations"
+      },
+      {
+        "name": "GitHub integration connected",
+        "completedDate": "2026-03-23",
+        "category": "integrations"
+      },
+      {
+        "name": "25 agent skills installed",
+        "completedDate": "2026-03-23",
+        "category": "infrastructure"
+      },
+      {
+        "name": "Google Drive workspace backup completed",
+        "completedDate": "2026-03-23",
+        "category": "ops"
+      },
+      {
+        "name": "Amazon KDP market research completed (Easter/Spring niche)",
+        "completedDate": "2026-03-23",
+        "category": "amazon-empire"
+      },
+      {
+        "name": "Amazon Empire 30-day execution plan drafted",
+        "completedDate": "2026-03-23",
+        "category": "amazon-empire"
+      },
+      {
+        "name": "Dashboard data.json sync with Amazon Empire data",
+        "completedDate": "2026-03-23",
+        "category": "ops"
+      }
+    ]
   },
   "marketing": {
     "linkedin": {
@@ -643,6 +854,21 @@
       "name": "Template Marketplace",
       "status": "planning",
       "progress": 15
+    },
+    {
+      "name": "Amazon KDP - Easter Coloring Book",
+      "status": "active",
+      "progress": 10
+    },
+    {
+      "name": "Amazon POD - Redbubble/Teepublic",
+      "status": "planning",
+      "progress": 0
+    },
+    {
+      "name": "Fiction Lead Magnet - Small Town Romance",
+      "status": "active",
+      "progress": 5
     }
   ],
   "services": [
