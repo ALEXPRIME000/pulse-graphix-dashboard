@@ -869,6 +869,26 @@
       "name": "Fiction Lead Magnet - Small Town Romance",
       "status": "active",
       "progress": 5
+    },
+    {
+      "name": "NexusAI Film Maker",
+      "status": "active",
+      "progress": 35,
+      "description": "AI-powered filmmaking SaaS — credit-based subscriptions ($9-$149/mo)",
+      "techStack": "Next.js 15 + React 19 + Firebase + Replicate + Stripe",
+      "repo": "github.com/LLTIGER/nexus-ai-movie-maker",
+      "milestones": [
+        {"name": "Dev server + Auth + AI routes", "done": true},
+        {"name": "40+ Replicate models wired", "done": true},
+        {"name": "Pricing strategy + model registry", "done": true},
+        {"name": "Firebase Admin setup", "done": false},
+        {"name": "Firestore security rules", "done": false},
+        {"name": "Stripe payments integration", "done": false},
+        {"name": "Production build fix", "done": false},
+        {"name": "UI polish + launch", "done": false}
+      ],
+      "nextAction": "Firebase Admin configuration (service account JSON)",
+      "blockers": ["Firebase service account JSON needed", "Stripe account setup", "Zod 4 + Next 15 async params build fixes"]
     }
   ],
   "services": [

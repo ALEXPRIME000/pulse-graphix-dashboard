@@ -847,6 +847,62 @@
             const list = document.getElementById('projectsList');
             list.innerHTML = dashboardData.projects.map(project => {
                 const statusClass = project.status.toLowerCase().replace(' ', '-');
+                
+                // Build milestones HTML if available
+                let milestonesHtml = '';
+                if (project.milestones && project.milestones.length) {
+                    milestonesHtml = `
+                        <div class="mt-4 pt-4 border-t border-gray-800">
+                            <h4 class="text-sm font-semibold text-gray-400 mb-3">Milestones</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                                ${project.milestones.map(m => `
+                                    <div class="flex items-center gap-2 text-sm">
+                                        <span class="${m.done ? 'text-green-400' : 'text-gray-600'}">${m.done ? '✅' : '⬜'}</span>
+                                        <span class="${m.done ? 'text-gray-400 line-through' : 'text-gray-300'}">${m.name}</span>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                // Build next action + blockers if available
+                let metaHtml = '';
+                if (project.nextAction || (project.blockers && project.blockers.length)) {
+                    metaHtml = `<div class="mt-4 pt-4 border-t border-gray-800 space-y-3">`;
+                    if (project.nextAction) {
+                        metaHtml += `
+                            <div>
+                                <span class="text-xs font-bold text-yellow-400 uppercase tracking-wide">⚡ Next Action</span>
+                                <p class="text-sm text-gray-300 mt-1">${project.nextAction}</p>
+                            </div>
+                        `;
+                    }
+                    if (project.blockers && project.blockers.length) {
+                        metaHtml += `
+                            <div>
+                                <span class="text-xs font-bold text-red-400 uppercase tracking-wide">🚫 Blockers</span>
+                                <ul class="mt-1 space-y-1">
+                                    ${project.blockers.map(b => `<li class="text-sm text-gray-400">• ${b}</li>`).join('')}
+                                </ul>
+                            </div>
+                        `;
+                    }
+                    metaHtml += `</div>`;
+                }
+                
+                // Description + tech stack
+                let descHtml = '';
+                if (project.description) {
+                    descHtml += `<p class="text-sm text-gray-400 mt-2">${project.description}</p>`;
+                }
+                if (project.techStack) {
+                    descHtml += `<p class="text-xs text-gray-600 mt-1">🛠 ${project.techStack}</p>`;
+                }
+                if (project.repo) {
+                    descHtml += `<p class="text-xs text-gray-600 mt-1">📂 <a href="https://${project.repo}" target="_blank" class="hover:text-green-400 transition-colors">${project.repo}</a></p>`;
+                }
+                
                 return `
                     <div class="glass-card rounded-xl p-6">
                         <div class="flex justify-between items-start mb-4">
@@ -856,12 +912,15 @@
                                     <span class="status-dot status-${statusClass}"></span>
                                     <span class="text-sm text-gray-400">${project.status}</span>
                                 </div>
+                                ${descHtml}
                             </div>
                             <span class="text-2xl font-bold neon-text">${project.progress}%</span>
                         </div>
                         <div class="progress-bar">
                             <div class="progress-fill" style="width: ${project.progress}%"></div>
                         </div>
+                        ${milestonesHtml}
+                        ${metaHtml}
                     </div>
                 `;
             }).join('');
