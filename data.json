@@ -889,6 +889,29 @@
       ],
       "nextAction": "Firebase Admin configuration (service account JSON)",
       "blockers": ["Firebase service account JSON needed", "Stripe account setup", "Zod 4 + Next 15 async params build fixes"]
+    },
+    {
+      "name": "FlowVoice",
+      "status": "active",
+      "progress": 55,
+      "description": "Desktop voice-dictation app (Win+Mac) — local-first Wispr Flow alternative",
+      "techStack": "Python 3.12 + PySide6 + faster-whisper + Groq + Claude",
+      "milestones": [
+        {"name": "Core codebase v2.0.0", "done": true},
+        {"name": "Push-to-talk + local STT + cloud STT", "done": true},
+        {"name": "LLM polish (Claude/Llama)", "done": true},
+        {"name": "Dark UI + tray + overlay + settings", "done": true},
+        {"name": "20 tests green + smoke tests", "done": true},
+        {"name": "PyInstaller spec + Inno Setup script", "done": true},
+        {"name": "Compile Windows installer + test", "done": false},
+        {"name": "macOS build verification", "done": false},
+        {"name": "Code signing (Windows + Apple)", "done": false},
+        {"name": "App icon + branding", "done": false},
+        {"name": "Landing page / website", "done": false},
+        {"name": "Pricing + launch", "done": false}
+      ],
+      "nextAction": "Compile Windows installer (Inno Setup) + test on clean VM",
+      "blockers": ["Pricing model decision needed", "Product name finalization", "Code signing certs (~$400+ budget)", "No GitHub remote yet"]
     }
   ],
   "services": [
