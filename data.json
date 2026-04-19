@@ -937,6 +937,31 @@
       ],
       "nextAction": "Run flutterfire configure to generate firebase_options.dart",
       "blockers": ["Firebase not configured (app crashes on launch)", "All payment API keys are placeholders", "Cloud Functions not deployed", "Must build from C: drive (Gradle cross-drive issue)"]
+    },
+    {
+      "name": "PALIN International / RealEstate DRC",
+      "status": "active",
+      "progress": 60,
+      "description": "Cross-border DRC property investment platform — diaspora buyers via rent-to-own, loans, or direct purchase",
+      "techStack": "Flutter (mobile) + Next.js 16 (web) + Firebase + 15 Payment Gateways",
+      "repo": "github.com/LLTIGER/PALIN_INTERNATIONAL",
+      "milestones": [
+        {"name": "Flutter mobile app feature-complete", "done": true},
+        {"name": "19 services + 7 providers + ~20 screen domains", "done": true},
+        {"name": "15 payment gateways implemented", "done": true},
+        {"name": "22 Cloud Functions written (TypeScript)", "done": true},
+        {"name": "179 tests passing", "done": true},
+        {"name": "Trust certificates + escrow + KYC/AML", "done": true},
+        {"name": "EN/FR localization (317 keys each)", "done": true},
+        {"name": "Next.js web app MVP", "done": false},
+        {"name": "Merge phase0 to master", "done": false},
+        {"name": "Deploy Cloud Functions", "done": false},
+        {"name": "Admin dashboard + RBAC", "done": false},
+        {"name": "CI/CD pipeline", "done": false},
+        {"name": "App Store / Play Store submission", "done": false}
+      ],
+      "nextAction": "Merge feat/phase0-critical-infrastructure to master, then deploy Cloud Functions",
+      "blockers": ["Phase 0 hardening closeout in progress", "Cloud Functions not deployed", "Web app still scaffold-stage", "No CI/CD pipeline yet"]
     }
   ],
   "services": [
