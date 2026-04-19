@@ -912,6 +912,31 @@
       ],
       "nextAction": "Compile Windows installer (Inno Setup) + test on clean VM",
       "blockers": ["Pricing model decision needed", "Product name finalization", "Code signing certs (~$400+ budget)", "No GitHub remote yet"]
+    },
+    {
+      "name": "Likelemba",
+      "status": "active",
+      "progress": 40,
+      "description": "Flutter app digitizing African ROSCA/tontine savings groups — DRC market first",
+      "techStack": "Flutter 3.29 + Firebase + 7 Payment Gateways (M-Pesa, Orange Money, Stripe...)",
+      "repo": "github.com/LLTIGER/Likelemba",
+      "milestones": [
+        {"name": "13 feature modules scaffolded", "done": true},
+        {"name": "7 payment gateways implemented", "done": true},
+        {"name": "22 Cloud Functions written", "done": true},
+        {"name": "4 African-inspired themes", "done": true},
+        {"name": "Trilingual localization (EN/FR/Lingala)", "done": true},
+        {"name": "153 tests passing", "done": true},
+        {"name": "Firebase configuration (flutterfire)", "done": false},
+        {"name": "Wire 9 stub routes to real screens", "done": false},
+        {"name": "Register feature providers", "done": false},
+        {"name": "Deploy Cloud Functions", "done": false},
+        {"name": "Real payment API keys", "done": false},
+        {"name": "End-to-end testing on device", "done": false},
+        {"name": "Production launch", "done": false}
+      ],
+      "nextAction": "Run flutterfire configure to generate firebase_options.dart",
+      "blockers": ["Firebase not configured (app crashes on launch)", "All payment API keys are placeholders", "Cloud Functions not deployed", "Must build from C: drive (Gradle cross-drive issue)"]
     }
   ],
   "services": [
