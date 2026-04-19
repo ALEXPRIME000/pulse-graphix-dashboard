@@ -962,6 +962,49 @@
       ],
       "nextAction": "Merge feat/phase0-critical-infrastructure to master, then deploy Cloud Functions",
       "blockers": ["Phase 0 hardening closeout in progress", "Cloud Functions not deployed", "Web app still scaffold-stage", "No CI/CD pipeline yet"]
+    },
+    {
+      "name": "Pulse Architects",
+      "status": "planning",
+      "progress": 5,
+      "description": "Architectural plans marketplace — digital products for architects & builders",
+      "milestones": [
+        {"name": "Define digital product lineup", "done": false},
+        {"name": "Create first batch of products", "done": false},
+        {"name": "Set up marketplace/storefront", "done": false},
+        {"name": "Launch & marketing", "done": false}
+      ],
+      "nextAction": "Define & create digital products — DEADLINE: ~Apr 26, 2026",
+      "blockers": ["No products created yet", "Product type needs definition (floor plans, templates, 3D models?)"]
+    },
+    {
+      "name": "Invest in Congo",
+      "status": "planning",
+      "progress": 15,
+      "description": "DRC investment platform — connecting diaspora investors with Congo opportunities",
+      "milestones": [
+        {"name": "Website live", "done": true},
+        {"name": "LinkedIn investor acquisition strategy", "done": false},
+        {"name": "Create advertising campaigns", "done": false},
+        {"name": "First investor clients acquired", "done": false}
+      ],
+      "nextAction": "Develop LinkedIn strategy to attract investors + start advertising",
+      "blockers": ["No advertising created yet", "LinkedIn strategy not developed", "Need to define investor value proposition"]
+    },
+    {
+      "name": "Nexus AI Academy",
+      "status": "active",
+      "progress": 25,
+      "description": "AI-powered learning platform — courses on AI, tech & business",
+      "milestones": [
+        {"name": "Website partially built", "done": true},
+        {"name": "Finish website", "done": false},
+        {"name": "Create first courses", "done": false},
+        {"name": "Marketing & client acquisition", "done": false},
+        {"name": "First paying students", "done": false}
+      ],
+      "nextAction": "Finish website + start creating courses + marketing strategy",
+      "blockers": ["Website not finished", "No courses created yet", "No marketing started"]
     }
   ],
   "services": [
