@@ -1,5 +1,5 @@
 {
-  "lastGenerated": "2026-03-23T17:42:00.000Z",
+  "lastGenerated": "2026-06-03T09:45:16.112Z",
   "keyMetrics": {
     "totalProspects": 20,
     "qualifiedProspects": 11,
@@ -49,7 +49,10 @@
     "podDesigns": {
       "planned": 15,
       "completed": 0,
-      "platforms": ["Redbubble", "Teepublic"]
+      "platforms": [
+        "Redbubble",
+        "Teepublic"
+      ]
     },
     "fiction": {
       "leadMagnet": "in-progress",
@@ -878,17 +881,45 @@
       "techStack": "Next.js 15 + React 19 + Firebase + Replicate + Stripe",
       "repo": "github.com/LLTIGER/nexus-ai-movie-maker",
       "milestones": [
-        {"name": "Dev server + Auth + AI routes", "done": true},
-        {"name": "40+ Replicate models wired", "done": true},
-        {"name": "Pricing strategy + model registry", "done": true},
-        {"name": "Firebase Admin setup", "done": false},
-        {"name": "Firestore security rules", "done": false},
-        {"name": "Stripe payments integration", "done": false},
-        {"name": "Production build fix", "done": false},
-        {"name": "UI polish + launch", "done": false}
+        {
+          "name": "Dev server + Auth + AI routes",
+          "done": true
+        },
+        {
+          "name": "40+ Replicate models wired",
+          "done": true
+        },
+        {
+          "name": "Pricing strategy + model registry",
+          "done": true
+        },
+        {
+          "name": "Firebase Admin setup",
+          "done": false
+        },
+        {
+          "name": "Firestore security rules",
+          "done": false
+        },
+        {
+          "name": "Stripe payments integration",
+          "done": false
+        },
+        {
+          "name": "Production build fix",
+          "done": false
+        },
+        {
+          "name": "UI polish + launch",
+          "done": false
+        }
       ],
       "nextAction": "Firebase Admin configuration (service account JSON)",
-      "blockers": ["Firebase service account JSON needed", "Stripe account setup", "Zod 4 + Next 15 async params build fixes"]
+      "blockers": [
+        "Firebase service account JSON needed",
+        "Stripe account setup",
+        "Zod 4 + Next 15 async params build fixes"
+      ]
     },
     {
       "name": "FlowVoice",
@@ -897,21 +928,62 @@
       "description": "Desktop voice-dictation app (Win+Mac) — local-first Wispr Flow alternative",
       "techStack": "Python 3.12 + PySide6 + faster-whisper + Groq + Claude",
       "milestones": [
-        {"name": "Core codebase v2.0.0", "done": true},
-        {"name": "Push-to-talk + local STT + cloud STT", "done": true},
-        {"name": "LLM polish (Claude/Llama)", "done": true},
-        {"name": "Dark UI + tray + overlay + settings", "done": true},
-        {"name": "20 tests green + smoke tests", "done": true},
-        {"name": "PyInstaller spec + Inno Setup script", "done": true},
-        {"name": "Compile Windows installer + test", "done": false},
-        {"name": "macOS build verification", "done": false},
-        {"name": "Code signing (Windows + Apple)", "done": false},
-        {"name": "App icon + branding", "done": false},
-        {"name": "Landing page / website", "done": false},
-        {"name": "Pricing + launch", "done": false}
+        {
+          "name": "Core codebase v2.0.0",
+          "done": true
+        },
+        {
+          "name": "Push-to-talk + local STT + cloud STT",
+          "done": true
+        },
+        {
+          "name": "LLM polish (Claude/Llama)",
+          "done": true
+        },
+        {
+          "name": "Dark UI + tray + overlay + settings",
+          "done": true
+        },
+        {
+          "name": "20 tests green + smoke tests",
+          "done": true
+        },
+        {
+          "name": "PyInstaller spec + Inno Setup script",
+          "done": true
+        },
+        {
+          "name": "Compile Windows installer + test",
+          "done": false
+        },
+        {
+          "name": "macOS build verification",
+          "done": false
+        },
+        {
+          "name": "Code signing (Windows + Apple)",
+          "done": false
+        },
+        {
+          "name": "App icon + branding",
+          "done": false
+        },
+        {
+          "name": "Landing page / website",
+          "done": false
+        },
+        {
+          "name": "Pricing + launch",
+          "done": false
+        }
       ],
       "nextAction": "Compile Windows installer (Inno Setup) + test on clean VM",
-      "blockers": ["Pricing model decision needed", "Product name finalization", "Code signing certs (~$400+ budget)", "No GitHub remote yet"]
+      "blockers": [
+        "Pricing model decision needed",
+        "Product name finalization",
+        "Code signing certs (~$400+ budget)",
+        "No GitHub remote yet"
+      ]
     },
     {
       "name": "Likelemba",
@@ -921,22 +993,66 @@
       "techStack": "Flutter 3.29 + Firebase + 7 Payment Gateways (M-Pesa, Orange Money, Stripe...)",
       "repo": "github.com/LLTIGER/Likelemba",
       "milestones": [
-        {"name": "13 feature modules scaffolded", "done": true},
-        {"name": "7 payment gateways implemented", "done": true},
-        {"name": "22 Cloud Functions written", "done": true},
-        {"name": "4 African-inspired themes", "done": true},
-        {"name": "Trilingual localization (EN/FR/Lingala)", "done": true},
-        {"name": "153 tests passing", "done": true},
-        {"name": "Firebase configuration (flutterfire)", "done": false},
-        {"name": "Wire 9 stub routes to real screens", "done": false},
-        {"name": "Register feature providers", "done": false},
-        {"name": "Deploy Cloud Functions", "done": false},
-        {"name": "Real payment API keys", "done": false},
-        {"name": "End-to-end testing on device", "done": false},
-        {"name": "Production launch", "done": false}
+        {
+          "name": "13 feature modules scaffolded",
+          "done": true
+        },
+        {
+          "name": "7 payment gateways implemented",
+          "done": true
+        },
+        {
+          "name": "22 Cloud Functions written",
+          "done": true
+        },
+        {
+          "name": "4 African-inspired themes",
+          "done": true
+        },
+        {
+          "name": "Trilingual localization (EN/FR/Lingala)",
+          "done": true
+        },
+        {
+          "name": "153 tests passing",
+          "done": true
+        },
+        {
+          "name": "Firebase configuration (flutterfire)",
+          "done": false
+        },
+        {
+          "name": "Wire 9 stub routes to real screens",
+          "done": false
+        },
+        {
+          "name": "Register feature providers",
+          "done": false
+        },
+        {
+          "name": "Deploy Cloud Functions",
+          "done": false
+        },
+        {
+          "name": "Real payment API keys",
+          "done": false
+        },
+        {
+          "name": "End-to-end testing on device",
+          "done": false
+        },
+        {
+          "name": "Production launch",
+          "done": false
+        }
       ],
       "nextAction": "Run flutterfire configure to generate firebase_options.dart",
-      "blockers": ["Firebase not configured (app crashes on launch)", "All payment API keys are placeholders", "Cloud Functions not deployed", "Must build from C: drive (Gradle cross-drive issue)"]
+      "blockers": [
+        "Firebase not configured (app crashes on launch)",
+        "All payment API keys are placeholders",
+        "Cloud Functions not deployed",
+        "Must build from C: drive (Gradle cross-drive issue)"
+      ]
     },
     {
       "name": "PALIN International / RealEstate DRC",
@@ -946,22 +1062,66 @@
       "techStack": "Flutter (mobile) + Next.js 16 (web) + Firebase + 15 Payment Gateways",
       "repo": "github.com/LLTIGER/PALIN_INTERNATIONAL",
       "milestones": [
-        {"name": "Flutter mobile app feature-complete", "done": true},
-        {"name": "19 services + 7 providers + ~20 screen domains", "done": true},
-        {"name": "15 payment gateways implemented", "done": true},
-        {"name": "22 Cloud Functions written (TypeScript)", "done": true},
-        {"name": "179 tests passing", "done": true},
-        {"name": "Trust certificates + escrow + KYC/AML", "done": true},
-        {"name": "EN/FR localization (317 keys each)", "done": true},
-        {"name": "Next.js web app MVP", "done": false},
-        {"name": "Merge phase0 to master", "done": false},
-        {"name": "Deploy Cloud Functions", "done": false},
-        {"name": "Admin dashboard + RBAC", "done": false},
-        {"name": "CI/CD pipeline", "done": false},
-        {"name": "App Store / Play Store submission", "done": false}
+        {
+          "name": "Flutter mobile app feature-complete",
+          "done": true
+        },
+        {
+          "name": "19 services + 7 providers + ~20 screen domains",
+          "done": true
+        },
+        {
+          "name": "15 payment gateways implemented",
+          "done": true
+        },
+        {
+          "name": "22 Cloud Functions written (TypeScript)",
+          "done": true
+        },
+        {
+          "name": "179 tests passing",
+          "done": true
+        },
+        {
+          "name": "Trust certificates + escrow + KYC/AML",
+          "done": true
+        },
+        {
+          "name": "EN/FR localization (317 keys each)",
+          "done": true
+        },
+        {
+          "name": "Next.js web app MVP",
+          "done": false
+        },
+        {
+          "name": "Merge phase0 to master",
+          "done": false
+        },
+        {
+          "name": "Deploy Cloud Functions",
+          "done": false
+        },
+        {
+          "name": "Admin dashboard + RBAC",
+          "done": false
+        },
+        {
+          "name": "CI/CD pipeline",
+          "done": false
+        },
+        {
+          "name": "App Store / Play Store submission",
+          "done": false
+        }
       ],
       "nextAction": "Merge feat/phase0-critical-infrastructure to master, then deploy Cloud Functions",
-      "blockers": ["Phase 0 hardening closeout in progress", "Cloud Functions not deployed", "Web app still scaffold-stage", "No CI/CD pipeline yet"]
+      "blockers": [
+        "Phase 0 hardening closeout in progress",
+        "Cloud Functions not deployed",
+        "Web app still scaffold-stage",
+        "No CI/CD pipeline yet"
+      ]
     },
     {
       "name": "Pulse Architects",
@@ -969,13 +1129,28 @@
       "progress": 5,
       "description": "Architectural plans marketplace — digital products for architects & builders",
       "milestones": [
-        {"name": "Define digital product lineup", "done": false},
-        {"name": "Create first batch of products", "done": false},
-        {"name": "Set up marketplace/storefront", "done": false},
-        {"name": "Launch & marketing", "done": false}
+        {
+          "name": "Define digital product lineup",
+          "done": false
+        },
+        {
+          "name": "Create first batch of products",
+          "done": false
+        },
+        {
+          "name": "Set up marketplace/storefront",
+          "done": false
+        },
+        {
+          "name": "Launch & marketing",
+          "done": false
+        }
       ],
       "nextAction": "Define & create digital products — DEADLINE: ~Apr 26, 2026",
-      "blockers": ["No products created yet", "Product type needs definition (floor plans, templates, 3D models?)"]
+      "blockers": [
+        "No products created yet",
+        "Product type needs definition (floor plans, templates, 3D models?)"
+      ]
     },
     {
       "name": "Invest in Congo",
@@ -983,13 +1158,29 @@
       "progress": 15,
       "description": "DRC investment platform — connecting diaspora investors with Congo opportunities",
       "milestones": [
-        {"name": "Website live", "done": true},
-        {"name": "LinkedIn investor acquisition strategy", "done": false},
-        {"name": "Create advertising campaigns", "done": false},
-        {"name": "First investor clients acquired", "done": false}
+        {
+          "name": "Website live",
+          "done": true
+        },
+        {
+          "name": "LinkedIn investor acquisition strategy",
+          "done": false
+        },
+        {
+          "name": "Create advertising campaigns",
+          "done": false
+        },
+        {
+          "name": "First investor clients acquired",
+          "done": false
+        }
       ],
       "nextAction": "Develop LinkedIn strategy to attract investors + start advertising",
-      "blockers": ["No advertising created yet", "LinkedIn strategy not developed", "Need to define investor value proposition"]
+      "blockers": [
+        "No advertising created yet",
+        "LinkedIn strategy not developed",
+        "Need to define investor value proposition"
+      ]
     },
     {
       "name": "Nexus AI Academy",
@@ -997,14 +1188,33 @@
       "progress": 25,
       "description": "AI-powered learning platform — courses on AI, tech & business",
       "milestones": [
-        {"name": "Website partially built", "done": true},
-        {"name": "Finish website", "done": false},
-        {"name": "Create first courses", "done": false},
-        {"name": "Marketing & client acquisition", "done": false},
-        {"name": "First paying students", "done": false}
+        {
+          "name": "Website partially built",
+          "done": true
+        },
+        {
+          "name": "Finish website",
+          "done": false
+        },
+        {
+          "name": "Create first courses",
+          "done": false
+        },
+        {
+          "name": "Marketing & client acquisition",
+          "done": false
+        },
+        {
+          "name": "First paying students",
+          "done": false
+        }
       ],
       "nextAction": "Finish website + start creating courses + marketing strategy",
-      "blockers": ["Website not finished", "No courses created yet", "No marketing started"]
+      "blockers": [
+        "Website not finished",
+        "No courses created yet",
+        "No marketing started"
+      ]
     }
   ],
   "services": [
