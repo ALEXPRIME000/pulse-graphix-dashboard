@@ -1,5 +1,5 @@
 {
-  "lastGenerated": "2026-06-03T09:45:16.112Z",
+  "lastGenerated": "2026-06-10T19:53:33.130Z",
   "keyMetrics": {
     "totalProspects": 20,
     "qualifiedProspects": 11,
@@ -1215,6 +1215,27 @@
         "No courses created yet",
         "No marketing started"
       ]
+    },
+    {
+      "name": "Social Selling Engine",
+      "status": "active",
+      "progress": 30,
+      "description": "One pipeline to advertise every brand via Alex AI voiceover + creator collabs -> lead capture -> email",
+      "repo": "workspace/strategy/social-selling-engine.md"
+    },
+    {
+      "name": "Always-On Advertising Network",
+      "status": "active",
+      "progress": 25,
+      "description": "5-tier channel army (core/personal/family/team-SCP/partner) pushing empire content continuously",
+      "repo": "workspace/strategy/empire-advertising-network.md"
+    },
+    {
+      "name": "Objectives Master Tracker",
+      "status": "active",
+      "progress": 100,
+      "description": "Single source of truth for all empire objectives, auto-reminded weekly+monthly",
+      "repo": "workspace/memory/OBJECTIVES-MASTER.md"
     }
   ],
   "services": [
@@ -1315,5 +1336,43 @@
       "contentPlanned": false,
       "nextPost": null
     }
-  }
+  },
+  "openDecisions": [
+    {
+      "name": "Pulse Architects: which plans available to sell NOW?",
+      "priority": "HIGH",
+      "impact": "Blocks first reels + Architects launch"
+    },
+    {
+      "name": "Channel roster: family/team/SCP handles + consent",
+      "priority": "HIGH",
+      "impact": "Blocks advertising network activation"
+    },
+    {
+      "name": "Approve ElevenLabs Alex voiceover",
+      "priority": "MEDIUM",
+      "impact": "Blocks voiceover pipeline"
+    },
+    {
+      "name": "Email tool: Brevo or Mailchimp?",
+      "priority": "MEDIUM",
+      "impact": "Blocks nurture sequence rebuild"
+    },
+    {
+      "name": "Holiday house preferred location",
+      "priority": "LOW",
+      "impact": "Life goal planning"
+    },
+    {
+      "name": "Subagent Pyramid: approve or not",
+      "priority": "LOW",
+      "impact": "Systems architecture"
+    }
+  ],
+  "reminders": {
+    "weeklyBrief": "Mondays 08:00 Europe/Paris — tactical brief to PG group",
+    "monthlyObjectives": "1st of month 09:00 Europe/Paris — full objectives review",
+    "dashboardSync": "this dashboard auto-syncs lastGenerated on schedule"
+  },
+  "lastUpdatedNote": "Synced 2026-06-10: added advertising systems, objectives tracker, current open decisions."
 }
