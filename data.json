@@ -1,5 +1,5 @@
 {
-  "lastGenerated": "2026-06-10T19:54:23.734Z",
+  "lastGenerated": "2026-06-10T23:15:30.498Z",
   "keyMetrics": {
     "totalProspects": 20,
     "qualifiedProspects": 11,
@@ -1374,5 +1374,122 @@
     "monthlyObjectives": "1st of month 09:00 Europe/Paris — full objectives review",
     "dashboardSync": "this dashboard auto-syncs lastGenerated on schedule"
   },
-  "lastUpdatedNote": "Synced 2026-06-10: added advertising systems, objectives tracker, current open decisions."
+  "lastUpdatedNote": "Synced 2026-06-10: added advertising systems, objectives tracker, current open decisions.",
+  "megaProjects": {
+    "lastUpdated": "2026-06-10T23:15:30.498Z",
+    "source": "strategy/empire-mega-projects.md",
+    "capitalRaise": {
+      "christianClothing": {
+        "status": "not started",
+        "priority": "HIGH",
+        "revenueStream": "Direct church sales (caps, shirts, jackets)",
+        "capitalNeeded": "€500-2k",
+        "timeline": "Weeks 1-4"
+      },
+      "musicStreaming": {
+        "status": "not started",
+        "priority": "HIGH",
+        "revenueStream": "Spotify/Apple/Deezer royalties",
+        "capitalNeeded": "€200-500",
+        "timeline": "Weeks 1-6"
+      }
+    },
+    "chinaDrcTrade": {
+      "vehicleImport": {
+        "status": "not started",
+        "priority": "HIGH",
+        "description": "Cars, trucks, motors from China to DRC",
+        "capitalNeeded": "€50k-200k",
+        "timeline": "Months 3-9"
+      },
+      "trackingSystems": {
+        "status": "not started",
+        "priority": "MEDIUM",
+        "description": "GPS/logistics systems for DRC market"
+      },
+      "mineralProposition": {
+        "status": "not started",
+        "priority": "HIGH",
+        "description": "Chinese partners get mineral access via govt relations"
+      }
+    },
+    "drcInfrastructure": {
+      "dataCenter": {
+        "status": "not started",
+        "priority": "HIGH",
+        "description": "Kinshasa Tier III, serving Central Africa",
+        "capitalNeeded": "$2-5M phase 1",
+        "timeline": "Months 6-18"
+      },
+      "internet": {
+        "status": "not started",
+        "priority": "HIGH",
+        "description": "Internet connectivity for DRC",
+        "capitalNeeded": "$1-10M",
+        "timeline": "Months 6-18"
+      },
+      "costcoWarehouse": {
+        "status": "not started",
+        "priority": "LONG",
+        "description": "Large-format retail across major DRC cities",
+        "capitalNeeded": "€500k-2M",
+        "timeline": "Months 12-24"
+      }
+    },
+    "drcEssentialServices": {
+      "farmingEquipment": {
+        "status": "not started",
+        "priority": "MEDIUM",
+        "description": "Tractors, irrigation for small farmers"
+      },
+      "solarPanels": {
+        "status": "not started",
+        "priority": "MEDIUM",
+        "description": "Renewable energy distribution"
+      },
+      "waterPurification": {
+        "status": "not started",
+        "priority": "MEDIUM",
+        "description": "Home filters + community stations"
+      },
+      "electricalSystems": {
+        "status": "not started",
+        "priority": "MEDIUM",
+        "description": "Wiring, panels, generators"
+      }
+    },
+    "investors": {
+      "americanCall": {
+        "status": "pending",
+        "priority": "HIGH",
+        "description": "Call Americans about DRC investment - climate is good",
+        "kabundjiAction": "Call them - I will write script"
+      },
+      "armaniLoan": {
+        "status": "pending",
+        "priority": "HIGH",
+        "description": "Data center financing source",
+        "kabundjiAction": "Clarify who/what Armani is"
+      },
+      "chineseBacking": {
+        "status": "pending",
+        "priority": "HIGH",
+        "description": "Equipment-for-minerals swap, joint venture"
+      },
+      "drcGovernment": {
+        "status": "pending",
+        "priority": "HIGH",
+        "description": "PPP for infrastructure projects"
+      }
+    },
+    "kabundjiActionsNeeded": [
+      "Approve first 5 Christian clothing designs",
+      "Choose music style (gospel/worship/afro-gospel)",
+      "Provide American investor phone numbers",
+      "Clarify China trip timeframe",
+      "Clarify Armani loan entity",
+      "List church contacts in France",
+      "Provide DRC government contacts if any"
+    ]
+  }
 }
